@@ -3,198 +3,92 @@ socks-port: 7891
 allow-lan: true
 mode: Rule
 log-level: info
-external-controller: 127.0.0.1:9090
+external-controller: :9090
 proxies:
-  - {name: 1.10|05包括V2ray和Trojan, server: yqy2325.china-cdn-net.com, port: 2325, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 1.10|698  364Mb, server: v5.ssrsub.com, port: 158, type: vmess, uuid: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ssrsub, ws-headers: {Host: v5.ssrsub.com}}
-  - {name: 1.26|GB5045, server: 109.74.194.189, port: 1443, type: trojan, password: 7x42LetRa0, skip-cert-verify: false}
-  - {name: 1.29|723  556Mb, server: t5.ssrsub.com, port: 8443, type: trojan, password: 6d6d99b0-be8a-43bc-ad73-2fb0f1595793, sni: t5.ssrsub.com, skip-cert-verify: false}
-  - {name: 1.44|CYL科技20211023, server: 1.transit.t.qjnodeip.xyz, port: 48404, type: vmess, uuid: 615505e8-e63c-3bad-b3e7-d5e6cf99387e, alterId: 8, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /Jp2, ws-headers: {Host: jp.dadwff.xyz}}
-  - {name: 1.49|  297Mb, server: 138.197.162.114, port: 4443, type: trojan, password: 7x42LetRa0, skip-cert-verify: false}
-  - {name: 1.54|03公益等级線路嚴格限速, server: yqy2323.china-cdn-net.com, port: 2323, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 1.54|708  616Mb, server: v3.ssrsub.com, port: 158, type: vmess, uuid: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ssrsub, ws-headers: {Host: v3.ssrsub.com}}
-  - {name: 1.56|GB5059, server: 138.68.179.78, port: 1443, type: trojan, password: 7x42LetRa0, skip-cert-verify: false}
-  - {name: 1.65|721  537Mb, server: t7.ssrsub.com, port: 8443, type: trojan, password: 6d6d99b0-be8a-43bc-ad73-2fb0f1595793, sni: t7.ssrsub.com, skip-cert-verify: false}
-  - {name: 1.66|712 5998Mb, server: v1.ssrsub.com, port: 8401, type: vmess, uuid: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}}
-  - {name: 1.70|HU5310, server: 185.225.69.134, port: 45081, type: vmess, uuid: 3c3bfd75-dc30-4e76-8940-47e1137e21f9, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 1.74|06中继中转隧道线路覆盖, server: yqy2326.china-cdn-net.com, port: 2326, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 1.97|193385145tcp, server: 193.38.51.45, port: 65162, type: vmess, uuid: 4b31ea60-3141-11ec-a70a-8e8d0e0ad36e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 2.04|697, server: v4.ssrsub.com, port: 158, type: vmess, uuid: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ssrsub, ws-headers: {Host: v4.ssrsub.com}}
-  - {name: 2.14|725 3580Mb, server: t4.ssrsub.com, port: 8443, type: trojan, password: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, sni: t4.ssrsub.com, skip-cert-verify: false}
-  - {name: 2.15|trojan, server: 65.49.196.246, port: 443, type: trojan, password: "123abc,./", sni: ztinoz.com, skip-cert-verify: false}
-  - {name: 2.32|37长期套餐覆盖IPLC专线, server: yqy2337.china-cdn-net.com, port: 2337, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy2337.china-cdn-net.com}}
-  - {name: 2.35|07长期套餐覆盖IPLC专线, server: yqy2327.china-cdn-net.com, port: 2327, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 2.89|33公益等级線路嚴格限速, server: yqy2333.china-cdn-net.com, port: 2333, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: yqy2333.china-cdn-net.com}}
-  - {name: 2.95| Game 1 PPhttp, server: id1-trojan.bonds.id, port: 443, type: trojan, password: 9e266b10-f204-11eb-96b8-1239d0255272, sni: pmsc.pubgmobile.com, skip-cert-verify: false}
-  - {name: 3.40| Game 3 PPhttp, server: sg2-trojan.bonds.id, port: 443, type: trojan, password: 7d450710-f1ad-11eb-a226-1239d0255272, sni: pmsc.pubgmobile.com, skip-cert-verify: false}
-  - {name: 3.70|国内中专227 2, server: tz-yd01.jdxx.xyz, port: 35007, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 3.84|AZ转移动0227, server: sl201.jdxx.xyz, port: 25986, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 3.99|AZ转移动0327, server: sl201.jdxx.xyz, port: 25987, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 4.04|35包括V2ray和Trojan, server: yqy2335.china-cdn-net.com, port: 2335, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy2335.china-cdn-net.com}}
-  - {name: 4.12|AZ转移动0127, server: sl201.jdxx.xyz, port: 25985, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1620:BfGQJg, obfs-param: 2605b1620.microsoft.com}
-  - {name: 4.14|国内中专327 2, server: tz-yd01.jdxx.xyz, port: 35006, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 4.15|AZ转移动0527 2, server: sl201.jdxx.xyz, port: 25989, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 4.37|36中继中转隧道线路覆盖, server: yqy2336.china-cdn-net.com, port: 2336, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy2336.china-cdn-net.com}}
-  - {name: 4.38|AZ转移动0427, server: sl201.jdxx.xyz, port: 25988, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 4.45|国内中专127 2, server: tz-yd01.jdxx.xyz, port: 35008, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇦🇺 1.61|直连 澳大利亚 Netflix SG, server: 149.28.172.85, port: 12222, type: vmess, uuid: 6ae2e994-2018-4f9f-a5bb-4639c14ba05f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 149.28.172.85}}
-  - {name: 🇦🇺 2.67| AU884, server: 1.0.0.1, port: 80, type: vmess, uuid: 0d02be86-0a21-4c56-a363-1c8c09074466, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /sshstores, ws-headers: {Host: 1.0.0.1}}
-  - {name: 🇨🇳 1.05|34捐赠解锁更多协议线路, server: yqy2334.china-cdn-net.com, port: 2334, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy2334.china-cdn-net.com}}
-  - {name: 🇨🇳 1.08| ITW高雄龍抬頭HiNetVC33132, server: yqy33132.china-cdn-net.com, port: 33132, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy33132.china-cdn-net.com}}
-  - {name: 🇨🇳 1.45| HTW高雄龍抬頭HiNetVC33237, server: yqy33237.china-cdn-net.com, port: 33237, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy33237.china-cdn-net.com}}
-  - {name: 🇨🇳 1.50| I6xTW台北HiNetVC31138, server: yqy31138.china-cdn-net.com, port: 31138, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy31138.china-cdn-net.com}}
-  - {name: 🇨🇳 1.57| ITW高雄龍抬頭HiNetRC33128, server: yqy33128.china-cdn-net.com, port: 33128, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 1.79|04捐赠解锁更多协议线路, server: yqy2324.china-cdn-net.com, port: 2324, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 1.80| HTW高雄龍抬頭HiNetRC33227, server: yqy33227.china-cdn-net.com, port: 33227, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 1.80| ITW高雄龍抬頭HiNetVC33138, server: yqy33138.china-cdn-net.com, port: 33138, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy33138.china-cdn-net.com}}
-  - {name: 🇨🇳 1.90| HTW高雄龍抬頭HiNetVC33135, server: yqy33135.china-cdn-net.com, port: 33135, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy33135.china-cdn-net.com}}
-  - {name: 🇨🇳 2.05|CN2657, server: rxzgzq.moox.icu, port: 34004, type: vmess, uuid: fe65a2ed-385e-42cf-a231-1abac116490c, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: rxzgzq.moox.icu}}
-  - {name: 🇨🇳 2.25| ITW高雄龍抬頭HiNetRC33127, server: yqy33127.china-cdn-net.com, port: 33127, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 2.38|CN2668, server: rxzgzq.moox.icu, port: 41025, type: vmess, uuid: fe65a2ed-385e-42cf-a231-1abac116490c, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: rxzgzq.moox.icu}}
-  - {name: 🇨🇳 2.40| I6xTW台北HiNetRC31128, server: yqy31128.china-cdn-net.com, port: 31128, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 2.43| I6xTW彰化HiNetRC32128, server: yqy32128.china-cdn-net.com, port: 32128, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 2.44|CN2660, server: icajm.moox.icu, port: 40007, type: vmess, uuid: fe65a2ed-385e-42cf-a231-1abac116490c, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: icajm.moox.icu}}
-  - {name: 🇨🇳 2.54| HTW高雄龍抬頭HiNetVC33136, server: yqy33136.china-cdn-net.com, port: 33136, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy33136.china-cdn-net.com}}
-  - {name: 🇨🇳 2.54|CN2658, server: rxzgzq.moox.icu, port: 34025, type: vmess, uuid: fe65a2ed-385e-42cf-a231-1abac116490c, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: rxzgzq.moox.icu}}
-  - {name: 🇨🇳 2.85| H25xTW彰化HiNetVC32132, server: yqy32132.china-cdn-net.com, port: 32132, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy32132.china-cdn-net.com}}
-  - {name: 🇨🇳 3.01| HTW高雄龍抬頭HiNetVC33131, server: yqy33131.china-cdn-net.com, port: 33131, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy33131.china-cdn-net.com}}
-  - {name: 🇨🇳 3.05| 01ChinaG几鸡学习助理, server: yqy2321.china-cdn-net.com, port: 2321, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 3.18|CN2656, server: icajm.moox.icu, port: 40001, type: vmess, uuid: fe65a2ed-385e-42cf-a231-1abac116490c, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: icajm.moox.icu}}
-  - {name: 🇨🇳 3.38| ITW高雄龍抬頭HiNetVC33137, server: yqy33137.china-cdn-net.com, port: 33137, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy33137.china-cdn-net.com}}
-  - {name: 🇨🇳 3.39| I5xTW彰化HiNetVC32131, server: yqy32131.china-cdn-net.com, port: 32131, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy32131.china-cdn-net.com}}
+  - {name: 🇭🇰 4.43| 香港I02BGZ, server: gz.nat.beer.mypeter.top, port: 60610, type: vmess, uuid: 205c9676-57ec-31dd-b28b-21784535e18c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ss, ws-headers: {Host: inkhk02.mypeter.top}}
+  - {name: 🇭🇰 4.26| 香港G2, server: g.v2bees.com, port: 36567, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 8.13| 香港免流04, server: hk04.zz123.xyz, port: 80, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: a.189.cn}}
+  - {name: 🇨🇳 4.82|台湾01, server: jike-cccn2.ddns-only.xyz, port: 39205, type: vmess, uuid: b8da3f41-58ec-3294-891e-cc27ecb1244a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /jike1, ws-headers: {Host: jike1-hinet03.ddns-only.xyz}}
+  - {name: 🇭🇰 7.39| 香港免流05 解锁新加坡区奈飞, server: hk05.zz123.xyz, port: 80, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: a.189.cn}}
+  - {name: 🇭🇰 3.19| 香港G5, server: ahmas.v2bees.com, port: 32315, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇯🇵 2.52| 日本 03  PCCW, server: mack.dliroom.co, port: 10007, type: vmess, uuid: b567bd47-bae6-3a4f-976a-3a64b701549c, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pqjp01.0894168.xyz}}
+  - {name: 🇯🇵 4.97| 日本 01  上海独享, server: mack.dliroom.co, port: 10006, type: vmess, uuid: b567bd47-bae6-3a4f-976a-3a64b701549c, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: jp03.ui3fuj66606.com}}
+  - {name: 🇭🇰 4.83| 香港G3, server: g.v2bees.com, port: 25015, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 4.36| 香港G4, server: ahmas.v2bees.com, port: 31774, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 7.82| 香港免流01, server: hk01.zz123.xyz, port: 80, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: a.189.cn}}
+  - {name: 🇭🇰 8.48| 香港免流02, server: hk02.zz123.xyz, port: 80, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: a.189.cn}}
+  - {name: 🇭🇰 4.96| 香港VIP01奈飞解锁, server: g.v2bees.com, port: 31000, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇸🇬 6.79| 新加坡G1, server: g.v2bees.com, port: 26457, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇸🇬 5.82| 新加坡G2, server: ah.cncm.v2bees.com, port: 51003, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: xueshu.baidu.com}}
+  - {name: 🇸🇬 3.77| 新加坡G3, server: ah.cncm.v2bees.com, port: 51013, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: xueshu.baidu.com}}
+  - {name: 🇭🇰 2.87| 新加坡  AZHK  02  1x, server: azhk.xiaoyizi.in, port: 10086, type: vmess, uuid: 95fc0635-0f8c-4d79-bd8d-cc5ecb826b57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /sgdo2, ws-headers: {Host: azhk.xiaoyizi.in}}
+  - {name: 🇨🇳 2.64|CN2637 1082Mb, server: 139.155.22.227, port: 49110, type: vmess, uuid: f7675b7e-59bf-435c-ac03-dc2482f27e5d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 6.22| 香港寬頻, server: hkbn2.tcpbbr.net, port: 80, type: vmess, uuid: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
+  - {name: 🇭🇰 2.12|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13, server: 120.232.173.88, port: 33532, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 6.42| 新加坡01, server: azhk.zz123.xyz, port: 38141, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: azhk.zz123.xyz}}
+  - {name: 🇭🇰 5.55| HKT  聊天, server: hkt.nkeo.top, port: 48691, type: vmess, uuid: 95fc0635-0f8c-4d79-bd8d-cc5ecb826b57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: hkt.nkeo.top}}
+  - {name: 🇸🇬 5.12| 新加坡02, server: azhk.zz123.xyz, port: 35724, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: azhk.zz123.xyz}}
+  - {name: 🇮🇳 4.15| 印度01 包月3元起, server: azhk.zz123.xyz, port: 33959, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: azhk.zz123.xyz}}
+  - {name: 🇭🇰 3.20|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点9, server: 1.transit.t.qjnodeip.xyz, port: 48404, type: vmess, uuid: 615505e8-e63c-3bad-b3e7-d5e6cf99387e, alterId: 8, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /Jp2, ws-headers: {Host: jp.dadwff.xyz}}
+  - {name: 🇯🇵 3.19| 日本03, server: azhk.zz123.xyz, port: 34083, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: azhk.zz123.xyz}}
+  - {name: 🇭🇰 3.05|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点4, server: 1.transit.t.qjnodeip.xyz, port: 20521, type: vmess, uuid: 615505e8-e63c-3bad-b3e7-d5e6cf99387e, alterId: 8, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /Jp03, ws-headers: {Host: rb2.iuhbhgg.xyz}}
+  - {name: 🇸🇬 2.06| 新加坡03, server: azhk.zz123.xyz, port: 32819, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: azhk.zz123.xyz}}
+  - {name: 🇭🇰 5.75| 香港寬頻, server: hkbn2.tcpbbr.net, port: 80, type: vmess, uuid: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
+  - {name: 🇭🇰 5.64|HK562, server: 18.163.112.47, port: 8080, type: vmess, uuid: 858432a9-4a9c-4690-ef7b-c7adeb4c9f21, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /Download, ws-headers: {Host: 18.163.112.47}}
+  - {name: 🇸🇬 5.37| SG A GZA, server: gya.v2ray.asia, port: 35786, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 5.33| 直连 香港 ZR公益, server: 16.162.32.76, port: 8888, type: vmess, uuid: 00138042-5598-459e-a56b-d1c7833e5a28, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 16.162.32.76}}
+  - {name: 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1, server: 120.240.86.53, port: 28592, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 4.26| HKT  聊天, server: hkt.nkeo.top, port: 48691, type: vmess, uuid: 95fc0635-0f8c-4d79-bd8d-cc5ecb826b57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: hkt.nkeo.top}}
+  - {name: 🇯🇵 4.19| 日本03, server: azhk.zz123.xyz, port: 34083, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: azhk.zz123.xyz}}
+  - {name: 🇭🇰 4.17| 香港1三网优化, server: 909hk1.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 909hk1.fans8.xyz}}
+  - {name: 🇸🇬 4.01| 新加坡G3, server: ah.cncm.v2bees.com, port: 51013, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: xueshu.baidu.com}}
+  - {name: 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4, server: 101.67.7.29, port: 25044, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇯🇵 3.73| 日本 01  上海独享, server: mack.dliroom.co, port: 10006, type: vmess, uuid: b567bd47-bae6-3a4f-976a-3a64b701549c, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: jp03.ui3fuj66606.com}}
+  - {name: 🇸🇬 3.69| 新加坡G2, server: ah.cncm.v2bees.com, port: 51003, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: xueshu.baidu.com}}
+  - {name: 🇭🇰 3.68| HK A GZB, server: gyb.v2ray.asia, port: 36857, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 3.65| 新加坡53端口AZ, server: azhk.xiaoyizi.in, port: 10086, type: vmess, uuid: 95fc0635-0f8c-4d79-bd8d-cc5ecb826b57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /sg53, ws-headers: {Host: azhk.xiaoyizi.in}}
+  - {name: 🇸🇬 3.54| SG A JM, server: jm.v2ray.asia, port: 28592, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇨🇳 3.41|台湾01, server: jike-cccn2.ddns-only.xyz, port: 39205, type: vmess, uuid: b8da3f41-58ec-3294-891e-cc27ecb1244a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /jike1, ws-headers: {Host: jike1-hinet03.ddns-only.xyz}}
-  - {name: 🇨🇳 3.53|CN2655, server: icajm.moox.icu, port: 34019, type: vmess, uuid: fe65a2ed-385e-42cf-a231-1abac116490c, alterId: 1, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: icajm.moox.icu}}
-  - {name: 🇨🇳 3.64| I5xTW台北HiNetVC31131, server: yqy31131.china-cdn-net.com, port: 31131, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy31131.china-cdn-net.com}}
-  - {name: 🇨🇳 3.66| I6xTW彰化HiNetRC32127, server: yqy32127.china-cdn-net.com, port: 32127, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 3.86| H3xTW彰化HiNetVC32135, server: yqy32135.china-cdn-net.com, port: 32135, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy32135.china-cdn-net.com}}
-  - {name: 🇨🇳 3.86| I5xTW彰化HiNetRC32122, server: yqy32122.china-cdn-net.com, port: 32122, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 3.87| H3xTW彰化HiNetRC32125, server: yqy32125.china-cdn-net.com, port: 32125, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.04| I5xTW台北HiNetVC31233, server: yqy31233.china-cdn-net.com, port: 31233, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy31233.china-cdn-net.com}}
-  - {name: 🇨🇳 4.15| H25xTW彰化HiNetRC32121, server: yqy32121.china-cdn-net.com, port: 32121, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.23| H25xTW台北HiNetVC31132, server: yqy31132.china-cdn-net.com, port: 31132, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy31132.china-cdn-net.com}}
-  - {name: 🇨🇳 4.24| I5xTW彰化HiNetVC32233, server: yqy32233.china-cdn-net.com, port: 32233, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy32233.china-cdn-net.com}}
-  - {name: 🇨🇳 4.29| ITW高雄龍抬頭HiNetRC33122, server: yqy33122.china-cdn-net.com, port: 33122, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.35| H3xTW台北HiNetRC31126, server: yqy31126.china-cdn-net.com, port: 31126, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.39| HTW高雄龍抬頭HiNetRC33121, server: yqy33121.china-cdn-net.com, port: 33121, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.42| H3xTW彰化HiNetVC32136, server: yqy32136.china-cdn-net.com, port: 32136, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy32136.china-cdn-net.com}}
-  - {name: 🇨🇳 4.46| I5xTW彰化HiNetRC32223, server: yqy32223.china-cdn-net.com, port: 32223, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.47| H3xTW台北HiNetRC31125, server: yqy31125.china-cdn-net.com, port: 31125, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.51| H25xTW台北HiNetRC31121, server: yqy31121.china-cdn-net.com, port: 31121, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.54|CN2670, server: tk.shcn2.tkddns.xyz, port: 22642, type: vmess, uuid: 98e96c9f-4bb3-39d4-9a2c-fac04257f7c7, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: tk.shcn2.tkddns.xyz}}
-  - {name: 🇨🇳 4.65| I6xTW台北HiNetVC31137, server: yqy31137.china-cdn-net.com, port: 31137, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy31137.china-cdn-net.com}}
-  - {name: 🇨🇳 4.66| I5xTW台北HiNetRC31122, server: yqy31122.china-cdn-net.com, port: 31122, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.85| H3xTW彰化HiNetRC32126, server: yqy32126.china-cdn-net.com, port: 32126, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 4.94| H3xTW台北HiNetVC31135, server: yqy31135.china-cdn-net.com, port: 31135, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy31135.china-cdn-net.com}}
-  - {name: 🇨🇳 5.05| H3xTW台北HiNetVC31136, server: yqy31136.china-cdn-net.com, port: 31136, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy31136.china-cdn-net.com}}
-  - {name: 🇨🇳 5.05| I6xTW台北HiNetRC31127, server: yqy31127.china-cdn-net.com, port: 31127, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇨🇳 5.11| I5xTW台北HiNetRC31223, server: yqy31223.china-cdn-net.com, port: 31223, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇩🇪 1.27|DE3524, server: 5.183.179.138, port: 443, type: trojan, password: 28d98f761aca9d636f44db62544628eb, skip-cert-verify: false}
-  - {name: 🇩🇪 1.42|DE3525, server: 194.195.124.174, port: 4443, type: trojan, password: 7x42LetRa0, skip-cert-verify: false}
-  - {name: 🇩🇪 1.54|DE3522, server: 139.59.209.152, port: 4443, type: trojan, password: 7x42LetRa0, skip-cert-verify: false}
-  - {name: 🇬🇧 1.46|直连 英国 BBC Netflix SG, server: 46.101.28.98, port: 12222, type: vmess, uuid: 6ae2e994-2018-4f9f-a5bb-4639c14ba05f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 46.101.28.98}}
-  - {name: 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68, server: 1.transit.t.qjnodeip.xyz, port: 60649, type: vmess, uuid: 615505e8-e63c-3bad-b3e7-d5e6cf99387e, alterId: 8, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /HGzsmqibHG02Z, ws-headers: {Host: dddwda.xyz}}
-  - {name: 🇭🇰 1.00|HK5218, server: f2s.jddg.me, port: 30004, type: vmess, uuid: 151939e6-092d-42d1-a817-6636f5ba291c, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: f2s.jddg.me}}
-  - {name: 🇭🇰 1.14| 香港 02, server: dg-hk-node02.linkthink.app, port: 12705, type: ssr, cipher: aes-256-cfb, password: e5opjuLDEQ, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 223809:m69bcxi8gq, obfs-param: ajax.microsoft.com}
-  - {name: 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41, server: 120.232.173.88, port: 25610, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 1.61| 香港04测试, server: 42.157.196.104, port: 20248, type: ssr, cipher: aes-256-cfb, password: CWSZscLkjf, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 223809:m69bcxi8gq, obfs-param: ajax.microsoft.com}
-  - {name: 🇭🇰 1.66| 香港8三网优化, server: 909hk2.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 909hk2.fans8.xyz}}
-  - {name: 🇭🇰 1.67| 香港04测试 2, server: 42.157.196.104, port: 20787, type: ssr, cipher: aes-256-cfb, password: CWSZscLkjf, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 227003:iawnbjGNuv, obfs-param: ""}
-  - {name: 🇭🇰 1.70| 香港04测试 3, server: 42.157.196.104, port: 20011, type: ssr, cipher: aes-256-cfb, password: CWSZscLkjf, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 227782:L1x3oQKUMT, obfs-param: ""}
-  - {name: 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22, server: 120.240.86.53, port: 33130, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 1.84| HKT转江门327, server: sl201.jdxx.xyz, port: 35003, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇭🇰 1.86| 香港04测试 4, server: 42.157.196.104, port: 20758, type: ssr, cipher: aes-256-cfb, password: CWSZscLkjf, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 227785:819VOzCkG3, obfs-param: ""}
-  - {name: 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72, server: 120.232.41.42, port: 33332, type: vmess, uuid: dc66f479-7453-33ea-9d7f-9a10e04591bf, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /tnt-us2, ws-headers: {Host: t.me/vpnhat}}
-  - {name: 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15, server: 101.67.7.29, port: 25019, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17, server: 183.232.13.60, port: 36857, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 2.58| 江西cn2 香港 ZR公益, server: jxcn2.xhbao.me, port: 56321, type: vmess, uuid: 00138042-5598-459e-a56b-d1c7833e5a28, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: jxcn2.xhbao.me}}
-  - {name: 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6, server: 101.67.7.29, port: 25033, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 2.76| 香港G2, server: g.v2bees.com, port: 36567, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
-  - {name: 🇭🇰 2.78| 香港G3, server: g.v2bees.com, port: 25015, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
-  - {name: 🇭🇰 2.80| 香港I02BGZ, server: gz.nat.beer.mypeter.top, port: 60610, type: vmess, uuid: 205c9676-57ec-31dd-b28b-21784535e18c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ss, ws-headers: {Host: inkhk02.mypeter.top}}
-  - {name: 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生, server: lv3fl2ciw6cwas22peq.v22222.xyz, port: 33332, type: vmess, uuid: dc66f479-7453-33ea-9d7f-9a10e04591bf, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /tnt-hgc2, ws-headers: {Host: baidu.com}}
-  - {name: 🇭🇰 2.95| 香港G5, server: ahmas.v2bees.com, port: 32315, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
-  - {name: 🇭🇰 3.02| 香港3三网优化, server: 615hk2.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 615hk2.fans8.xyz}}
-  - {name: 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5, server: 120.240.86.53, port: 31262, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 3.21| 香港G4, server: ahmas.v2bees.com, port: 31774, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 3.37| 香港VIP01奈飞解锁, server: g.v2bees.com, port: 31000, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13, server: 120.232.173.88, port: 33532, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇯🇵 3.31|JP6816, server: 146.56.187.13, port: 80, type: vmess, uuid: 562398c8-cb7f-4850-90eb-2fd17dccb13a, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 146.56.187.13}}
   - {name: 🇭🇰 3.25| 广移 香港 ZR公益, server: gzcm.xhbao.me, port: 58963, type: vmess, uuid: 00138042-5598-459e-a56b-d1c7833e5a28, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: gzcm.xhbao.me}}
   - {name: 🇭🇰 3.25| 江门 香港 ZR公益, server: cmjm.xhbao.me, port: 58963, type: vmess, uuid: 00138042-5598-459e-a56b-d1c7833e5a28, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: cmjm.xhbao.me}}
-  - {name: 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13, server: 120.232.173.88, port: 33532, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 3.37| 香港VIP01奈飞解锁, server: g.v2bees.com, port: 31000, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
-  - {name: 🇭🇰 3.55| HKT转江门227 2, server: sl201.jdxx.xyz, port: 35002, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇭🇰 3.68| HK A GZB, server: gyb.v2ray.asia, port: 36857, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4, server: 101.67.7.29, port: 25044, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 3.90| H3xHKHKTBGPVC36233, server: yqy36233.china-cdn-net.com, port: 36233, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy36233.china-cdn-net.com}}
-  - {name: 🇭🇰 3.91|香港免流04, server: hk04.zz123.xyz, port: 80, type: vmess, uuid: 3126dadc-7e23-346d-81a6-7db8b7b143f5, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: a.189.cn}}
-  - {name: 🇭🇰 3.93| H3xHKHKTBGPVC36433, server: yqy36433.china-cdn-net.com, port: 36433, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy36433.china-cdn-net.com}}
-  - {name: 🇭🇰 3.97| HKT转江门127, server: sl201.jdxx.xyz, port: 35001, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇭🇰 4.16| I6xHKHKTBGPRC36424, server: yqy36424.china-cdn-net.com, port: 36424, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇭🇰 4.17| 香港1三网优化, server: 909hk1.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 909hk1.fans8.xyz}}
-  - {name: 🇭🇰 4.19| 香港 02 2, server: dg-hk-node02.linkthink.app, port: 12312, type: ssr, cipher: aes-256-cfb, password: e5opjuLDEQ, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 227003:iawnbjGNuv, obfs-param: ""}
-  - {name: 🇭🇰 4.26| HKT  聊天, server: hkt.nkeo.top, port: 48691, type: vmess, uuid: 95fc0635-0f8c-4d79-bd8d-cc5ecb826b57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: hkt.nkeo.top}}
-  - {name: 🇭🇰 4.28| H3xHKHKTBGPVC36333, server: yqy36333.china-cdn-net.com, port: 36333, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy36333.china-cdn-net.com}}
-  - {name: 🇭🇰 4.34| HKT转江门427, server: sl201.jdxx.xyz, port: 35004, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇭🇰 4.40| H3xHKHKTBGPRC36223, server: yqy36223.china-cdn-net.com, port: 36223, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇭🇰 4.41| I6xHKHKTBGPRC36224, server: yqy36224.china-cdn-net.com, port: 36224, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇭🇰 4.42| H3xHKHKTBGPRC36423, server: yqy36423.china-cdn-net.com, port: 36423, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇭🇰 4.56|香港免流03, server: hk03.zz123.xyz, port: 80, type: vmess, uuid: 3126dadc-7e23-346d-81a6-7db8b7b143f5, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: a.189.cn}}
-  - {name: 🇭🇰 4.70| I6xHKHKTBGPVC36334, server: yqy36334.china-cdn-net.com, port: 36334, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy36334.china-cdn-net.com}}
-  - {name: 🇭🇰 4.73| 香港 免费节点EC2负载均衡, server: gz2.52168.xyz, port: 2109, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:f91myz466fp, obfs-param: bcbf9623.baidu.com}
-  - {name: 🇭🇰 4.76| I6xHKHKTBGPVC36434, server: yqy36434.china-cdn-net.com, port: 36434, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy36434.china-cdn-net.com}}
-  - {name: 🇭🇰 4.85| I6xHKHKTBGPVC36234, server: yqy36234.china-cdn-net.com, port: 36234, type: vmess, uuid: 27d52299-cc4e-3a79-830a-bc7ee4c81a8e, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /iso, ws-headers: {Host: yqy36234.china-cdn-net.com}}
-  - {name: 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1, server: 120.240.86.53, port: 28592, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇭🇰 5.03| I6xHKHKTBGPRC36124, server: yqy36124.china-cdn-net.com, port: 36124, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇭🇰 5.06| H3xHKHKTBGPRC36123, server: yqy36123.china-cdn-net.com, port: 36123, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇭🇰 5.26| I6xHKHKTBGPRC36324, server: yqy36324.china-cdn-net.com, port: 36324, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇭🇰 5.33| 直连 香港 ZR公益, server: 16.162.32.76, port: 8888, type: vmess, uuid: 00138042-5598-459e-a56b-d1c7833e5a28, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 16.162.32.76}}
-  - {name: 🇭🇰 5.64|HK562, server: 18.163.112.47, port: 8080, type: vmess, uuid: 858432a9-4a9c-4690-ef7b-c7adeb4c9f21, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /Download, ws-headers: {Host: 18.163.112.47}}
-  - {name: 🇭🇰 5.75| 香港寬頻, server: hkbn2.tcpbbr.net, port: 80, type: vmess, uuid: 4c3ba552-174e-11ec-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
-  - {name: 🇭🇰 6.36| 香港 01 2, server: dg-hk-node01.linkthink.app, port: 10520, type: ssr, cipher: rc4-md5, password: abK09D1FnV, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 227782:L1x3oQKUMT, obfs-param: ""}
-  - {name: 🇭🇰 6.48| 香港 01 3, server: dg-hk-node01.linkthink.app, port: 10418, type: ssr, cipher: rc4-md5, password: abK09D1FnV, protocol: auth_aes128_md5, obfs: http_post, protocol-param: 227785:819VOzCkG3, obfs-param: ""}
-  - {name: 🇯🇵 1.05| 日本移动隧道127 2, server: sl201.jdxx.xyz, port: 26386, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇯🇵 2.70| 日本 03  PCCW, server: mack.dliroom.co, port: 10007, type: vmess, uuid: b567bd47-bae6-3a4f-976a-3a64b701549c, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pqjp01.0894168.xyz}}
-  - {name: 🇯🇵 3.17|JP6823, server: jp-server-02.selfupay.com, port: 443, type: trojan, password: a3fa58b581353bb375d2ddad0f327938, skip-cert-verify: false}
-  - {name: 🇯🇵 3.31|JP6816, server: 146.56.187.13, port: 80, type: vmess, uuid: 562398c8-cb7f-4850-90eb-2fd17dccb13a, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 146.56.187.13}}
-  - {name: 🇯🇵 3.65| 日本移动隧道427 2, server: sl201.jdxx.xyz, port: 26389, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇯🇵 3.65|JP6955, server: 45.66.134.219, port: 443, type: trojan, password: a3fa58b581353bb375d2ddad0f327938, skip-cert-verify: false}
-  - {name: 🇯🇵 3.69| 日本  奈飞动画疯06xAZ, server: az.xiaoyizi.in, port: 10086, type: vmess, uuid: 95fc0635-0f8c-4d79-bd8d-cc5ecb826b57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /lijp, ws-headers: {Host: az.xiaoyizi.in}}
-  - {name: 🇯🇵 3.73| 日本 01  上海独享, server: mack.dliroom.co, port: 10006, type: vmess, uuid: b567bd47-bae6-3a4f-976a-3a64b701549c, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: jp03.ui3fuj66606.com}}
-  - {name: 🇯🇵 3.82| 日本移动隧道227 2, server: sl201.jdxx.xyz, port: 26387, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇯🇵 4.19| 日本03, server: azhk.zz123.xyz, port: 34083, type: vmess, uuid: 08090dfa-3bad-3fb3-82cd-f7bd238c4abf, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /zz, ws-headers: {Host: azhk.zz123.xyz}}
-  - {name: 🇰🇷 3.96| 韩国移动隧道527 2, server: sl201.jdxx.xyz, port: 26390, type: ssr, cipher: chacha20-ietf, password: MaOKEa, protocol: auth_aes128_md5, obfs: tls1.2_ticket_auth, protocol-param: 1237:Wa2lOa, obfs-param: b00e31237.microsoft.com}
-  - {name: 🇲🇾 1.99| 马来西亚1三网优化, server: 923my.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 923my.fans8.xyz}}
-  - {name: 🇳🇱 1.43|NL7624, server: 178.62.201.120, port: 4443, type: trojan, password: 7x42LetRa0, skip-cert-verify: false}
-  - {name: 🇳🇱 1.57|NL7613, server: 89.31.127.151, port: 443, type: trojan, password: a3fa58b581353bb375d2ddad0f327938, skip-cert-verify: false}
-  - {name: 🇳🇱 1.64|NL7849 5004Mb, server: 185.171.120.144, port: 443, type: trojan, password: 36ebef7d1b1d6205fd0c55f28800e674, skip-cert-verify: false}
-  - {name: 🇳🇱 3.48| githubcomfreefq  荷兰  1, server: 132.226.172.134, port: 25381, type: vmess, uuid: 7a44d386-e7eb-41d4-92ce-ffbfb32b7957, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇷🇴 1.37|RO10004, server: 185.126.116.235, port: 443, type: trojan, password: 28d98f761aca9d636f44db62544628eb, skip-cert-verify: false}
-  - {name: 🇷🇴 5.53|RO10010  951Mb, server: hk-server-01.selfupay.com, port: 443, type: trojan, password: 36ebef7d1b1d6205fd0c55f28800e674, skip-cert-verify: false}
-  - {name: 🇷🇴 5.57|RO10015  858Mb, server: 62.216.92.180, port: 443, type: trojan, password: 36ebef7d1b1d6205fd0c55f28800e674, skip-cert-verify: false}
-  - {name: 🇷🇺 1.12|俄罗斯01, server: jike-shlt.ddns-only.xyz, port: 39307, type: vmess, uuid: b8da3f41-58ec-3294-891e-cc27ecb1244a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /jike1, ws-headers: {Host: jike1-ru04.ddns-only.xyz}}
-  - {name: 🇷🇺 1.73| Russia, server: russia.cscecsr.tk, port: 443, type: trojan, password: abc123, sni: russia.cscecsr.tk, skip-cert-verify: false}
-  - {name: 🇷🇺 2.03|RU9917, server: 45.141.102.51, port: 54367, type: vmess, uuid: d7bbbcad-0653-42a1-b101-db44624707aa, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 1.15|新加坡02, server: jike-gzyd.ddns-only.xyz, port: 39551, type: vmess, uuid: b8da3f41-58ec-3294-891e-cc27ecb1244a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /jike1, ws-headers: {Host: jike1-linode01.ddns-only.xyz}}
-  - {name: 🇸🇬 2.34|SG10131, server: 81.90.189.85, port: 443, type: trojan, password: 28d98f761aca9d636f44db62544628eb, skip-cert-verify: false}
-  - {name: 🇸🇬 2.51|更新地址reurlccW35gV7, server: 139.155.22.227, port: 49110, type: vmess, uuid: f7675b7e-59bf-435c-ac03-dc2482f27e5d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 2.84|直连 新加坡1 Netflix SG, server: 165.22.61.210, port: 21888, type: vmess, uuid: 6ae2e994-2018-4f9f-a5bb-4639c14ba05f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 165.22.61.210}}
-  - {name: 🇸🇬 2.89|更新地址reurlccW35gV7, server: v2-rbb-v5.cl123.xyz, port: 80, type: vmess, uuid: 6d3faf56-93b6-33ca-a57d-673bb6ab696f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /hls/cctv5phd.m3u8, ws-headers: {Host: v2-rbb-v5.cl123.xyz}}
+  - {name: 🇭🇰 3.21| 香港G4, server: ahmas.v2bees.com, port: 31774, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5, server: 120.240.86.53, port: 31262, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
   - {name: 🇸🇬 3.15| 新加坡G1, server: g.v2bees.com, port: 26457, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
-  - {name: 🇸🇬 3.52|SG10520 1246Mb, server: 188.166.242.117, port: 4443, type: trojan, password: 7x42LetRa0, skip-cert-verify: false}
-  - {name: 🇸🇬 3.54| SG A JM, server: jm.v2ray.asia, port: 28592, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇸🇬 3.65| 新加坡53端口AZ, server: azhk.xiaoyizi.in, port: 10086, type: vmess, uuid: 95fc0635-0f8c-4d79-bd8d-cc5ecb826b57, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /sg53, ws-headers: {Host: azhk.xiaoyizi.in}}
-  - {name: 🇸🇬 3.69| 新加坡G2, server: ah.cncm.v2bees.com, port: 51003, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: xueshu.baidu.com}}
-  - {name: 🇸🇬 4.01| 新加坡G3, server: ah.cncm.v2bees.com, port: 51013, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: xueshu.baidu.com}}
-  - {name: 🇸🇬 4.22| 新加坡 VIP节点, server: gz2.52168.xyz, port: 2106, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 623:f91myz466fp, obfs-param: bcbf9623.baidu.com}
-  - {name: 🇸🇬 5.37| SG A GZA, server: gya.v2ray.asia, port: 35786, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇲 1.28| H26xUS紐約DigitalOceanRC3312123, server: SCDN.3312123.HPQDDO.China-nCDN-nRDS.com, port: 12123, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇺🇲 1.34| H26xUS紐約DigitalOceanRC3312121, server: SCDN.3312121.DOVKDO.China-nCDN-nRDS.com, port: 12121, type: ssr, cipher: aes-256-cfb, password: http://cc.ax/, protocol: auth_aes128_md5, obfs: plain, protocol-param: 48529:tCIwlf, obfs-param: data.bilibili.com/8d41348529}
-  - {name: 🇺🇲 1.36|US16408, server: 192.74.254.167, port: 20508, type: vmess, uuid: 764e808a-115e-11ec-a88f-00163c9f4934, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇲 1.41| cfmemcomUS美国19, server: 23.234.223.28, port: 443, type: vmess, uuid: e52db663-720b-4894-8235-dac718e65e3f, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/323127100515, ws-headers: {Host: www.68080962.xyz}}
-  - {name: 🇺🇲 1.61|US16403, server: 192.74.254.112, port: 58719, type: vmess, uuid: ae1048eb-a962-48f6-b15f-013d83d0b6c7, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇲 1.90|US17637 5693Mb, server: 72.167.33.106, port: 443, type: trojan, password: a3fa58b581353bb375d2ddad0f327938, skip-cert-verify: false}
-  - {name: 🇺🇲 1.93| US A HZ NETFLIX, server: hy.v2ray.asia, port: 25019, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
-  - {name: 🇺🇲 2.14|US16467, server: 72.167.45.6, port: 443, type: trojan, password: a3fa58b581353bb375d2ddad0f327938, skip-cert-verify: false}
-  - {name: 🇺🇲 2.16|RelayCNUS4135, server: 120.232.41.42, port: 33331, type: vmess, uuid: dc66f479-7453-33ea-9d7f-9a10e04591bf, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /tnt-us2, ws-headers: {Host: 120.232.41.42}}
-  - {name: 🇺🇲 4.21|US17073, server: 184.168.127.50, port: 443, type: trojan, password: 36ebef7d1b1d6205fd0c55f28800e674, skip-cert-verify: false}
+  - {name: 🇭🇰 3.02| 香港3三网优化, server: 615hk2.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 615hk2.fans8.xyz}}
+  - {name: 🇭🇰 2.95| 香港G5, server: ahmas.v2bees.com, port: 32315, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生, server: lv3fl2ciw6cwas22peq.v22222.xyz, port: 33332, type: vmess, uuid: dc66f479-7453-33ea-9d7f-9a10e04591bf, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /tnt-hgc2, ws-headers: {Host: baidu.com}}
+  - {name: 🇸🇬 2.84|直连 新加坡1 Netflix SG, server: 165.22.61.210, port: 21888, type: vmess, uuid: 6ae2e994-2018-4f9f-a5bb-4639c14ba05f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 165.22.61.210}}
+  - {name: 🇭🇰 2.80| 香港I02BGZ, server: gz.nat.beer.mypeter.top, port: 60610, type: vmess, uuid: 205c9676-57ec-31dd-b28b-21784535e18c, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ss, ws-headers: {Host: inkhk02.mypeter.top}}
+  - {name: 🇭🇰 2.78| 香港G3, server: g.v2bees.com, port: 25015, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇭🇰 2.76| 香港G2, server: g.v2bees.com, port: 36567, type: vmess, uuid: 5d6c7299-810e-49a4-b10f-e8a6987e5b51, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: www.baidu.com}}
+  - {name: 🇯🇵 2.70| 日本 03  PCCW, server: mack.dliroom.co, port: 10007, type: vmess, uuid: b567bd47-bae6-3a4f-976a-3a64b701549c, alterId: 2, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: pqjp01.0894168.xyz}}
+  - {name: 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6, server: 101.67.7.29, port: 25033, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 2.58| 江西cn2 香港 ZR公益, server: jxcn2.xhbao.me, port: 56321, type: vmess, uuid: 00138042-5598-459e-a56b-d1c7833e5a28, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: jxcn2.xhbao.me}}
+  - {name: 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17, server: 183.232.13.60, port: 36857, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇸🇬 2.51|更新地址reurlccW35gV7, server: 139.155.22.227, port: 49110, type: vmess, uuid: f7675b7e-59bf-435c-ac03-dc2482f27e5d, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 2.16|RelayCNUS4135, server: 120.232.41.42, port: 33331, type: vmess, uuid: dc66f479-7453-33ea-9d7f-9a10e04591bf, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /tnt-us2, ws-headers: {Host: 120.232.41.42}}
+  - {name: 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15, server: 101.67.7.29, port: 25019, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72, server: 120.232.41.42, port: 33332, type: vmess, uuid: dc66f479-7453-33ea-9d7f-9a10e04591bf, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /tnt-us2, ws-headers: {Host: t.me/vpnhat}}
+  - {name: 🇲🇾 1.99| 马来西亚1三网优化, server: 923my.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 923my.fans8.xyz}}
+  - {name: 1.97|193385145tcp, server: 193.38.51.45, port: 65162, type: vmess, uuid: 4b31ea60-3141-11ec-a70a-8e8d0e0ad36e, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 1.93| US A HZ NETFLIX, server: hy.v2ray.asia, port: 25019, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22, server: 120.240.86.53, port: 33130, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 1.66|712 5998Mb, server: v1.ssrsub.com, port: 8401, type: vmess, uuid: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ssrsub, ws-headers: {Host: v1.ssrsub.com}}
+  - {name: 🇭🇰 1.66| 香港8三网优化, server: 909hk2.fans8.xyz, port: 80, type: vmess, uuid: dd1e127b-7068-384f-98ac-b0358163017f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /v2ray, ws-headers: {Host: 909hk2.fans8.xyz}}
+  - {name: 🇺🇸 1.61|US16403, server: 192.74.254.112, port: 58719, type: vmess, uuid: ae1048eb-a962-48f6-b15f-013d83d0b6c7, alterId: 64, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇦🇺 1.61|直连 澳大利亚 Netflix SG, server: 149.28.172.85, port: 12222, type: vmess, uuid: 6ae2e994-2018-4f9f-a5bb-4639c14ba05f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 149.28.172.85}}
+  - {name: 1.54|708  616Mb, server: v3.ssrsub.com, port: 158, type: vmess, uuid: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ssrsub, ws-headers: {Host: v3.ssrsub.com}}
+  - {name: 🇬🇧 1.46|直连 英国 BBC Netflix SG, server: 46.101.28.98, port: 12222, type: vmess, uuid: 6ae2e994-2018-4f9f-a5bb-4639c14ba05f, alterId: 1, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: 46.101.28.98}}
+  - {name: 1.44|CYL科技20211023, server: 1.transit.t.qjnodeip.xyz, port: 48404, type: vmess, uuid: 615505e8-e63c-3bad-b3e7-d5e6cf99387e, alterId: 8, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /Jp2, ws-headers: {Host: jp.dadwff.xyz}}
+  - {name: 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41, server: 120.232.173.88, port: 25610, type: vmess, uuid: fdc2ac0a-ce39-4b69-ae6a-4cc38643440f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: false}
+  - {name: 🇺🇸 1.41| cfmemcomUS美国19, server: 23.234.223.28, port: 443, type: vmess, uuid: e52db663-720b-4894-8235-dac718e65e3f, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/323127100515, ws-headers: {Host: www.68080962.xyz}}
+  - {name: 🇸🇬 1.15|新加坡02, server: jike-gzyd.ddns-only.xyz, port: 39551, type: vmess, uuid: b8da3f41-58ec-3294-891e-cc27ecb1244a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /jike1, ws-headers: {Host: jike1-linode01.ddns-only.xyz}}
+  - {name: 🇷🇺 1.12|俄罗斯01, server: jike-shlt.ddns-only.xyz, port: 39307, type: vmess, uuid: b8da3f41-58ec-3294-891e-cc27ecb1244a, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /jike1, ws-headers: {Host: jike1-ru04.ddns-only.xyz}}
+  - {name: 1.10|698  364Mb, server: v5.ssrsub.com, port: 158, type: vmess, uuid: 5b092e88-82d8-47eb-a7a2-98bcf02754e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /ssrsub, ws-headers: {Host: v5.ssrsub.com}}
+  - {name: 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68, server: 1.transit.t.qjnodeip.xyz, port: 60649, type: vmess, uuid: 615505e8-e63c-3bad-b3e7-d5e6cf99387e, alterId: 8, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /HGzsmqibHG02Z, ws-headers: {Host: dddwda.xyz}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -203,782 +97,358 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
-      - 1.10|05包括V2ray和Trojan
-      - 1.10|698  364Mb
-      - 1.26|GB5045
-      - 1.29|723  556Mb
-      - 1.44|CYL科技20211023
-      - 1.49|  297Mb
-      - 1.54|03公益等级線路嚴格限速
-      - 1.54|708  616Mb
-      - 1.56|GB5059
-      - 1.65|721  537Mb
-      - 1.66|712 5998Mb
-      - 1.70|HU5310
-      - 1.74|06中继中转隧道线路覆盖
-      - 1.97|193385145tcp
-      - 2.04|697
-      - 2.14|725 3580Mb
-      - 2.15|trojan
-      - 2.32|37长期套餐覆盖IPLC专线
-      - 2.35|07长期套餐覆盖IPLC专线
-      - 2.89|33公益等级線路嚴格限速
-      - 2.95| Game 1 PPhttp
-      - 3.40| Game 3 PPhttp
-      - 3.70|国内中专227 2
-      - 3.84|AZ转移动0227
-      - 3.99|AZ转移动0327
-      - 4.04|35包括V2ray和Trojan
-      - 4.12|AZ转移动0127
-      - 4.14|国内中专327 2
-      - 4.15|AZ转移动0527 2
-      - 4.37|36中继中转隧道线路覆盖
-      - 4.38|AZ转移动0427
-      - 4.45|国内中专127 2
-      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
-      - 🇦🇺 2.67| AU884
-      - 🇨🇳 1.05|34捐赠解锁更多协议线路
-      - 🇨🇳 1.08| ITW高雄龍抬頭HiNetVC33132
-      - 🇨🇳 1.45| HTW高雄龍抬頭HiNetVC33237
-      - 🇨🇳 1.50| I6xTW台北HiNetVC31138
-      - 🇨🇳 1.57| ITW高雄龍抬頭HiNetRC33128
-      - 🇨🇳 1.79|04捐赠解锁更多协议线路
-      - 🇨🇳 1.80| HTW高雄龍抬頭HiNetRC33227
-      - 🇨🇳 1.80| ITW高雄龍抬頭HiNetVC33138
-      - 🇨🇳 1.90| HTW高雄龍抬頭HiNetVC33135
-      - 🇨🇳 2.05|CN2657
-      - 🇨🇳 2.25| ITW高雄龍抬頭HiNetRC33127
-      - 🇨🇳 2.38|CN2668
-      - 🇨🇳 2.40| I6xTW台北HiNetRC31128
-      - 🇨🇳 2.43| I6xTW彰化HiNetRC32128
-      - 🇨🇳 2.44|CN2660
-      - 🇨🇳 2.54| HTW高雄龍抬頭HiNetVC33136
-      - 🇨🇳 2.54|CN2658
-      - 🇨🇳 2.85| H25xTW彰化HiNetVC32132
-      - 🇨🇳 3.01| HTW高雄龍抬頭HiNetVC33131
-      - 🇨🇳 3.05| 01ChinaG几鸡学习助理
-      - 🇨🇳 3.18|CN2656
-      - 🇨🇳 3.38| ITW高雄龍抬頭HiNetVC33137
-      - 🇨🇳 3.39| I5xTW彰化HiNetVC32131
+      - 🇭🇰 4.43| 香港I02BGZ
+      - 🇭🇰 4.26| 香港G2
+      - 🇭🇰 8.13| 香港免流04
+      - 🇨🇳 4.82|台湾01
+      - 🇭🇰 7.39| 香港免流05 解锁新加坡区奈飞
+      - 🇭🇰 3.19| 香港G5
+      - 🇯🇵 2.52| 日本 03  PCCW
+      - 🇯🇵 4.97| 日本 01  上海独享
+      - 🇭🇰 4.83| 香港G3
+      - 🇭🇰 4.36| 香港G4
+      - 🇭🇰 7.82| 香港免流01
+      - 🇭🇰 8.48| 香港免流02
+      - 🇭🇰 4.96| 香港VIP01奈飞解锁
+      - 🇸🇬 6.79| 新加坡G1
+      - 🇸🇬 5.82| 新加坡G2
+      - 🇸🇬 3.77| 新加坡G3
+      - 🇭🇰 2.87| 新加坡  AZHK  02  1x
+      - 🇨🇳 2.64|CN2637 1082Mb
+      - 🇭🇰 6.22| 香港寬頻
+      - 🇭🇰 2.12|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇸🇬 6.42| 新加坡01
+      - 🇭🇰 5.55| HKT  聊天
+      - 🇸🇬 5.12| 新加坡02
+      - 🇮🇳 4.15| 印度01 包月3元起
+      - 🇭🇰 3.20|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点9
+      - 🇯🇵 3.19| 日本03
+      - 🇭🇰 3.05|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点4
+      - 🇸🇬 2.06| 新加坡03
+      - 🇭🇰 5.75| 香港寬頻
+      - 🇭🇰 5.64|HK562
+      - 🇸🇬 5.37| SG A GZA
+      - 🇭🇰 5.33| 直连 香港 ZR公益
+      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
+      - 🇭🇰 4.26| HKT  聊天
+      - 🇯🇵 4.19| 日本03
+      - 🇭🇰 4.17| 香港1三网优化
+      - 🇸🇬 4.01| 新加坡G3
+      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
+      - 🇯🇵 3.73| 日本 01  上海独享
+      - 🇸🇬 3.69| 新加坡G2
+      - 🇭🇰 3.68| HK A GZB
+      - 🇸🇬 3.65| 新加坡53端口AZ
+      - 🇸🇬 3.54| SG A JM
       - 🇨🇳 3.41|台湾01
-      - 🇨🇳 3.53|CN2655
-      - 🇨🇳 3.64| I5xTW台北HiNetVC31131
-      - 🇨🇳 3.66| I6xTW彰化HiNetRC32127
-      - 🇨🇳 3.86| H3xTW彰化HiNetVC32135
-      - 🇨🇳 3.86| I5xTW彰化HiNetRC32122
-      - 🇨🇳 3.87| H3xTW彰化HiNetRC32125
-      - 🇨🇳 4.04| I5xTW台北HiNetVC31233
-      - 🇨🇳 4.15| H25xTW彰化HiNetRC32121
-      - 🇨🇳 4.23| H25xTW台北HiNetVC31132
-      - 🇨🇳 4.24| I5xTW彰化HiNetVC32233
-      - 🇨🇳 4.29| ITW高雄龍抬頭HiNetRC33122
-      - 🇨🇳 4.35| H3xTW台北HiNetRC31126
-      - 🇨🇳 4.39| HTW高雄龍抬頭HiNetRC33121
-      - 🇨🇳 4.42| H3xTW彰化HiNetVC32136
-      - 🇨🇳 4.46| I5xTW彰化HiNetRC32223
-      - 🇨🇳 4.47| H3xTW台北HiNetRC31125
-      - 🇨🇳 4.51| H25xTW台北HiNetRC31121
-      - 🇨🇳 4.54|CN2670
-      - 🇨🇳 4.65| I6xTW台北HiNetVC31137
-      - 🇨🇳 4.66| I5xTW台北HiNetRC31122
-      - 🇨🇳 4.85| H3xTW彰化HiNetRC32126
-      - 🇨🇳 4.94| H3xTW台北HiNetVC31135
-      - 🇨🇳 5.05| H3xTW台北HiNetVC31136
-      - 🇨🇳 5.05| I6xTW台北HiNetRC31127
-      - 🇨🇳 5.11| I5xTW台北HiNetRC31223
-      - 🇩🇪 1.27|DE3524
-      - 🇩🇪 1.42|DE3525
-      - 🇩🇪 1.54|DE3522
-      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
-      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
-      - 🇭🇰 1.00|HK5218
-      - 🇭🇰 1.14| 香港 02
-      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
-      - 🇭🇰 1.61| 香港04测试
-      - 🇭🇰 1.66| 香港8三网优化
-      - 🇭🇰 1.67| 香港04测试 2
-      - 🇭🇰 1.70| 香港04测试 3
-      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
-      - 🇭🇰 1.84| HKT转江门327
-      - 🇭🇰 1.86| 香港04测试 4
-      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
-      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
-      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
-      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
-      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
-      - 🇭🇰 2.76| 香港G2
-      - 🇭🇰 2.78| 香港G3
-      - 🇭🇰 2.80| 香港I02BGZ
-      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
-      - 🇭🇰 2.95| 香港G5
-      - 🇭🇰 3.02| 香港3三网优化
-      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
-      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.37| 香港VIP01奈飞解锁
+      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇯🇵 3.31|JP6816
       - 🇭🇰 3.25| 广移 香港 ZR公益
       - 🇭🇰 3.25| 江门 香港 ZR公益
-      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
-      - 🇭🇰 3.37| 香港VIP01奈飞解锁
-      - 🇭🇰 3.55| HKT转江门227 2
-      - 🇭🇰 3.68| HK A GZB
-      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
-      - 🇭🇰 3.90| H3xHKHKTBGPVC36233
-      - 🇭🇰 3.91|香港免流04
-      - 🇭🇰 3.93| H3xHKHKTBGPVC36433
-      - 🇭🇰 3.97| HKT转江门127
-      - 🇭🇰 4.16| I6xHKHKTBGPRC36424
-      - 🇭🇰 4.17| 香港1三网优化
-      - 🇭🇰 4.19| 香港 02 2
-      - 🇭🇰 4.26| HKT  聊天
-      - 🇭🇰 4.28| H3xHKHKTBGPVC36333
-      - 🇭🇰 4.34| HKT转江门427
-      - 🇭🇰 4.40| H3xHKHKTBGPRC36223
-      - 🇭🇰 4.41| I6xHKHKTBGPRC36224
-      - 🇭🇰 4.42| H3xHKHKTBGPRC36423
-      - 🇭🇰 4.56|香港免流03
-      - 🇭🇰 4.70| I6xHKHKTBGPVC36334
-      - 🇭🇰 4.73| 香港 免费节点EC2负载均衡
-      - 🇭🇰 4.76| I6xHKHKTBGPVC36434
-      - 🇭🇰 4.85| I6xHKHKTBGPVC36234
-      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
-      - 🇭🇰 5.03| I6xHKHKTBGPRC36124
-      - 🇭🇰 5.06| H3xHKHKTBGPRC36123
-      - 🇭🇰 5.26| I6xHKHKTBGPRC36324
-      - 🇭🇰 5.33| 直连 香港 ZR公益
-      - 🇭🇰 5.64|HK562
-      - 🇭🇰 5.75| 香港寬頻
-      - 🇭🇰 6.36| 香港 01 2
-      - 🇭🇰 6.48| 香港 01 3
-      - 🇯🇵 1.05| 日本移动隧道127 2
-      - 🇯🇵 2.70| 日本 03  PCCW
-      - 🇯🇵 3.17|JP6823
-      - 🇯🇵 3.31|JP6816
-      - 🇯🇵 3.65| 日本移动隧道427 2
-      - 🇯🇵 3.65|JP6955
-      - 🇯🇵 3.69| 日本  奈飞动画疯06xAZ
-      - 🇯🇵 3.73| 日本 01  上海独享
-      - 🇯🇵 3.82| 日本移动隧道227 2
-      - 🇯🇵 4.19| 日本03
-      - 🇰🇷 3.96| 韩国移动隧道527 2
-      - 🇲🇾 1.99| 马来西亚1三网优化
-      - 🇳🇱 1.43|NL7624
-      - 🇳🇱 1.57|NL7613
-      - 🇳🇱 1.64|NL7849 5004Mb
-      - 🇳🇱 3.48| githubcomfreefq  荷兰  1
-      - 🇷🇴 1.37|RO10004
-      - 🇷🇴 5.53|RO10010  951Mb
-      - 🇷🇴 5.57|RO10015  858Mb
-      - 🇷🇺 1.12|俄罗斯01
-      - 🇷🇺 1.73| Russia
-      - 🇷🇺 2.03|RU9917
-      - 🇸🇬 1.15|新加坡02
-      - 🇸🇬 2.34|SG10131
-      - 🇸🇬 2.51|更新地址reurlccW35gV7
-      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
-      - 🇸🇬 2.89|更新地址reurlccW35gV7
+      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
       - 🇸🇬 3.15| 新加坡G1
-      - 🇸🇬 3.52|SG10520 1246Mb
-      - 🇸🇬 3.54| SG A JM
-      - 🇸🇬 3.65| 新加坡53端口AZ
-      - 🇸🇬 3.69| 新加坡G2
-      - 🇸🇬 4.01| 新加坡G3
-      - 🇸🇬 4.22| 新加坡 VIP节点
-      - 🇸🇬 5.37| SG A GZA
-      - 🇺🇲 1.28| H26xUS紐約DigitalOceanRC3312123
-      - 🇺🇲 1.34| H26xUS紐約DigitalOceanRC3312121
-      - 🇺🇲 1.36|US16408
-      - 🇺🇲 1.41| cfmemcomUS美国19
-      - 🇺🇲 1.61|US16403
-      - 🇺🇲 1.90|US17637 5693Mb
-      - 🇺🇲 1.93| US A HZ NETFLIX
-      - 🇺🇲 2.14|US16467
-      - 🇺🇲 2.16|RelayCNUS4135
-      - 🇺🇲 4.21|US17073
+      - 🇭🇰 3.02| 香港3三网优化
+      - 🇭🇰 2.95| 香港G5
+      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
+      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
+      - 🇭🇰 2.80| 香港I02BGZ
+      - 🇭🇰 2.78| 香港G3
+      - 🇭🇰 2.76| 香港G2
+      - 🇯🇵 2.70| 日本 03  PCCW
+      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
+      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
+      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
+      - 🇸🇬 2.51|更新地址reurlccW35gV7
+      - 🇺🇸 2.16|RelayCNUS4135
+      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
+      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
+      - 🇲🇾 1.99| 马来西亚1三网优化
+      - 1.97|193385145tcp
+      - 🇺🇸 1.93| US A HZ NETFLIX
+      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
+      - 1.66|712 5998Mb
+      - 🇭🇰 1.66| 香港8三网优化
+      - 🇺🇸 1.61|US16403
+      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
+      - 1.54|708  616Mb
+      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
+      - 1.44|CYL科技20211023
+      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
+      - 🇺🇸 1.41| cfmemcomUS美国19
+      - 🇸🇬 1.15|新加坡02
+      - 🇷🇺 1.12|俄罗斯01
+      - 1.10|698  364Mb
+      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 50
     proxies:
-      - 1.10|05包括V2ray和Trojan
-      - 1.10|698  364Mb
-      - 1.26|GB5045
-      - 1.29|723  556Mb
-      - 1.44|CYL科技20211023
-      - 1.49|  297Mb
-      - 1.54|03公益等级線路嚴格限速
-      - 1.54|708  616Mb
-      - 1.56|GB5059
-      - 1.65|721  537Mb
-      - 1.66|712 5998Mb
-      - 1.70|HU5310
-      - 1.74|06中继中转隧道线路覆盖
-      - 1.97|193385145tcp
-      - 2.04|697
-      - 2.14|725 3580Mb
-      - 2.15|trojan
-      - 2.32|37长期套餐覆盖IPLC专线
-      - 2.35|07长期套餐覆盖IPLC专线
-      - 2.89|33公益等级線路嚴格限速
-      - 2.95| Game 1 PPhttp
-      - 3.40| Game 3 PPhttp
-      - 3.70|国内中专227 2
-      - 3.84|AZ转移动0227
-      - 3.99|AZ转移动0327
-      - 4.04|35包括V2ray和Trojan
-      - 4.12|AZ转移动0127
-      - 4.14|国内中专327 2
-      - 4.15|AZ转移动0527 2
-      - 4.37|36中继中转隧道线路覆盖
-      - 4.38|AZ转移动0427
-      - 4.45|国内中专127 2
-      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
-      - 🇦🇺 2.67| AU884
-      - 🇨🇳 1.05|34捐赠解锁更多协议线路
-      - 🇨🇳 1.08| ITW高雄龍抬頭HiNetVC33132
-      - 🇨🇳 1.45| HTW高雄龍抬頭HiNetVC33237
-      - 🇨🇳 1.50| I6xTW台北HiNetVC31138
-      - 🇨🇳 1.57| ITW高雄龍抬頭HiNetRC33128
-      - 🇨🇳 1.79|04捐赠解锁更多协议线路
-      - 🇨🇳 1.80| HTW高雄龍抬頭HiNetRC33227
-      - 🇨🇳 1.80| ITW高雄龍抬頭HiNetVC33138
-      - 🇨🇳 1.90| HTW高雄龍抬頭HiNetVC33135
-      - 🇨🇳 2.05|CN2657
-      - 🇨🇳 2.25| ITW高雄龍抬頭HiNetRC33127
-      - 🇨🇳 2.38|CN2668
-      - 🇨🇳 2.40| I6xTW台北HiNetRC31128
-      - 🇨🇳 2.43| I6xTW彰化HiNetRC32128
-      - 🇨🇳 2.44|CN2660
-      - 🇨🇳 2.54| HTW高雄龍抬頭HiNetVC33136
-      - 🇨🇳 2.54|CN2658
-      - 🇨🇳 2.85| H25xTW彰化HiNetVC32132
-      - 🇨🇳 3.01| HTW高雄龍抬頭HiNetVC33131
-      - 🇨🇳 3.05| 01ChinaG几鸡学习助理
-      - 🇨🇳 3.18|CN2656
-      - 🇨🇳 3.38| ITW高雄龍抬頭HiNetVC33137
-      - 🇨🇳 3.39| I5xTW彰化HiNetVC32131
+      - 🇭🇰 4.43| 香港I02BGZ
+      - 🇭🇰 4.26| 香港G2
+      - 🇭🇰 8.13| 香港免流04
+      - 🇨🇳 4.82|台湾01
+      - 🇭🇰 7.39| 香港免流05 解锁新加坡区奈飞
+      - 🇭🇰 3.19| 香港G5
+      - 🇯🇵 2.52| 日本 03  PCCW
+      - 🇯🇵 4.97| 日本 01  上海独享
+      - 🇭🇰 4.83| 香港G3
+      - 🇭🇰 4.36| 香港G4
+      - 🇭🇰 7.82| 香港免流01
+      - 🇭🇰 8.48| 香港免流02
+      - 🇭🇰 4.96| 香港VIP01奈飞解锁
+      - 🇸🇬 6.79| 新加坡G1
+      - 🇸🇬 5.82| 新加坡G2
+      - 🇸🇬 3.77| 新加坡G3
+      - 🇭🇰 2.87| 新加坡  AZHK  02  1x
+      - 🇨🇳 2.64|CN2637 1082Mb
+      - 🇭🇰 6.22| 香港寬頻
+      - 🇭🇰 2.12|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇸🇬 6.42| 新加坡01
+      - 🇭🇰 5.55| HKT  聊天
+      - 🇸🇬 5.12| 新加坡02
+      - 🇮🇳 4.15| 印度01 包月3元起
+      - 🇭🇰 3.20|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点9
+      - 🇯🇵 3.19| 日本03
+      - 🇭🇰 3.05|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点4
+      - 🇸🇬 2.06| 新加坡03
+      - 🇭🇰 5.75| 香港寬頻
+      - 🇭🇰 5.64|HK562
+      - 🇸🇬 5.37| SG A GZA
+      - 🇭🇰 5.33| 直连 香港 ZR公益
+      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
+      - 🇭🇰 4.26| HKT  聊天
+      - 🇯🇵 4.19| 日本03
+      - 🇭🇰 4.17| 香港1三网优化
+      - 🇸🇬 4.01| 新加坡G3
+      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
+      - 🇯🇵 3.73| 日本 01  上海独享
+      - 🇸🇬 3.69| 新加坡G2
+      - 🇭🇰 3.68| HK A GZB
+      - 🇸🇬 3.65| 新加坡53端口AZ
+      - 🇸🇬 3.54| SG A JM
       - 🇨🇳 3.41|台湾01
-      - 🇨🇳 3.53|CN2655
-      - 🇨🇳 3.64| I5xTW台北HiNetVC31131
-      - 🇨🇳 3.66| I6xTW彰化HiNetRC32127
-      - 🇨🇳 3.86| H3xTW彰化HiNetVC32135
-      - 🇨🇳 3.86| I5xTW彰化HiNetRC32122
-      - 🇨🇳 3.87| H3xTW彰化HiNetRC32125
-      - 🇨🇳 4.04| I5xTW台北HiNetVC31233
-      - 🇨🇳 4.15| H25xTW彰化HiNetRC32121
-      - 🇨🇳 4.23| H25xTW台北HiNetVC31132
-      - 🇨🇳 4.24| I5xTW彰化HiNetVC32233
-      - 🇨🇳 4.29| ITW高雄龍抬頭HiNetRC33122
-      - 🇨🇳 4.35| H3xTW台北HiNetRC31126
-      - 🇨🇳 4.39| HTW高雄龍抬頭HiNetRC33121
-      - 🇨🇳 4.42| H3xTW彰化HiNetVC32136
-      - 🇨🇳 4.46| I5xTW彰化HiNetRC32223
-      - 🇨🇳 4.47| H3xTW台北HiNetRC31125
-      - 🇨🇳 4.51| H25xTW台北HiNetRC31121
-      - 🇨🇳 4.54|CN2670
-      - 🇨🇳 4.65| I6xTW台北HiNetVC31137
-      - 🇨🇳 4.66| I5xTW台北HiNetRC31122
-      - 🇨🇳 4.85| H3xTW彰化HiNetRC32126
-      - 🇨🇳 4.94| H3xTW台北HiNetVC31135
-      - 🇨🇳 5.05| H3xTW台北HiNetVC31136
-      - 🇨🇳 5.05| I6xTW台北HiNetRC31127
-      - 🇨🇳 5.11| I5xTW台北HiNetRC31223
-      - 🇩🇪 1.27|DE3524
-      - 🇩🇪 1.42|DE3525
-      - 🇩🇪 1.54|DE3522
-      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
-      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
-      - 🇭🇰 1.00|HK5218
-      - 🇭🇰 1.14| 香港 02
-      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
-      - 🇭🇰 1.61| 香港04测试
-      - 🇭🇰 1.66| 香港8三网优化
-      - 🇭🇰 1.67| 香港04测试 2
-      - 🇭🇰 1.70| 香港04测试 3
-      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
-      - 🇭🇰 1.84| HKT转江门327
-      - 🇭🇰 1.86| 香港04测试 4
-      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
-      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
-      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
-      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
-      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
-      - 🇭🇰 2.76| 香港G2
-      - 🇭🇰 2.78| 香港G3
-      - 🇭🇰 2.80| 香港I02BGZ
-      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
-      - 🇭🇰 2.95| 香港G5
-      - 🇭🇰 3.02| 香港3三网优化
-      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
-      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.37| 香港VIP01奈飞解锁
+      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇯🇵 3.31|JP6816
       - 🇭🇰 3.25| 广移 香港 ZR公益
       - 🇭🇰 3.25| 江门 香港 ZR公益
-      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
-      - 🇭🇰 3.37| 香港VIP01奈飞解锁
-      - 🇭🇰 3.55| HKT转江门227 2
-      - 🇭🇰 3.68| HK A GZB
-      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
-      - 🇭🇰 3.90| H3xHKHKTBGPVC36233
-      - 🇭🇰 3.91|香港免流04
-      - 🇭🇰 3.93| H3xHKHKTBGPVC36433
-      - 🇭🇰 3.97| HKT转江门127
-      - 🇭🇰 4.16| I6xHKHKTBGPRC36424
-      - 🇭🇰 4.17| 香港1三网优化
-      - 🇭🇰 4.19| 香港 02 2
-      - 🇭🇰 4.26| HKT  聊天
-      - 🇭🇰 4.28| H3xHKHKTBGPVC36333
-      - 🇭🇰 4.34| HKT转江门427
-      - 🇭🇰 4.40| H3xHKHKTBGPRC36223
-      - 🇭🇰 4.41| I6xHKHKTBGPRC36224
-      - 🇭🇰 4.42| H3xHKHKTBGPRC36423
-      - 🇭🇰 4.56|香港免流03
-      - 🇭🇰 4.70| I6xHKHKTBGPVC36334
-      - 🇭🇰 4.73| 香港 免费节点EC2负载均衡
-      - 🇭🇰 4.76| I6xHKHKTBGPVC36434
-      - 🇭🇰 4.85| I6xHKHKTBGPVC36234
-      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
-      - 🇭🇰 5.03| I6xHKHKTBGPRC36124
-      - 🇭🇰 5.06| H3xHKHKTBGPRC36123
-      - 🇭🇰 5.26| I6xHKHKTBGPRC36324
-      - 🇭🇰 5.33| 直连 香港 ZR公益
-      - 🇭🇰 5.64|HK562
-      - 🇭🇰 5.75| 香港寬頻
-      - 🇭🇰 6.36| 香港 01 2
-      - 🇭🇰 6.48| 香港 01 3
-      - 🇯🇵 1.05| 日本移动隧道127 2
-      - 🇯🇵 2.70| 日本 03  PCCW
-      - 🇯🇵 3.17|JP6823
-      - 🇯🇵 3.31|JP6816
-      - 🇯🇵 3.65| 日本移动隧道427 2
-      - 🇯🇵 3.65|JP6955
-      - 🇯🇵 3.69| 日本  奈飞动画疯06xAZ
-      - 🇯🇵 3.73| 日本 01  上海独享
-      - 🇯🇵 3.82| 日本移动隧道227 2
-      - 🇯🇵 4.19| 日本03
-      - 🇰🇷 3.96| 韩国移动隧道527 2
-      - 🇲🇾 1.99| 马来西亚1三网优化
-      - 🇳🇱 1.43|NL7624
-      - 🇳🇱 1.57|NL7613
-      - 🇳🇱 1.64|NL7849 5004Mb
-      - 🇳🇱 3.48| githubcomfreefq  荷兰  1
-      - 🇷🇴 1.37|RO10004
-      - 🇷🇴 5.53|RO10010  951Mb
-      - 🇷🇴 5.57|RO10015  858Mb
-      - 🇷🇺 1.12|俄罗斯01
-      - 🇷🇺 1.73| Russia
-      - 🇷🇺 2.03|RU9917
-      - 🇸🇬 1.15|新加坡02
-      - 🇸🇬 2.34|SG10131
-      - 🇸🇬 2.51|更新地址reurlccW35gV7
-      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
-      - 🇸🇬 2.89|更新地址reurlccW35gV7
+      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
       - 🇸🇬 3.15| 新加坡G1
-      - 🇸🇬 3.52|SG10520 1246Mb
-      - 🇸🇬 3.54| SG A JM
-      - 🇸🇬 3.65| 新加坡53端口AZ
-      - 🇸🇬 3.69| 新加坡G2
-      - 🇸🇬 4.01| 新加坡G3
-      - 🇸🇬 4.22| 新加坡 VIP节点
-      - 🇸🇬 5.37| SG A GZA
-      - 🇺🇲 1.28| H26xUS紐約DigitalOceanRC3312123
-      - 🇺🇲 1.34| H26xUS紐約DigitalOceanRC3312121
-      - 🇺🇲 1.36|US16408
-      - 🇺🇲 1.41| cfmemcomUS美国19
-      - 🇺🇲 1.61|US16403
-      - 🇺🇲 1.90|US17637 5693Mb
-      - 🇺🇲 1.93| US A HZ NETFLIX
-      - 🇺🇲 2.14|US16467
-      - 🇺🇲 2.16|RelayCNUS4135
-      - 🇺🇲 4.21|US17073
+      - 🇭🇰 3.02| 香港3三网优化
+      - 🇭🇰 2.95| 香港G5
+      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
+      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
+      - 🇭🇰 2.80| 香港I02BGZ
+      - 🇭🇰 2.78| 香港G3
+      - 🇭🇰 2.76| 香港G2
+      - 🇯🇵 2.70| 日本 03  PCCW
+      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
+      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
+      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
+      - 🇸🇬 2.51|更新地址reurlccW35gV7
+      - 🇺🇸 2.16|RelayCNUS4135
+      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
+      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
+      - 🇲🇾 1.99| 马来西亚1三网优化
+      - 1.97|193385145tcp
+      - 🇺🇸 1.93| US A HZ NETFLIX
+      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
+      - 1.66|712 5998Mb
+      - 🇭🇰 1.66| 香港8三网优化
+      - 🇺🇸 1.61|US16403
+      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
+      - 1.54|708  616Mb
+      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
+      - 1.44|CYL科技20211023
+      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
+      - 🇺🇸 1.41| cfmemcomUS美国19
+      - 🇸🇬 1.15|新加坡02
+      - 🇷🇺 1.12|俄罗斯01
+      - 1.10|698  364Mb
+      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 1.10|05包括V2ray和Trojan
-      - 1.10|698  364Mb
-      - 1.26|GB5045
-      - 1.29|723  556Mb
-      - 1.44|CYL科技20211023
-      - 1.49|  297Mb
-      - 1.54|03公益等级線路嚴格限速
-      - 1.54|708  616Mb
-      - 1.56|GB5059
-      - 1.65|721  537Mb
-      - 1.66|712 5998Mb
-      - 1.70|HU5310
-      - 1.74|06中继中转隧道线路覆盖
-      - 1.97|193385145tcp
-      - 2.04|697
-      - 2.14|725 3580Mb
-      - 2.15|trojan
-      - 2.32|37长期套餐覆盖IPLC专线
-      - 2.35|07长期套餐覆盖IPLC专线
-      - 2.89|33公益等级線路嚴格限速
-      - 2.95| Game 1 PPhttp
-      - 3.40| Game 3 PPhttp
-      - 3.70|国内中专227 2
-      - 3.84|AZ转移动0227
-      - 3.99|AZ转移动0327
-      - 4.04|35包括V2ray和Trojan
-      - 4.12|AZ转移动0127
-      - 4.14|国内中专327 2
-      - 4.15|AZ转移动0527 2
-      - 4.37|36中继中转隧道线路覆盖
-      - 4.38|AZ转移动0427
-      - 4.45|国内中专127 2
-      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
-      - 🇦🇺 2.67| AU884
-      - 🇨🇳 1.05|34捐赠解锁更多协议线路
-      - 🇨🇳 1.08| ITW高雄龍抬頭HiNetVC33132
-      - 🇨🇳 1.45| HTW高雄龍抬頭HiNetVC33237
-      - 🇨🇳 1.50| I6xTW台北HiNetVC31138
-      - 🇨🇳 1.57| ITW高雄龍抬頭HiNetRC33128
-      - 🇨🇳 1.79|04捐赠解锁更多协议线路
-      - 🇨🇳 1.80| HTW高雄龍抬頭HiNetRC33227
-      - 🇨🇳 1.80| ITW高雄龍抬頭HiNetVC33138
-      - 🇨🇳 1.90| HTW高雄龍抬頭HiNetVC33135
-      - 🇨🇳 2.05|CN2657
-      - 🇨🇳 2.25| ITW高雄龍抬頭HiNetRC33127
-      - 🇨🇳 2.38|CN2668
-      - 🇨🇳 2.40| I6xTW台北HiNetRC31128
-      - 🇨🇳 2.43| I6xTW彰化HiNetRC32128
-      - 🇨🇳 2.44|CN2660
-      - 🇨🇳 2.54| HTW高雄龍抬頭HiNetVC33136
-      - 🇨🇳 2.54|CN2658
-      - 🇨🇳 2.85| H25xTW彰化HiNetVC32132
-      - 🇨🇳 3.01| HTW高雄龍抬頭HiNetVC33131
-      - 🇨🇳 3.05| 01ChinaG几鸡学习助理
-      - 🇨🇳 3.18|CN2656
-      - 🇨🇳 3.38| ITW高雄龍抬頭HiNetVC33137
-      - 🇨🇳 3.39| I5xTW彰化HiNetVC32131
+      - 🇭🇰 4.43| 香港I02BGZ
+      - 🇭🇰 4.26| 香港G2
+      - 🇭🇰 8.13| 香港免流04
+      - 🇨🇳 4.82|台湾01
+      - 🇭🇰 7.39| 香港免流05 解锁新加坡区奈飞
+      - 🇭🇰 3.19| 香港G5
+      - 🇯🇵 2.52| 日本 03  PCCW
+      - 🇯🇵 4.97| 日本 01  上海独享
+      - 🇭🇰 4.83| 香港G3
+      - 🇭🇰 4.36| 香港G4
+      - 🇭🇰 7.82| 香港免流01
+      - 🇭🇰 8.48| 香港免流02
+      - 🇭🇰 4.96| 香港VIP01奈飞解锁
+      - 🇸🇬 6.79| 新加坡G1
+      - 🇸🇬 5.82| 新加坡G2
+      - 🇸🇬 3.77| 新加坡G3
+      - 🇭🇰 2.87| 新加坡  AZHK  02  1x
+      - 🇨🇳 2.64|CN2637 1082Mb
+      - 🇭🇰 6.22| 香港寬頻
+      - 🇭🇰 2.12|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇸🇬 6.42| 新加坡01
+      - 🇭🇰 5.55| HKT  聊天
+      - 🇸🇬 5.12| 新加坡02
+      - 🇮🇳 4.15| 印度01 包月3元起
+      - 🇭🇰 3.20|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点9
+      - 🇯🇵 3.19| 日本03
+      - 🇭🇰 3.05|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点4
+      - 🇸🇬 2.06| 新加坡03
+      - 🇭🇰 5.75| 香港寬頻
+      - 🇭🇰 5.64|HK562
+      - 🇸🇬 5.37| SG A GZA
+      - 🇭🇰 5.33| 直连 香港 ZR公益
+      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
+      - 🇭🇰 4.26| HKT  聊天
+      - 🇯🇵 4.19| 日本03
+      - 🇭🇰 4.17| 香港1三网优化
+      - 🇸🇬 4.01| 新加坡G3
+      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
+      - 🇯🇵 3.73| 日本 01  上海独享
+      - 🇸🇬 3.69| 新加坡G2
+      - 🇭🇰 3.68| HK A GZB
+      - 🇸🇬 3.65| 新加坡53端口AZ
+      - 🇸🇬 3.54| SG A JM
       - 🇨🇳 3.41|台湾01
-      - 🇨🇳 3.53|CN2655
-      - 🇨🇳 3.64| I5xTW台北HiNetVC31131
-      - 🇨🇳 3.66| I6xTW彰化HiNetRC32127
-      - 🇨🇳 3.86| H3xTW彰化HiNetVC32135
-      - 🇨🇳 3.86| I5xTW彰化HiNetRC32122
-      - 🇨🇳 3.87| H3xTW彰化HiNetRC32125
-      - 🇨🇳 4.04| I5xTW台北HiNetVC31233
-      - 🇨🇳 4.15| H25xTW彰化HiNetRC32121
-      - 🇨🇳 4.23| H25xTW台北HiNetVC31132
-      - 🇨🇳 4.24| I5xTW彰化HiNetVC32233
-      - 🇨🇳 4.29| ITW高雄龍抬頭HiNetRC33122
-      - 🇨🇳 4.35| H3xTW台北HiNetRC31126
-      - 🇨🇳 4.39| HTW高雄龍抬頭HiNetRC33121
-      - 🇨🇳 4.42| H3xTW彰化HiNetVC32136
-      - 🇨🇳 4.46| I5xTW彰化HiNetRC32223
-      - 🇨🇳 4.47| H3xTW台北HiNetRC31125
-      - 🇨🇳 4.51| H25xTW台北HiNetRC31121
-      - 🇨🇳 4.54|CN2670
-      - 🇨🇳 4.65| I6xTW台北HiNetVC31137
-      - 🇨🇳 4.66| I5xTW台北HiNetRC31122
-      - 🇨🇳 4.85| H3xTW彰化HiNetRC32126
-      - 🇨🇳 4.94| H3xTW台北HiNetVC31135
-      - 🇨🇳 5.05| H3xTW台北HiNetVC31136
-      - 🇨🇳 5.05| I6xTW台北HiNetRC31127
-      - 🇨🇳 5.11| I5xTW台北HiNetRC31223
-      - 🇩🇪 1.27|DE3524
-      - 🇩🇪 1.42|DE3525
-      - 🇩🇪 1.54|DE3522
-      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
-      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
-      - 🇭🇰 1.00|HK5218
-      - 🇭🇰 1.14| 香港 02
-      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
-      - 🇭🇰 1.61| 香港04测试
-      - 🇭🇰 1.66| 香港8三网优化
-      - 🇭🇰 1.67| 香港04测试 2
-      - 🇭🇰 1.70| 香港04测试 3
-      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
-      - 🇭🇰 1.84| HKT转江门327
-      - 🇭🇰 1.86| 香港04测试 4
-      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
-      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
-      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
-      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
-      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
-      - 🇭🇰 2.76| 香港G2
-      - 🇭🇰 2.78| 香港G3
-      - 🇭🇰 2.80| 香港I02BGZ
-      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
-      - 🇭🇰 2.95| 香港G5
-      - 🇭🇰 3.02| 香港3三网优化
-      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
-      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.37| 香港VIP01奈飞解锁
+      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇯🇵 3.31|JP6816
       - 🇭🇰 3.25| 广移 香港 ZR公益
       - 🇭🇰 3.25| 江门 香港 ZR公益
-      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
-      - 🇭🇰 3.37| 香港VIP01奈飞解锁
-      - 🇭🇰 3.55| HKT转江门227 2
-      - 🇭🇰 3.68| HK A GZB
-      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
-      - 🇭🇰 3.90| H3xHKHKTBGPVC36233
-      - 🇭🇰 3.91|香港免流04
-      - 🇭🇰 3.93| H3xHKHKTBGPVC36433
-      - 🇭🇰 3.97| HKT转江门127
-      - 🇭🇰 4.16| I6xHKHKTBGPRC36424
-      - 🇭🇰 4.17| 香港1三网优化
-      - 🇭🇰 4.19| 香港 02 2
-      - 🇭🇰 4.26| HKT  聊天
-      - 🇭🇰 4.28| H3xHKHKTBGPVC36333
-      - 🇭🇰 4.34| HKT转江门427
-      - 🇭🇰 4.40| H3xHKHKTBGPRC36223
-      - 🇭🇰 4.41| I6xHKHKTBGPRC36224
-      - 🇭🇰 4.42| H3xHKHKTBGPRC36423
-      - 🇭🇰 4.56|香港免流03
-      - 🇭🇰 4.70| I6xHKHKTBGPVC36334
-      - 🇭🇰 4.73| 香港 免费节点EC2负载均衡
-      - 🇭🇰 4.76| I6xHKHKTBGPVC36434
-      - 🇭🇰 4.85| I6xHKHKTBGPVC36234
-      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
-      - 🇭🇰 5.03| I6xHKHKTBGPRC36124
-      - 🇭🇰 5.06| H3xHKHKTBGPRC36123
-      - 🇭🇰 5.26| I6xHKHKTBGPRC36324
-      - 🇭🇰 5.33| 直连 香港 ZR公益
-      - 🇭🇰 5.64|HK562
-      - 🇭🇰 5.75| 香港寬頻
-      - 🇭🇰 6.36| 香港 01 2
-      - 🇭🇰 6.48| 香港 01 3
-      - 🇯🇵 1.05| 日本移动隧道127 2
-      - 🇯🇵 2.70| 日本 03  PCCW
-      - 🇯🇵 3.17|JP6823
-      - 🇯🇵 3.31|JP6816
-      - 🇯🇵 3.65| 日本移动隧道427 2
-      - 🇯🇵 3.65|JP6955
-      - 🇯🇵 3.69| 日本  奈飞动画疯06xAZ
-      - 🇯🇵 3.73| 日本 01  上海独享
-      - 🇯🇵 3.82| 日本移动隧道227 2
-      - 🇯🇵 4.19| 日本03
-      - 🇰🇷 3.96| 韩国移动隧道527 2
-      - 🇲🇾 1.99| 马来西亚1三网优化
-      - 🇳🇱 1.43|NL7624
-      - 🇳🇱 1.57|NL7613
-      - 🇳🇱 1.64|NL7849 5004Mb
-      - 🇳🇱 3.48| githubcomfreefq  荷兰  1
-      - 🇷🇴 1.37|RO10004
-      - 🇷🇴 5.53|RO10010  951Mb
-      - 🇷🇴 5.57|RO10015  858Mb
-      - 🇷🇺 1.12|俄罗斯01
-      - 🇷🇺 1.73| Russia
-      - 🇷🇺 2.03|RU9917
-      - 🇸🇬 1.15|新加坡02
-      - 🇸🇬 2.34|SG10131
-      - 🇸🇬 2.51|更新地址reurlccW35gV7
-      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
-      - 🇸🇬 2.89|更新地址reurlccW35gV7
+      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
       - 🇸🇬 3.15| 新加坡G1
-      - 🇸🇬 3.52|SG10520 1246Mb
-      - 🇸🇬 3.54| SG A JM
-      - 🇸🇬 3.65| 新加坡53端口AZ
-      - 🇸🇬 3.69| 新加坡G2
-      - 🇸🇬 4.01| 新加坡G3
-      - 🇸🇬 4.22| 新加坡 VIP节点
-      - 🇸🇬 5.37| SG A GZA
-      - 🇺🇲 1.28| H26xUS紐約DigitalOceanRC3312123
-      - 🇺🇲 1.34| H26xUS紐約DigitalOceanRC3312121
-      - 🇺🇲 1.36|US16408
-      - 🇺🇲 1.41| cfmemcomUS美国19
-      - 🇺🇲 1.61|US16403
-      - 🇺🇲 1.90|US17637 5693Mb
-      - 🇺🇲 1.93| US A HZ NETFLIX
-      - 🇺🇲 2.14|US16467
-      - 🇺🇲 2.16|RelayCNUS4135
-      - 🇺🇲 4.21|US17073
+      - 🇭🇰 3.02| 香港3三网优化
+      - 🇭🇰 2.95| 香港G5
+      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
+      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
+      - 🇭🇰 2.80| 香港I02BGZ
+      - 🇭🇰 2.78| 香港G3
+      - 🇭🇰 2.76| 香港G2
+      - 🇯🇵 2.70| 日本 03  PCCW
+      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
+      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
+      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
+      - 🇸🇬 2.51|更新地址reurlccW35gV7
+      - 🇺🇸 2.16|RelayCNUS4135
+      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
+      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
+      - 🇲🇾 1.99| 马来西亚1三网优化
+      - 1.97|193385145tcp
+      - 🇺🇸 1.93| US A HZ NETFLIX
+      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
+      - 1.66|712 5998Mb
+      - 🇭🇰 1.66| 香港8三网优化
+      - 🇺🇸 1.61|US16403
+      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
+      - 1.54|708  616Mb
+      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
+      - 1.44|CYL科技20211023
+      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
+      - 🇺🇸 1.41| cfmemcomUS美国19
+      - 🇸🇬 1.15|新加坡02
+      - 🇷🇺 1.12|俄罗斯01
+      - 1.10|698  364Mb
+      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
   - name: 🔮 负载均衡
     type: load-balance
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
-      - 1.10|05包括V2ray和Trojan
-      - 1.10|698  364Mb
-      - 1.26|GB5045
-      - 1.29|723  556Mb
-      - 1.44|CYL科技20211023
-      - 1.49|  297Mb
-      - 1.54|03公益等级線路嚴格限速
-      - 1.54|708  616Mb
-      - 1.56|GB5059
-      - 1.65|721  537Mb
-      - 1.66|712 5998Mb
-      - 1.70|HU5310
-      - 1.74|06中继中转隧道线路覆盖
-      - 1.97|193385145tcp
-      - 2.04|697
-      - 2.14|725 3580Mb
-      - 2.15|trojan
-      - 2.32|37长期套餐覆盖IPLC专线
-      - 2.35|07长期套餐覆盖IPLC专线
-      - 2.89|33公益等级線路嚴格限速
-      - 2.95| Game 1 PPhttp
-      - 3.40| Game 3 PPhttp
-      - 3.70|国内中专227 2
-      - 3.84|AZ转移动0227
-      - 3.99|AZ转移动0327
-      - 4.04|35包括V2ray和Trojan
-      - 4.12|AZ转移动0127
-      - 4.14|国内中专327 2
-      - 4.15|AZ转移动0527 2
-      - 4.37|36中继中转隧道线路覆盖
-      - 4.38|AZ转移动0427
-      - 4.45|国内中专127 2
-      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
-      - 🇦🇺 2.67| AU884
-      - 🇨🇳 1.05|34捐赠解锁更多协议线路
-      - 🇨🇳 1.08| ITW高雄龍抬頭HiNetVC33132
-      - 🇨🇳 1.45| HTW高雄龍抬頭HiNetVC33237
-      - 🇨🇳 1.50| I6xTW台北HiNetVC31138
-      - 🇨🇳 1.57| ITW高雄龍抬頭HiNetRC33128
-      - 🇨🇳 1.79|04捐赠解锁更多协议线路
-      - 🇨🇳 1.80| HTW高雄龍抬頭HiNetRC33227
-      - 🇨🇳 1.80| ITW高雄龍抬頭HiNetVC33138
-      - 🇨🇳 1.90| HTW高雄龍抬頭HiNetVC33135
-      - 🇨🇳 2.05|CN2657
-      - 🇨🇳 2.25| ITW高雄龍抬頭HiNetRC33127
-      - 🇨🇳 2.38|CN2668
-      - 🇨🇳 2.40| I6xTW台北HiNetRC31128
-      - 🇨🇳 2.43| I6xTW彰化HiNetRC32128
-      - 🇨🇳 2.44|CN2660
-      - 🇨🇳 2.54| HTW高雄龍抬頭HiNetVC33136
-      - 🇨🇳 2.54|CN2658
-      - 🇨🇳 2.85| H25xTW彰化HiNetVC32132
-      - 🇨🇳 3.01| HTW高雄龍抬頭HiNetVC33131
-      - 🇨🇳 3.05| 01ChinaG几鸡学习助理
-      - 🇨🇳 3.18|CN2656
-      - 🇨🇳 3.38| ITW高雄龍抬頭HiNetVC33137
-      - 🇨🇳 3.39| I5xTW彰化HiNetVC32131
+      - 🇭🇰 4.43| 香港I02BGZ
+      - 🇭🇰 4.26| 香港G2
+      - 🇭🇰 8.13| 香港免流04
+      - 🇨🇳 4.82|台湾01
+      - 🇭🇰 7.39| 香港免流05 解锁新加坡区奈飞
+      - 🇭🇰 3.19| 香港G5
+      - 🇯🇵 2.52| 日本 03  PCCW
+      - 🇯🇵 4.97| 日本 01  上海独享
+      - 🇭🇰 4.83| 香港G3
+      - 🇭🇰 4.36| 香港G4
+      - 🇭🇰 7.82| 香港免流01
+      - 🇭🇰 8.48| 香港免流02
+      - 🇭🇰 4.96| 香港VIP01奈飞解锁
+      - 🇸🇬 6.79| 新加坡G1
+      - 🇸🇬 5.82| 新加坡G2
+      - 🇸🇬 3.77| 新加坡G3
+      - 🇭🇰 2.87| 新加坡  AZHK  02  1x
+      - 🇨🇳 2.64|CN2637 1082Mb
+      - 🇭🇰 6.22| 香港寬頻
+      - 🇭🇰 2.12|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇸🇬 6.42| 新加坡01
+      - 🇭🇰 5.55| HKT  聊天
+      - 🇸🇬 5.12| 新加坡02
+      - 🇮🇳 4.15| 印度01 包月3元起
+      - 🇭🇰 3.20|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点9
+      - 🇯🇵 3.19| 日本03
+      - 🇭🇰 3.05|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点4
+      - 🇸🇬 2.06| 新加坡03
+      - 🇭🇰 5.75| 香港寬頻
+      - 🇭🇰 5.64|HK562
+      - 🇸🇬 5.37| SG A GZA
+      - 🇭🇰 5.33| 直连 香港 ZR公益
+      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
+      - 🇭🇰 4.26| HKT  聊天
+      - 🇯🇵 4.19| 日本03
+      - 🇭🇰 4.17| 香港1三网优化
+      - 🇸🇬 4.01| 新加坡G3
+      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
+      - 🇯🇵 3.73| 日本 01  上海独享
+      - 🇸🇬 3.69| 新加坡G2
+      - 🇭🇰 3.68| HK A GZB
+      - 🇸🇬 3.65| 新加坡53端口AZ
+      - 🇸🇬 3.54| SG A JM
       - 🇨🇳 3.41|台湾01
-      - 🇨🇳 3.53|CN2655
-      - 🇨🇳 3.64| I5xTW台北HiNetVC31131
-      - 🇨🇳 3.66| I6xTW彰化HiNetRC32127
-      - 🇨🇳 3.86| H3xTW彰化HiNetVC32135
-      - 🇨🇳 3.86| I5xTW彰化HiNetRC32122
-      - 🇨🇳 3.87| H3xTW彰化HiNetRC32125
-      - 🇨🇳 4.04| I5xTW台北HiNetVC31233
-      - 🇨🇳 4.15| H25xTW彰化HiNetRC32121
-      - 🇨🇳 4.23| H25xTW台北HiNetVC31132
-      - 🇨🇳 4.24| I5xTW彰化HiNetVC32233
-      - 🇨🇳 4.29| ITW高雄龍抬頭HiNetRC33122
-      - 🇨🇳 4.35| H3xTW台北HiNetRC31126
-      - 🇨🇳 4.39| HTW高雄龍抬頭HiNetRC33121
-      - 🇨🇳 4.42| H3xTW彰化HiNetVC32136
-      - 🇨🇳 4.46| I5xTW彰化HiNetRC32223
-      - 🇨🇳 4.47| H3xTW台北HiNetRC31125
-      - 🇨🇳 4.51| H25xTW台北HiNetRC31121
-      - 🇨🇳 4.54|CN2670
-      - 🇨🇳 4.65| I6xTW台北HiNetVC31137
-      - 🇨🇳 4.66| I5xTW台北HiNetRC31122
-      - 🇨🇳 4.85| H3xTW彰化HiNetRC32126
-      - 🇨🇳 4.94| H3xTW台北HiNetVC31135
-      - 🇨🇳 5.05| H3xTW台北HiNetVC31136
-      - 🇨🇳 5.05| I6xTW台北HiNetRC31127
-      - 🇨🇳 5.11| I5xTW台北HiNetRC31223
-      - 🇩🇪 1.27|DE3524
-      - 🇩🇪 1.42|DE3525
-      - 🇩🇪 1.54|DE3522
-      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
-      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
-      - 🇭🇰 1.00|HK5218
-      - 🇭🇰 1.14| 香港 02
-      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
-      - 🇭🇰 1.61| 香港04测试
-      - 🇭🇰 1.66| 香港8三网优化
-      - 🇭🇰 1.67| 香港04测试 2
-      - 🇭🇰 1.70| 香港04测试 3
-      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
-      - 🇭🇰 1.84| HKT转江门327
-      - 🇭🇰 1.86| 香港04测试 4
-      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
-      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
-      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
-      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
-      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
-      - 🇭🇰 2.76| 香港G2
-      - 🇭🇰 2.78| 香港G3
-      - 🇭🇰 2.80| 香港I02BGZ
-      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
-      - 🇭🇰 2.95| 香港G5
-      - 🇭🇰 3.02| 香港3三网优化
-      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
-      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.37| 香港VIP01奈飞解锁
+      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇯🇵 3.31|JP6816
       - 🇭🇰 3.25| 广移 香港 ZR公益
       - 🇭🇰 3.25| 江门 香港 ZR公益
-      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
-      - 🇭🇰 3.37| 香港VIP01奈飞解锁
-      - 🇭🇰 3.55| HKT转江门227 2
-      - 🇭🇰 3.68| HK A GZB
-      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
-      - 🇭🇰 3.90| H3xHKHKTBGPVC36233
-      - 🇭🇰 3.91|香港免流04
-      - 🇭🇰 3.93| H3xHKHKTBGPVC36433
-      - 🇭🇰 3.97| HKT转江门127
-      - 🇭🇰 4.16| I6xHKHKTBGPRC36424
-      - 🇭🇰 4.17| 香港1三网优化
-      - 🇭🇰 4.19| 香港 02 2
-      - 🇭🇰 4.26| HKT  聊天
-      - 🇭🇰 4.28| H3xHKHKTBGPVC36333
-      - 🇭🇰 4.34| HKT转江门427
-      - 🇭🇰 4.40| H3xHKHKTBGPRC36223
-      - 🇭🇰 4.41| I6xHKHKTBGPRC36224
-      - 🇭🇰 4.42| H3xHKHKTBGPRC36423
-      - 🇭🇰 4.56|香港免流03
-      - 🇭🇰 4.70| I6xHKHKTBGPVC36334
-      - 🇭🇰 4.73| 香港 免费节点EC2负载均衡
-      - 🇭🇰 4.76| I6xHKHKTBGPVC36434
-      - 🇭🇰 4.85| I6xHKHKTBGPVC36234
-      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
-      - 🇭🇰 5.03| I6xHKHKTBGPRC36124
-      - 🇭🇰 5.06| H3xHKHKTBGPRC36123
-      - 🇭🇰 5.26| I6xHKHKTBGPRC36324
-      - 🇭🇰 5.33| 直连 香港 ZR公益
-      - 🇭🇰 5.64|HK562
-      - 🇭🇰 5.75| 香港寬頻
-      - 🇭🇰 6.36| 香港 01 2
-      - 🇭🇰 6.48| 香港 01 3
-      - 🇯🇵 1.05| 日本移动隧道127 2
-      - 🇯🇵 2.70| 日本 03  PCCW
-      - 🇯🇵 3.17|JP6823
-      - 🇯🇵 3.31|JP6816
-      - 🇯🇵 3.65| 日本移动隧道427 2
-      - 🇯🇵 3.65|JP6955
-      - 🇯🇵 3.69| 日本  奈飞动画疯06xAZ
-      - 🇯🇵 3.73| 日本 01  上海独享
-      - 🇯🇵 3.82| 日本移动隧道227 2
-      - 🇯🇵 4.19| 日本03
-      - 🇰🇷 3.96| 韩国移动隧道527 2
-      - 🇲🇾 1.99| 马来西亚1三网优化
-      - 🇳🇱 1.43|NL7624
-      - 🇳🇱 1.57|NL7613
-      - 🇳🇱 1.64|NL7849 5004Mb
-      - 🇳🇱 3.48| githubcomfreefq  荷兰  1
-      - 🇷🇴 1.37|RO10004
-      - 🇷🇴 5.53|RO10010  951Mb
-      - 🇷🇴 5.57|RO10015  858Mb
-      - 🇷🇺 1.12|俄罗斯01
-      - 🇷🇺 1.73| Russia
-      - 🇷🇺 2.03|RU9917
-      - 🇸🇬 1.15|新加坡02
-      - 🇸🇬 2.34|SG10131
-      - 🇸🇬 2.51|更新地址reurlccW35gV7
-      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
-      - 🇸🇬 2.89|更新地址reurlccW35gV7
+      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
       - 🇸🇬 3.15| 新加坡G1
-      - 🇸🇬 3.52|SG10520 1246Mb
-      - 🇸🇬 3.54| SG A JM
-      - 🇸🇬 3.65| 新加坡53端口AZ
-      - 🇸🇬 3.69| 新加坡G2
-      - 🇸🇬 4.01| 新加坡G3
-      - 🇸🇬 4.22| 新加坡 VIP节点
-      - 🇸🇬 5.37| SG A GZA
-      - 🇺🇲 1.28| H26xUS紐約DigitalOceanRC3312123
-      - 🇺🇲 1.34| H26xUS紐約DigitalOceanRC3312121
-      - 🇺🇲 1.36|US16408
-      - 🇺🇲 1.41| cfmemcomUS美国19
-      - 🇺🇲 1.61|US16403
-      - 🇺🇲 1.90|US17637 5693Mb
-      - 🇺🇲 1.93| US A HZ NETFLIX
-      - 🇺🇲 2.14|US16467
-      - 🇺🇲 2.16|RelayCNUS4135
-      - 🇺🇲 4.21|US17073
+      - 🇭🇰 3.02| 香港3三网优化
+      - 🇭🇰 2.95| 香港G5
+      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
+      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
+      - 🇭🇰 2.80| 香港I02BGZ
+      - 🇭🇰 2.78| 香港G3
+      - 🇭🇰 2.76| 香港G2
+      - 🇯🇵 2.70| 日本 03  PCCW
+      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
+      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
+      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
+      - 🇸🇬 2.51|更新地址reurlccW35gV7
+      - 🇺🇸 2.16|RelayCNUS4135
+      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
+      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
+      - 🇲🇾 1.99| 马来西亚1三网优化
+      - 1.97|193385145tcp
+      - 🇺🇸 1.93| US A HZ NETFLIX
+      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
+      - 1.66|712 5998Mb
+      - 🇭🇰 1.66| 香港8三网优化
+      - 🇺🇸 1.61|US16403
+      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
+      - 1.54|708  616Mb
+      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
+      - 1.44|CYL科技20211023
+      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
+      - 🇺🇸 1.41| cfmemcomUS美国19
+      - 🇸🇬 1.15|新加坡02
+      - 🇷🇺 1.12|俄罗斯01
+      - 1.10|698  364Mb
+      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -998,196 +468,90 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
-      - 1.10|05包括V2ray和Trojan
-      - 1.10|698  364Mb
-      - 1.26|GB5045
-      - 1.29|723  556Mb
-      - 1.44|CYL科技20211023
-      - 1.49|  297Mb
-      - 1.54|03公益等级線路嚴格限速
-      - 1.54|708  616Mb
-      - 1.56|GB5059
-      - 1.65|721  537Mb
-      - 1.66|712 5998Mb
-      - 1.70|HU5310
-      - 1.74|06中继中转隧道线路覆盖
-      - 1.97|193385145tcp
-      - 2.04|697
-      - 2.14|725 3580Mb
-      - 2.15|trojan
-      - 2.32|37长期套餐覆盖IPLC专线
-      - 2.35|07长期套餐覆盖IPLC专线
-      - 2.89|33公益等级線路嚴格限速
-      - 2.95| Game 1 PPhttp
-      - 3.40| Game 3 PPhttp
-      - 3.70|国内中专227 2
-      - 3.84|AZ转移动0227
-      - 3.99|AZ转移动0327
-      - 4.04|35包括V2ray和Trojan
-      - 4.12|AZ转移动0127
-      - 4.14|国内中专327 2
-      - 4.15|AZ转移动0527 2
-      - 4.37|36中继中转隧道线路覆盖
-      - 4.38|AZ转移动0427
-      - 4.45|国内中专127 2
-      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
-      - 🇦🇺 2.67| AU884
-      - 🇨🇳 1.05|34捐赠解锁更多协议线路
-      - 🇨🇳 1.08| ITW高雄龍抬頭HiNetVC33132
-      - 🇨🇳 1.45| HTW高雄龍抬頭HiNetVC33237
-      - 🇨🇳 1.50| I6xTW台北HiNetVC31138
-      - 🇨🇳 1.57| ITW高雄龍抬頭HiNetRC33128
-      - 🇨🇳 1.79|04捐赠解锁更多协议线路
-      - 🇨🇳 1.80| HTW高雄龍抬頭HiNetRC33227
-      - 🇨🇳 1.80| ITW高雄龍抬頭HiNetVC33138
-      - 🇨🇳 1.90| HTW高雄龍抬頭HiNetVC33135
-      - 🇨🇳 2.05|CN2657
-      - 🇨🇳 2.25| ITW高雄龍抬頭HiNetRC33127
-      - 🇨🇳 2.38|CN2668
-      - 🇨🇳 2.40| I6xTW台北HiNetRC31128
-      - 🇨🇳 2.43| I6xTW彰化HiNetRC32128
-      - 🇨🇳 2.44|CN2660
-      - 🇨🇳 2.54| HTW高雄龍抬頭HiNetVC33136
-      - 🇨🇳 2.54|CN2658
-      - 🇨🇳 2.85| H25xTW彰化HiNetVC32132
-      - 🇨🇳 3.01| HTW高雄龍抬頭HiNetVC33131
-      - 🇨🇳 3.05| 01ChinaG几鸡学习助理
-      - 🇨🇳 3.18|CN2656
-      - 🇨🇳 3.38| ITW高雄龍抬頭HiNetVC33137
-      - 🇨🇳 3.39| I5xTW彰化HiNetVC32131
+      - 🇭🇰 4.43| 香港I02BGZ
+      - 🇭🇰 4.26| 香港G2
+      - 🇭🇰 8.13| 香港免流04
+      - 🇨🇳 4.82|台湾01
+      - 🇭🇰 7.39| 香港免流05 解锁新加坡区奈飞
+      - 🇭🇰 3.19| 香港G5
+      - 🇯🇵 2.52| 日本 03  PCCW
+      - 🇯🇵 4.97| 日本 01  上海独享
+      - 🇭🇰 4.83| 香港G3
+      - 🇭🇰 4.36| 香港G4
+      - 🇭🇰 7.82| 香港免流01
+      - 🇭🇰 8.48| 香港免流02
+      - 🇭🇰 4.96| 香港VIP01奈飞解锁
+      - 🇸🇬 6.79| 新加坡G1
+      - 🇸🇬 5.82| 新加坡G2
+      - 🇸🇬 3.77| 新加坡G3
+      - 🇭🇰 2.87| 新加坡  AZHK  02  1x
+      - 🇨🇳 2.64|CN2637 1082Mb
+      - 🇭🇰 6.22| 香港寬頻
+      - 🇭🇰 2.12|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇸🇬 6.42| 新加坡01
+      - 🇭🇰 5.55| HKT  聊天
+      - 🇸🇬 5.12| 新加坡02
+      - 🇮🇳 4.15| 印度01 包月3元起
+      - 🇭🇰 3.20|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点9
+      - 🇯🇵 3.19| 日本03
+      - 🇭🇰 3.05|1025oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点4
+      - 🇸🇬 2.06| 新加坡03
+      - 🇭🇰 5.75| 香港寬頻
+      - 🇭🇰 5.64|HK562
+      - 🇸🇬 5.37| SG A GZA
+      - 🇭🇰 5.33| 直连 香港 ZR公益
+      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
+      - 🇭🇰 4.26| HKT  聊天
+      - 🇯🇵 4.19| 日本03
+      - 🇭🇰 4.17| 香港1三网优化
+      - 🇸🇬 4.01| 新加坡G3
+      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
+      - 🇯🇵 3.73| 日本 01  上海独享
+      - 🇸🇬 3.69| 新加坡G2
+      - 🇭🇰 3.68| HK A GZB
+      - 🇸🇬 3.65| 新加坡53端口AZ
+      - 🇸🇬 3.54| SG A JM
       - 🇨🇳 3.41|台湾01
-      - 🇨🇳 3.53|CN2655
-      - 🇨🇳 3.64| I5xTW台北HiNetVC31131
-      - 🇨🇳 3.66| I6xTW彰化HiNetRC32127
-      - 🇨🇳 3.86| H3xTW彰化HiNetVC32135
-      - 🇨🇳 3.86| I5xTW彰化HiNetRC32122
-      - 🇨🇳 3.87| H3xTW彰化HiNetRC32125
-      - 🇨🇳 4.04| I5xTW台北HiNetVC31233
-      - 🇨🇳 4.15| H25xTW彰化HiNetRC32121
-      - 🇨🇳 4.23| H25xTW台北HiNetVC31132
-      - 🇨🇳 4.24| I5xTW彰化HiNetVC32233
-      - 🇨🇳 4.29| ITW高雄龍抬頭HiNetRC33122
-      - 🇨🇳 4.35| H3xTW台北HiNetRC31126
-      - 🇨🇳 4.39| HTW高雄龍抬頭HiNetRC33121
-      - 🇨🇳 4.42| H3xTW彰化HiNetVC32136
-      - 🇨🇳 4.46| I5xTW彰化HiNetRC32223
-      - 🇨🇳 4.47| H3xTW台北HiNetRC31125
-      - 🇨🇳 4.51| H25xTW台北HiNetRC31121
-      - 🇨🇳 4.54|CN2670
-      - 🇨🇳 4.65| I6xTW台北HiNetVC31137
-      - 🇨🇳 4.66| I5xTW台北HiNetRC31122
-      - 🇨🇳 4.85| H3xTW彰化HiNetRC32126
-      - 🇨🇳 4.94| H3xTW台北HiNetVC31135
-      - 🇨🇳 5.05| H3xTW台北HiNetVC31136
-      - 🇨🇳 5.05| I6xTW台北HiNetRC31127
-      - 🇨🇳 5.11| I5xTW台北HiNetRC31223
-      - 🇩🇪 1.27|DE3524
-      - 🇩🇪 1.42|DE3525
-      - 🇩🇪 1.54|DE3522
-      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
-      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
-      - 🇭🇰 1.00|HK5218
-      - 🇭🇰 1.14| 香港 02
-      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
-      - 🇭🇰 1.61| 香港04测试
-      - 🇭🇰 1.66| 香港8三网优化
-      - 🇭🇰 1.67| 香港04测试 2
-      - 🇭🇰 1.70| 香港04测试 3
-      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
-      - 🇭🇰 1.84| HKT转江门327
-      - 🇭🇰 1.86| 香港04测试 4
-      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
-      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
-      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
-      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
-      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
-      - 🇭🇰 2.76| 香港G2
-      - 🇭🇰 2.78| 香港G3
-      - 🇭🇰 2.80| 香港I02BGZ
-      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
-      - 🇭🇰 2.95| 香港G5
-      - 🇭🇰 3.02| 香港3三网优化
-      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
-      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.37| 香港VIP01奈飞解锁
+      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
+      - 🇯🇵 3.31|JP6816
       - 🇭🇰 3.25| 广移 香港 ZR公益
       - 🇭🇰 3.25| 江门 香港 ZR公益
-      - 🇭🇰 3.35|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点13
-      - 🇭🇰 3.37| 香港VIP01奈飞解锁
-      - 🇭🇰 3.55| HKT转江门227 2
-      - 🇭🇰 3.68| HK A GZB
-      - 🇭🇰 3.85|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点4
-      - 🇭🇰 3.90| H3xHKHKTBGPVC36233
-      - 🇭🇰 3.91|香港免流04
-      - 🇭🇰 3.93| H3xHKHKTBGPVC36433
-      - 🇭🇰 3.97| HKT转江门127
-      - 🇭🇰 4.16| I6xHKHKTBGPRC36424
-      - 🇭🇰 4.17| 香港1三网优化
-      - 🇭🇰 4.19| 香港 02 2
-      - 🇭🇰 4.26| HKT  聊天
-      - 🇭🇰 4.28| H3xHKHKTBGPVC36333
-      - 🇭🇰 4.34| HKT转江门427
-      - 🇭🇰 4.40| H3xHKHKTBGPRC36223
-      - 🇭🇰 4.41| I6xHKHKTBGPRC36224
-      - 🇭🇰 4.42| H3xHKHKTBGPRC36423
-      - 🇭🇰 4.56|香港免流03
-      - 🇭🇰 4.70| I6xHKHKTBGPVC36334
-      - 🇭🇰 4.73| 香港 免费节点EC2负载均衡
-      - 🇭🇰 4.76| I6xHKHKTBGPVC36434
-      - 🇭🇰 4.85| I6xHKHKTBGPVC36234
-      - 🇭🇰 5.00|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点1
-      - 🇭🇰 5.03| I6xHKHKTBGPRC36124
-      - 🇭🇰 5.06| H3xHKHKTBGPRC36123
-      - 🇭🇰 5.26| I6xHKHKTBGPRC36324
-      - 🇭🇰 5.33| 直连 香港 ZR公益
-      - 🇭🇰 5.64|HK562
-      - 🇭🇰 5.75| 香港寬頻
-      - 🇭🇰 6.36| 香港 01 2
-      - 🇭🇰 6.48| 香港 01 3
-      - 🇯🇵 1.05| 日本移动隧道127 2
-      - 🇯🇵 2.70| 日本 03  PCCW
-      - 🇯🇵 3.17|JP6823
-      - 🇯🇵 3.31|JP6816
-      - 🇯🇵 3.65| 日本移动隧道427 2
-      - 🇯🇵 3.65|JP6955
-      - 🇯🇵 3.69| 日本  奈飞动画疯06xAZ
-      - 🇯🇵 3.73| 日本 01  上海独享
-      - 🇯🇵 3.82| 日本移动隧道227 2
-      - 🇯🇵 4.19| 日本03
-      - 🇰🇷 3.96| 韩国移动隧道527 2
-      - 🇲🇾 1.99| 马来西亚1三网优化
-      - 🇳🇱 1.43|NL7624
-      - 🇳🇱 1.57|NL7613
-      - 🇳🇱 1.64|NL7849 5004Mb
-      - 🇳🇱 3.48| githubcomfreefq  荷兰  1
-      - 🇷🇴 1.37|RO10004
-      - 🇷🇴 5.53|RO10010  951Mb
-      - 🇷🇴 5.57|RO10015  858Mb
-      - 🇷🇺 1.12|俄罗斯01
-      - 🇷🇺 1.73| Russia
-      - 🇷🇺 2.03|RU9917
-      - 🇸🇬 1.15|新加坡02
-      - 🇸🇬 2.34|SG10131
-      - 🇸🇬 2.51|更新地址reurlccW35gV7
-      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
-      - 🇸🇬 2.89|更新地址reurlccW35gV7
+      - 🇭🇰 3.21| 香港G4
+      - 🇭🇰 3.20|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点5
       - 🇸🇬 3.15| 新加坡G1
-      - 🇸🇬 3.52|SG10520 1246Mb
-      - 🇸🇬 3.54| SG A JM
-      - 🇸🇬 3.65| 新加坡53端口AZ
-      - 🇸🇬 3.69| 新加坡G2
-      - 🇸🇬 4.01| 新加坡G3
-      - 🇸🇬 4.22| 新加坡 VIP节点
-      - 🇸🇬 5.37| SG A GZA
-      - 🇺🇲 1.28| H26xUS紐約DigitalOceanRC3312123
-      - 🇺🇲 1.34| H26xUS紐約DigitalOceanRC3312121
-      - 🇺🇲 1.36|US16408
-      - 🇺🇲 1.41| cfmemcomUS美国19
-      - 🇺🇲 1.61|US16403
-      - 🇺🇲 1.90|US17637 5693Mb
-      - 🇺🇲 1.93| US A HZ NETFLIX
-      - 🇺🇲 2.14|US16467
-      - 🇺🇲 2.16|RelayCNUS4135
-      - 🇺🇲 4.21|US17073
+      - 🇭🇰 3.02| 香港3三网优化
+      - 🇭🇰 2.95| 香港G5
+      - 🇭🇰 2.91| Lv310x 香港HKT02DIAIP均衡优化混合负载香港原生
+      - 🇸🇬 2.84|直连 新加坡1 Netflix SG
+      - 🇭🇰 2.80| 香港I02BGZ
+      - 🇭🇰 2.78| 香港G3
+      - 🇭🇰 2.76| 香港G2
+      - 🇯🇵 2.70| 日本 03  PCCW
+      - 🇭🇰 2.68|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点6
+      - 🇭🇰 2.58| 江西cn2 香港 ZR公益
+      - 🇭🇰 2.55|1024oslook中国香港中国台湾CNChinaXicheng可能是中转节点17
+      - 🇸🇬 2.51|更新地址reurlccW35gV7
+      - 🇺🇸 2.16|RelayCNUS4135
+      - 🇭🇰 2.14|1024oslook中国香港中国台湾CNChinaHangzhou可能是中转节点15
+      - 🇭🇰 2.13|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点72
+      - 🇲🇾 1.99| 马来西亚1三网优化
+      - 1.97|193385145tcp
+      - 🇺🇸 1.93| US A HZ NETFLIX
+      - 🇭🇰 1.78|1024oslook中国香港中国台湾CNChinaShenzhen可能是中转节点22
+      - 1.66|712 5998Mb
+      - 🇭🇰 1.66| 香港8三网优化
+      - 🇺🇸 1.61|US16403
+      - 🇦🇺 1.61|直连 澳大利亚 Netflix SG
+      - 1.54|708  616Mb
+      - 🇬🇧 1.46|直连 英国 BBC Netflix SG
+      - 1.44|CYL科技20211023
+      - 🇭🇰 1.44|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点41
+      - 🇺🇸 1.41| cfmemcomUS美国19
+      - 🇸🇬 1.15|新加坡02
+      - 🇷🇺 1.12|俄罗斯01
+      - 1.10|698  364Mb
+      - 🇭🇰 1.00|1024oslook中国香港中国台湾CNChinaGuangzhou可能是中转节点68
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
