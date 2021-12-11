@@ -16,11 +16,11 @@ QuantumultX 本地脚本配置:
 
 [task_local]
 # 叮咚果园
-1 8,12,17 * * * iepngs/Script/master/dingdong/ddgy.js
+1 8,12,17 * * * https://raw.githubusercontent.com/moneyfly1/sublist/main/ddgy.js
 
 [rewrite_local]
 # 获取Cookie
-https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed url script-request-header iepngs/Script/master/dingdong/ddgy.js
+https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed url script-request-header https://raw.githubusercontent.com/moneyfly1/sublist/main/ddgy.js
 
 
 ************************
@@ -29,10 +29,10 @@ Loon 2.1.0+ 脚本配置:
 
 [Script]
 # 叮咚果园
-cron "1 8,11,17 * * *" script-path=https://raw.githubusercontent.com/iepngs/Script/master/dingdong/ddgy.js,tag=叮咚果园
+cron "1 8,11,17 * * *" script-path=https://raw.githubusercontent.com/moneyfly1/sublist/main/ddgy.js,tag=叮咚果园
 
 # 获取Cookie
-http-request ^https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed script-path=https://raw.githubusercontent.com/iepngs/Script/master/dingdong/ddgy.js,tag=叮咚果园
+http-request ^https:\/\/farm\.api\.ddxq\.mobi\/api\/v2\/props\/feed script-path=https://raw.githubusercontent.com/moneyfly1/sublist/main/ddgy.js,tag=叮咚果园
 
 ***********************
 Nodejs
