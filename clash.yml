@@ -5,6 +5,15 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
+  - {name: 免费线路, server: 23.225.213.243, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.95314708.xyz}}
+  - {name: 🇭🇰 ★中国香港A★年付专线, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.52833977.xyz}}
+  - {name: 🇮🇹 意大利米兰, server: 23.225.213.243, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.95314708.xyz}}
+  - {name: 🇫🇮 芬兰, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.52833977.xyz}}
+  - {name: 塞尔维亚, server: 154.84.1.195, port: 443, type: vmess, uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f79, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.57556953.xyz}}
+  - {name: 比利时, server: 154.84.1.155, port: 443, type: vmess, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.05222027.xyz}}
+  - {name: 🇮🇪 爱尔兰, server: 154.84.1.198, port: 443, type: vmess, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.54872833.xyz}}
+  - {name: 🇳🇱 荷兰B, server: 173.82.149.130, port: 443, type: vmess, uuid: 031d396f-6d28-4341-b456-bd8489aa6baa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.98262787.xyz}}
+  - {name: 🇩🇪 德国Dusseldorf, server: 173.82.149.130, port: 443, type: vmess, uuid: 031d396f-6d28-4341-b456-bd8489aa6baa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.98262787.xyz}}
   - {name: 🇨🇳 tw.gotochinatown.net:10881/#台灣2, server: tw.gotochinatown.net, port: 10881, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
   - {name: 🇯🇵 日本, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
   - {name: 🇮🇳 in.gotochinatown.net:10884/#印度, server: in.gotochinatown.net, port: 10884, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
@@ -63,6 +72,14 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
+      - 免费线路
+      - 🇭🇰 ★中国香港A★年付专线
+      - 🇮🇹 意大利米兰
+      - 🇫🇮 芬兰
+      - 塞尔维亚
+      - 比利时
+      - 🇳🇱 荷兰B
+      - 🇩🇪 德国Dusseldorf	  
       - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
       - 🇯🇵 日本
       - 🇮🇳 in.gotochinatown.net:10884/#印度
@@ -119,6 +136,14 @@ proxy-groups:
     interval: 300
     tolerance: 50
     proxies:
+      - 免费线路
+      - 🇭🇰 ★中国香港A★年付专线
+      - 🇮🇹 意大利米兰
+      - 🇫🇮 芬兰
+      - 塞尔维亚
+      - 比利时
+      - 🇳🇱 荷兰B
+      - 🇩🇪 德国Dusseldorf	
       - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
       - 🇯🇵 日本
       - 🇮🇳 in.gotochinatown.net:10884/#印度
@@ -174,6 +199,14 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
+      - 免费线路
+      - 🇭🇰 ★中国香港A★年付专线
+      - 🇮🇹 意大利米兰
+      - 🇫🇮 芬兰
+      - 塞尔维亚
+      - 比利时
+      - 🇳🇱 荷兰B
+      - 🇩🇪 德国Dusseldorf	
       - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
       - 🇯🇵 日本
       - 🇮🇳 in.gotochinatown.net:10884/#印度
@@ -229,6 +262,14 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
+      - 免费线路
+      - 🇭🇰 ★中国香港A★年付专线
+      - 🇮🇹 意大利米兰
+      - 🇫🇮 芬兰
+      - 塞尔维亚
+      - 比利时
+      - 🇳🇱 荷兰B
+      - 🇩🇪 德国Dusseldorf	
       - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
       - 🇯🇵 日本
       - 🇮🇳 in.gotochinatown.net:10884/#印度
@@ -298,6 +339,14 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
+      - 免费线路
+      - 🇭🇰 ★中国香港A★年付专线
+      - 🇮🇹 意大利米兰
+      - 🇫🇮 芬兰
+      - 塞尔维亚
+      - 比利时
+      - 🇳🇱 荷兰B
+      - 🇩🇪 德国Dusseldorf	  
       - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
       - 🇯🇵 日本
       - 🇮🇳 in.gotochinatown.net:10884/#印度
