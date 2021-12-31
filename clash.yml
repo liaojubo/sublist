@@ -5,65 +5,34 @@ mode: Rule
 log-level: info
 external-controller: 127.0.0.1:9090
 proxies:
-  - {name: 免费线路, server: 23.225.213.243, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.95314708.xyz}}
-  - {name: 🇭🇰 ★中国香港A★年付专线, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.52833977.xyz}}
-  - {name: 🇮🇹 意大利米兰, server: 23.225.213.243, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.95314708.xyz}}
-  - {name: 🇫🇮 芬兰, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.52833977.xyz}}
-  - {name: 塞尔维亚, server: 154.84.1.195, port: 443, type: vmess, uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f79, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.57556953.xyz}}
-  - {name: 比利时, server: 154.84.1.155, port: 443, type: vmess, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.05222027.xyz}}
-  - {name: 🇮🇪 爱尔兰, server: 154.84.1.198, port: 443, type: vmess, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.54872833.xyz}}
-  - {name: 🇳🇱 荷兰B, server: 173.82.149.130, port: 443, type: vmess, uuid: 031d396f-6d28-4341-b456-bd8489aa6baa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.98262787.xyz}}
-  - {name: 🇩🇪 德国Dusseldorf, server: 173.82.149.130, port: 443, type: vmess, uuid: 031d396f-6d28-4341-b456-bd8489aa6baa, alterId: 64, cipher: auto, tls: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.98262787.xyz}}
-  - {name: 🇨🇳 tw.gotochinatown.net:10881/#台灣2, server: tw.gotochinatown.net, port: 10881, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇯🇵 日本, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
-  - {name: 🇮🇳 in.gotochinatown.net:10884/#印度, server: in.gotochinatown.net, port: 10884, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇸🇬 nz.gotochinatown.net:10920/#新西兰, server: nz.gotochinatown.net, port: 10920, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇦🇺 au.gotochinatown.net:10930/#澳大利亚, server: au.gotochinatown.net, port: 10930, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇬🇧 uk.gotochinatown.net:10882/#英國, server: uk.gotochinatown.net, port: 10882, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯, server: ru.gotochinatown.net, port: 10883, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇹🇷 tr.gotochinatown.net:10885/#土耳其, server: tr.gotochinatown.net, port: 10885, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇩🇪 de.gotochinatown.net:10887/#德國, server: de.gotochinatown.net, port: 10887, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇨🇳 fr.gotochinatown.net:10910/#法國, server: fr.gotochinatown.net, port: 10910, type: http, username: 43588755@qq.com, password: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, tls: true}
-  - {name: 🇨🇳 tw.gotochinatown.net:10881/#台灣2 2, server: tw.gotochinatown.net, port: 10881, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇯🇵 日本 2, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
-  - {name: 🇮🇳 in.gotochinatown.net:10884/#印度 2, server: in.gotochinatown.net, port: 10884, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇸🇬 nz.gotochinatown.net:10920/#新西兰 2, server: nz.gotochinatown.net, port: 10920, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 2, server: au.gotochinatown.net, port: 10930, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇬🇧 uk.gotochinatown.net:10882/#英國 2, server: uk.gotochinatown.net, port: 10882, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 2, server: ru.gotochinatown.net, port: 10883, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇹🇷 tr.gotochinatown.net:10885/#土耳其 2, server: tr.gotochinatown.net, port: 10885, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇩🇪 de.gotochinatown.net:10887/#德國 2, server: de.gotochinatown.net, port: 10887, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇨🇳 fr.gotochinatown.net:10910/#法國 2, server: fr.gotochinatown.net, port: 10910, type: http, username: shuailinzhou02@gmail.com, password: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇨🇳 tw.gotochinatown.net:10881/#台灣2 3, server: tw.gotochinatown.net, port: 10881, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇯🇵 日本 3, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: aa31d423-283f-c4f1-e503-41870612d44f, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
-  - {name: 🇮🇳 in.gotochinatown.net:10884/#印度 3, server: in.gotochinatown.net, port: 10884, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇸🇬 nz.gotochinatown.net:10920/#新西兰 3, server: nz.gotochinatown.net, port: 10920, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 3, server: au.gotochinatown.net, port: 10930, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇬🇧 uk.gotochinatown.net:10882/#英國 3, server: uk.gotochinatown.net, port: 10882, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 3, server: ru.gotochinatown.net, port: 10883, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇹🇷 tr.gotochinatown.net:10885/#土耳其 3, server: tr.gotochinatown.net, port: 10885, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇩🇪 de.gotochinatown.net:10887/#德國 3, server: de.gotochinatown.net, port: 10887, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇨🇳 fr.gotochinatown.net:10910/#法國 3, server: fr.gotochinatown.net, port: 10910, type: http, username: zzm88104@gmail.com, password: aa31d423-283f-c4f1-e503-41870612d44f, tls: true}
-  - {name: 🇨🇳 tw.gotochinatown.net:10881/#台灣2 4, server: tw.gotochinatown.net, port: 10881, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇯🇵 日本 4, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: 71812650-8eb2-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
-  - {name: 🇮🇳 in.gotochinatown.net:10884/#印度 4, server: in.gotochinatown.net, port: 10884, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇸🇬 nz.gotochinatown.net:10920/#新西兰 4, server: nz.gotochinatown.net, port: 10920, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 4, server: au.gotochinatown.net, port: 10930, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇬🇧 uk.gotochinatown.net:10882/#英國 4, server: uk.gotochinatown.net, port: 10882, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 4, server: ru.gotochinatown.net, port: 10883, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇹🇷 tr.gotochinatown.net:10885/#土耳其 4, server: tr.gotochinatown.net, port: 10885, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇩🇪 de.gotochinatown.net:10887/#德國 4, server: de.gotochinatown.net, port: 10887, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇨🇳 fr.gotochinatown.net:10910/#法國 4, server: fr.gotochinatown.net, port: 10910, type: http, username: 1248110286@qq.com, password: 71812650-8eb2-11ea-82ef-f23c9164ca5d, tls: true}
-  - {name: 🇨🇳 tw.gotochinatown.net:10881/#台灣2 5, server: tw.gotochinatown.net, port: 10881, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇯🇵 日本 5, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
-  - {name: 🇮🇳 in.gotochinatown.net:10884/#印度 5, server: in.gotochinatown.net, port: 10884, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇸🇬 nz.gotochinatown.net:10920/#新西兰 5, server: nz.gotochinatown.net, port: 10920, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 5, server: au.gotochinatown.net, port: 10930, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇬🇧 uk.gotochinatown.net:10882/#英國 5, server: uk.gotochinatown.net, port: 10882, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 5, server: ru.gotochinatown.net, port: 10883, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇹🇷 tr.gotochinatown.net:10885/#土耳其 5, server: tr.gotochinatown.net, port: 10885, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇩🇪 de.gotochinatown.net:10887/#德國 5, server: de.gotochinatown.net, port: 10887, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
-  - {name: 🇨🇳 fr.gotochinatown.net:10910/#法國 5, server: fr.gotochinatown.net, port: 10910, type: http, username: jeep.jipu@gmail.com, password: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, tls: true}
+  - {name: "🇯🇵 JP, Tokyo", server: 54.178.47.113, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇰🇷 KR, Incheon", server: 54.180.141.230, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇺🇲 US, Dallas", server: 104.243.30.27, port: 245, type: ss, cipher: aes-256-cfb, password: bwhskrskr03}
+  - {name: "🇺🇲 US, Los Angeles", server: 107.182.25.165, port: 245, type: ss, cipher: aes-256-cfb, password: bwhskrskr03}
+  - {name: "🇺🇲 US, Houston", server: 54.184.104.3, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇭🇰 HK, New Territories", server: 3.36.61.26, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇸🇬 SG, Singapore", server: 18.181.214.255, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇯🇵 JP, Tokyo 2", server: 18.141.194.185, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇯🇵 JP, Osaka", server: 13.250.96.38, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇺🇲 US, Dallas 2", server: 3.36.65.230, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇺🇲 US, California", server: 107.182.16.238, port: 239, type: ss, cipher: aes-256-cfb, password: bwhskrskr03}
+  - {name: "CA, Vancouver", server: 34.222.41.59, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇨🇳 TW, Taipei", server: 52.221.203.98, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: "🇭🇰 HK, Kowloon", server: 18.141.192.94, port: 443, type: ss, cipher: aes-256-cfb, password: amazonskr05}
+  - {name: 免费线路, server: 23.225.213.243, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.95314708.xyz}}
+  - {name: 🇭🇰 ★中国香港A★年付专线, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.52833977.xyz}}
+  - {name: 🇮🇹 意大利米兰, server: 23.225.213.243, port: 443, type: vmess, uuid: 418048af-a293-4b99-9b0c-98ca3580dd24, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.95314708.xyz}}
+  - {name: 🇫🇮 芬兰, server: 46.182.107.82, port: 443, type: vmess, uuid: 37c29f42-b7c7-40c7-9da9-743dcc4895bc, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.52833977.xyz}}
+  - {name: 塞尔维亚, server: 154.84.1.195, port: 443, type: vmess, uuid: 65ea6727-4461-47a7-a5c4-fef2c67f2f79, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.57556953.xyz}}
+  - {name: 比利时, server: 154.84.1.155, port: 443, type: vmess, uuid: 130c9f2e-42b1-4ebf-b345-e26456a061f9, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.05222027.xyz}}
+  - {name: 🇮🇪 爱尔兰, server: 154.84.1.198, port: 443, type: vmess, uuid: 743bdc87-1dea-41bf-aa0b-51dfbbfec8aa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.54872833.xyz}}
+  - {name: 🇳🇱 荷兰B, server: 173.82.149.130, port: 443, type: vmess, uuid: 031d396f-6d28-4341-b456-bd8489aa6baa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.98262787.xyz}}
+  - {name: 🇩🇪 德国Dusseldorf, server: 173.82.149.130, port: 443, type: vmess, uuid: 031d396f-6d28-4341-b456-bd8489aa6baa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: false, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.98262787.xyz}}
+  - {name: 🇯🇵 日本, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: dfa1072e-8c6b-11eb-86a4-f23c913c8d2b, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
+  - {name: 🇯🇵 日本 2, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: 64e2f264-5d3f-11eb-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
+  - {name: 🇯🇵 日本 3, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: aa31d423-283f-c4f1-e503-41870612d44f, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
+  - {name: 🇯🇵 日本 4, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: 71812650-8eb2-11ea-82ef-f23c9164ca5d, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
+  - {name: 🇯🇵 日本 5, server: jp.comefromchinatown.com, port: 80, type: vmess, uuid: 5255c98a-42ec-11ec-a8bf-f23c91cfbbc9, alterId: 2, cipher: auto, tls: false, skip-cert-verify: false, network: ws, ws-path: /, ws-headers: {Host: broadcastlv.chat.bilibili.com}}
 proxy-groups:
   - name: 🚀 节点选择
     type: select
@@ -72,254 +41,134 @@ proxy-groups:
       - 🔯 故障转移
       - 🔮 负载均衡
       - DIRECT
+      - 🇯🇵 JP, Tokyo
+      - 🇰🇷 KR, Incheon
+      - 🇺🇲 US, Dallas
+      - 🇺🇲 US, Los Angeles
+      - 🇺🇲 US, Houston
+      - 🇭🇰 HK, New Territories
+      - 🇸🇬 SG, Singapore
+      - 🇯🇵 JP, Tokyo 2
+      - 🇯🇵 JP, Osaka
+      - 🇺🇲 US, Dallas 2
+      - 🇺🇲 US, California
+      - CA, Vancouver
+      - 🇨🇳 TW, Taipei
+      - 🇭🇰 HK, Kowloon
       - 免费线路
       - 🇭🇰 ★中国香港A★年付专线
       - 🇮🇹 意大利米兰
       - 🇫🇮 芬兰
       - 塞尔维亚
       - 比利时
+      - 🇮🇪 爱尔兰
       - 🇳🇱 荷兰B
-      - 🇩🇪 德国Dusseldorf	  
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
+      - 🇩🇪 德国Dusseldorf
       - 🇯🇵 日本
-      - 🇮🇳 in.gotochinatown.net:10884/#印度
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其
-      - 🇩🇪 de.gotochinatown.net:10887/#德國
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 2
       - 🇯🇵 日本 2
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 2
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 2
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 2
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 2
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 2
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 2
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 2
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 2
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 3
       - 🇯🇵 日本 3
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 3
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 3
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 3
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 3
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 3
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 3
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 3
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 3
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 4
       - 🇯🇵 日本 4
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 4
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 4
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 4
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 4
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 4
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 4
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 4
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 4
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 5
       - 🇯🇵 日本 5
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 5
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 5
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 5
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 5
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 5
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 5
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 5
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 5
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
-    tolerance: 50
     proxies:
+      - 🇯🇵 JP, Tokyo
+      - 🇰🇷 KR, Incheon
+      - 🇺🇲 US, Dallas
+      - 🇺🇲 US, Los Angeles
+      - 🇺🇲 US, Houston
+      - 🇭🇰 HK, New Territories
+      - 🇸🇬 SG, Singapore
+      - 🇯🇵 JP, Tokyo 2
+      - 🇯🇵 JP, Osaka
+      - 🇺🇲 US, Dallas 2
+      - 🇺🇲 US, California
+      - CA, Vancouver
+      - 🇨🇳 TW, Taipei
+      - 🇭🇰 HK, Kowloon
       - 免费线路
       - 🇭🇰 ★中国香港A★年付专线
       - 🇮🇹 意大利米兰
       - 🇫🇮 芬兰
       - 塞尔维亚
       - 比利时
+      - 🇮🇪 爱尔兰
       - 🇳🇱 荷兰B
-      - 🇩🇪 德国Dusseldorf	
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
+      - 🇩🇪 德国Dusseldorf
       - 🇯🇵 日本
-      - 🇮🇳 in.gotochinatown.net:10884/#印度
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其
-      - 🇩🇪 de.gotochinatown.net:10887/#德國
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 2
       - 🇯🇵 日本 2
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 2
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 2
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 2
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 2
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 2
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 2
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 2
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 2
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 3
       - 🇯🇵 日本 3
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 3
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 3
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 3
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 3
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 3
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 3
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 3
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 3
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 4
       - 🇯🇵 日本 4
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 4
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 4
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 4
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 4
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 4
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 4
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 4
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 4
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 5
       - 🇯🇵 日本 5
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 5
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 5
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 5
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 5
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 5
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 5
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 5
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 5
   - name: 🔯 故障转移
     type: fallback
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
+      - 🇯🇵 JP, Tokyo
+      - 🇰🇷 KR, Incheon
+      - 🇺🇲 US, Dallas
+      - 🇺🇲 US, Los Angeles
+      - 🇺🇲 US, Houston
+      - 🇭🇰 HK, New Territories
+      - 🇸🇬 SG, Singapore
+      - 🇯🇵 JP, Tokyo 2
+      - 🇯🇵 JP, Osaka
+      - 🇺🇲 US, Dallas 2
+      - 🇺🇲 US, California
+      - CA, Vancouver
+      - 🇨🇳 TW, Taipei
+      - 🇭🇰 HK, Kowloon
       - 免费线路
       - 🇭🇰 ★中国香港A★年付专线
       - 🇮🇹 意大利米兰
       - 🇫🇮 芬兰
       - 塞尔维亚
       - 比利时
+      - 🇮🇪 爱尔兰
       - 🇳🇱 荷兰B
-      - 🇩🇪 德国Dusseldorf	
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
+      - 🇩🇪 德国Dusseldorf
       - 🇯🇵 日本
-      - 🇮🇳 in.gotochinatown.net:10884/#印度
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其
-      - 🇩🇪 de.gotochinatown.net:10887/#德國
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 2
       - 🇯🇵 日本 2
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 2
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 2
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 2
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 2
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 2
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 2
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 2
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 2
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 3
       - 🇯🇵 日本 3
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 3
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 3
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 3
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 3
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 3
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 3
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 3
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 3
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 4
       - 🇯🇵 日本 4
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 4
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 4
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 4
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 4
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 4
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 4
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 4
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 4
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 5
       - 🇯🇵 日本 5
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 5
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 5
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 5
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 5
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 5
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 5
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 5
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 5
   - name: 🔮 负载均衡
     type: load-balance
+    strategy: consistent-hashing
     url: http://www.gstatic.com/generate_204
     interval: 180
     proxies:
+      - 🇯🇵 JP, Tokyo
+      - 🇰🇷 KR, Incheon
+      - 🇺🇲 US, Dallas
+      - 🇺🇲 US, Los Angeles
+      - 🇺🇲 US, Houston
+      - 🇭🇰 HK, New Territories
+      - 🇸🇬 SG, Singapore
+      - 🇯🇵 JP, Tokyo 2
+      - 🇯🇵 JP, Osaka
+      - 🇺🇲 US, Dallas 2
+      - 🇺🇲 US, California
+      - CA, Vancouver
+      - 🇨🇳 TW, Taipei
+      - 🇭🇰 HK, Kowloon
       - 免费线路
       - 🇭🇰 ★中国香港A★年付专线
       - 🇮🇹 意大利米兰
       - 🇫🇮 芬兰
       - 塞尔维亚
       - 比利时
+      - 🇮🇪 爱尔兰
       - 🇳🇱 荷兰B
-      - 🇩🇪 德国Dusseldorf	
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
+      - 🇩🇪 德国Dusseldorf
       - 🇯🇵 日本
-      - 🇮🇳 in.gotochinatown.net:10884/#印度
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其
-      - 🇩🇪 de.gotochinatown.net:10887/#德國
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 2
       - 🇯🇵 日本 2
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 2
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 2
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 2
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 2
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 2
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 2
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 2
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 2
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 3
       - 🇯🇵 日本 3
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 3
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 3
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 3
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 3
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 3
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 3
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 3
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 3
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 4
       - 🇯🇵 日本 4
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 4
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 4
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 4
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 4
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 4
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 4
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 4
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 4
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 5
       - 🇯🇵 日本 5
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 5
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 5
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 5
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 5
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 5
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 5
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 5
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 5
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -339,64 +188,34 @@ proxy-groups:
       - ♻️ 自动选择
       - 🔯 故障转移
       - 🔮 负载均衡
+      - 🇯🇵 JP, Tokyo
+      - 🇰🇷 KR, Incheon
+      - 🇺🇲 US, Dallas
+      - 🇺🇲 US, Los Angeles
+      - 🇺🇲 US, Houston
+      - 🇭🇰 HK, New Territories
+      - 🇸🇬 SG, Singapore
+      - 🇯🇵 JP, Tokyo 2
+      - 🇯🇵 JP, Osaka
+      - 🇺🇲 US, Dallas 2
+      - 🇺🇲 US, California
+      - CA, Vancouver
+      - 🇨🇳 TW, Taipei
+      - 🇭🇰 HK, Kowloon
       - 免费线路
       - 🇭🇰 ★中国香港A★年付专线
       - 🇮🇹 意大利米兰
       - 🇫🇮 芬兰
       - 塞尔维亚
       - 比利时
+      - 🇮🇪 爱尔兰
       - 🇳🇱 荷兰B
-      - 🇩🇪 德国Dusseldorf	  
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2
+      - 🇩🇪 德国Dusseldorf
       - 🇯🇵 日本
-      - 🇮🇳 in.gotochinatown.net:10884/#印度
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其
-      - 🇩🇪 de.gotochinatown.net:10887/#德國
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 2
       - 🇯🇵 日本 2
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 2
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 2
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 2
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 2
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 2
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 2
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 2
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 2
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 3
       - 🇯🇵 日本 3
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 3
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 3
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 3
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 3
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 3
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 3
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 3
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 3
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 4
       - 🇯🇵 日本 4
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 4
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 4
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 4
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 4
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 4
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 4
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 4
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 4
-      - 🇨🇳 tw.gotochinatown.net:10881/#台灣2 5
       - 🇯🇵 日本 5
-      - 🇮🇳 in.gotochinatown.net:10884/#印度 5
-      - 🇸🇬 nz.gotochinatown.net:10920/#新西兰 5
-      - 🇦🇺 au.gotochinatown.net:10930/#澳大利亚 5
-      - 🇬🇧 uk.gotochinatown.net:10882/#英國 5
-      - 🇷🇺 ru.gotochinatown.net:10883/#俄羅斯 5
-      - 🇹🇷 tr.gotochinatown.net:10885/#土耳其 5
-      - 🇩🇪 de.gotochinatown.net:10887/#德國 5
-      - 🇨🇳 fr.gotochinatown.net:10910/#法國 5
 rules:
  - DOMAIN-SUFFIX,acl4.ssr,🎯 全球直连
  - DOMAIN-SUFFIX,ip6-localhost,🎯 全球直连
@@ -2150,15 +1969,22 @@ rules:
  - DOMAIN-SUFFIX,hayabusa.io,🚀 节点选择
  - DOMAIN-SUFFIX,c4assets.com,🚀 节点选择
  - DOMAIN-SUFFIX,channel4.com,🚀 节点选择
- - DOMAIN, atv-ps.amazon.com,🚀 节点选择
- - DOMAIN, fls-na.amazon.com,🚀 节点选择
- - DOMAIN-SUFFIX, media-amazon.com,🚀 节点选择
+ - DOMAIN-KEYWORD,avoddashs,🚀 节点选择
+ - DOMAIN,atv-ps.amazon.com,🚀 节点选择
+ - DOMAIN,avodmp4s3ww-a.akamaihd.net,🚀 节点选择
+ - DOMAIN,d1v5ir2lpwr8os.cloudfront.net,🚀 节点选择
+ - DOMAIN,d1xfray82862hr.cloudfront.net,🚀 节点选择
+ - DOMAIN,d22qjgkvxw22r6.cloudfront.net,🚀 节点选择
+ - DOMAIN,d25xi40x97liuc.cloudfront.net,🚀 节点选择
+ - DOMAIN,d27xxe7juh1us6.cloudfront.net,🚀 节点选择
+ - DOMAIN,d3196yreox78o9.cloudfront.net,🚀 节点选择
+ - DOMAIN,dmqdd6hw24ucf.cloudfront.net,🚀 节点选择
+ - DOMAIN,ktpx.amazon.com,🚀 节点选择
  - DOMAIN-SUFFIX,aiv-cdn.net,🚀 节点选择
- - DOMAIN-SUFFIX,amazonaws.co.uk,🚀 节点选择
- - DOMAIN-SUFFIX,amazonaws.com,🚀 节点选择
+ - DOMAIN-SUFFIX,aiv-delivery.net,🚀 节点选择
  - DOMAIN-SUFFIX,amazonvideo.com,🚀 节点选择
- - DOMAIN-SUFFIX,llnwd.net,🚀 节点选择
- - DOMAIN-SUFFIX,primevideo.com,🚀 节点选择
+ - DOMAIN-SUFFIX,media-amazon.com,🚀 节点选择
+ - DOMAIN-SUFFIX,pv-cdn.net,🚀 节点选择
  - DOMAIN,gspe1-ssl.ls.apple.com,🚀 节点选择
  - DOMAIN,np-edge.itunes.apple.com,🚀 节点选择
  - DOMAIN,play-edge.itunes.apple.com,🚀 节点选择
@@ -2181,45 +2007,17 @@ rules:
  - DOMAIN,gamer2-cds.cdn.hinet.net,🚀 节点选择
  - DOMAIN-SUFFIX,bahamut.com.tw,🚀 节点选择
  - DOMAIN-SUFFIX,gamer.com.tw,🚀 节点选择
- - DOMAIN-SUFFIX,hinet.net,🚀 节点选择
- - DOMAIN-KEYWORD,livedazn,🚀 节点选择
- - DOMAIN-KEYWORD,vod2dazn,🚀 节点选择
  - DOMAIN-KEYWORD,voddazn,🚀 节点选择
  - DOMAIN,d151l6v8er5bdm.cloudfront.net,🚀 节点选择
- - DOMAIN,edge.api.brightcove.com,🚀 节点选择
- - DOMAIN,players.brightcove.net,🚀 节点选择
- - DOMAIN-SUFFIX,amplify.outbrain.com,🚀 节点选择
- - DOMAIN-SUFFIX,bluekai.com,🚀 节点选择
- - DOMAIN-SUFFIX,control.kochava.com,🚀 节点选择
- - DOMAIN-SUFFIX,cws.conviva.com,🚀 节点选择
  - DOMAIN-SUFFIX,d151l6v8er5bdm.cloudfront.net,🚀 节点选择
  - DOMAIN-SUFFIX,d1sgwhnao7452x.cloudfront.net,🚀 节点选择
  - DOMAIN-SUFFIX,dazn-api.com,🚀 节点选择
  - DOMAIN-SUFFIX,dazn.com,🚀 节点选择
  - DOMAIN-SUFFIX,dazndn.com,🚀 节点选择
- - DOMAIN-SUFFIX,dc1-voddash-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dc1live21715dazn.akamaized.net,🚀 节点选择
- - DOMAIN-SUFFIX,dc2-live2dash-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dc2-live2hls-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dc2-vodhls-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dca-livedash-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dca-voddash-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dca-vodhls-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dcb-livedash-perform.secure.footprint.net,🚀 节点选择
- - DOMAIN-SUFFIX,dcb-voddash-perform.secure.footprint.net,🚀 节点选择
  - DOMAIN-SUFFIX,dcblivedazn.akamaized.net,🚀 节点选择
  - DOMAIN-SUFFIX,indazn.com,🚀 节点选择
  - DOMAIN-SUFFIX,indaznlab.com,🚀 节点选择
- - DOMAIN-SUFFIX,intercom.io,🚀 节点选择
- - DOMAIN-SUFFIX,perfops.doracdn.com,🚀 节点选择
- - DOMAIN-SUFFIX,s.llnwi.net,🚀 节点选择
- - DOMAIN-SUFFIX,s.yimg.jp,🚀 节点选择
- - DOMAIN-SUFFIX,secure.footprint.net,🚀 节点选择
  - DOMAIN-SUFFIX,sentry.io,🚀 节点选择
- - DOMAIN-SUFFIX,urbanairship.com,🚀 节点选择
- - DOMAIN-SUFFIX,vjs.zencdn.net,🚀 节点选择
- - DOMAIN-SUFFIX,widevine.entitlement.us.theplatform.com,🚀 节点选择
- - DOMAIN-SUFFIX,yahoo.co.jp,🚀 节点选择
  - DOMAIN-SUFFIX,deezer.com,🚀 节点选择
  - DOMAIN-SUFFIX,dzcdn.net,🚀 节点选择
  - DOMAIN,cdn.registerdisney.go.com,🚀 节点选择
@@ -2250,25 +2048,13 @@ rules:
  - DOMAIN-SUFFIX,fox.com,🚀 节点选择
  - DOMAIN-SUFFIX,foxdcg.com,🚀 节点选择
  - DOMAIN-SUFFIX,uplynk.com,🚀 节点选择
- - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🚀 节点选择
- - DOMAIN,bcbolthboa-a.akamaihd.net,🚀 节点选择
- - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,🚀 节点选择
- - DOMAIN,dai3fd1oh325y.cloudfront.net,🚀 节点选择
- - DOMAIN,hboasia1-i.akamaihd.net,🚀 节点选择
- - DOMAIN,hboasia2-i.akamaihd.net,🚀 节点选择
- - DOMAIN,hboasia3-i.akamaihd.net,🚀 节点选择
- - DOMAIN,hboasia4-i.akamaihd.net,🚀 节点选择
- - DOMAIN,hboasia5-i.akamaihd.net,🚀 节点选择
- - DOMAIN,players.brightcove.net,🚀 节点选择
- - DOMAIN,s3-ap-southeast-1.amazonaws.com,🚀 节点选择
  - DOMAIN-SUFFIX,hbo.com,🚀 节点选择
  - DOMAIN-SUFFIX,hbogo.com,🚀 节点选择
- - DOMAIN-SUFFIX,hbogoasia.com,🚀 节点选择
- - DOMAIN-SUFFIX,hbogoasia.hk,🚀 节点选择
  - DOMAIN-SUFFIX,hbomax.com,🚀 节点选择
  - DOMAIN-SUFFIX,hbomaxcdn.com,🚀 节点选择
  - DOMAIN-SUFFIX,hbonow.com,🚀 节点选择
  - DOMAIN-KEYWORD,.hbogoasia.,🚀 节点选择
+ - DOMAIN-KEYWORD,hbogoasia,🚀 节点选择
  - DOMAIN,44wilhpljf.execute-api.ap-southeast-1.amazonaws.com,🚀 节点选择
  - DOMAIN,bcbolthboa-a.akamaihd.net,🚀 节点选择
  - DOMAIN,cf-images.ap-southeast-1.prod.boltdns.net,🚀 节点选择
@@ -2284,6 +2070,7 @@ rules:
  - DOMAIN,hbounify-prod.evergent.com,🚀 节点选择
  - DOMAIN,players.brightcove.net,🚀 节点选择
  - DOMAIN,s3-ap-southeast-1.amazonaws.com,🚀 节点选择
+ - DOMAIN-SUFFIX,hboasia.com,🚀 节点选择
  - DOMAIN-SUFFIX,hbogoasia.com,🚀 节点选择
  - DOMAIN-SUFFIX,hbogoasia.hk,🚀 节点选择
  - DOMAIN-SUFFIX,5itv.tv,🚀 节点选择
@@ -2331,6 +2118,8 @@ rules:
  - DOMAIN,d349g9zuie06uo.cloudfront.net,🚀 节点选择
  - DOMAIN-SUFFIX,channel5.com,🚀 节点选择
  - DOMAIN-SUFFIX,my5.tv,🚀 节点选择
+ - DOMAIN-KEYWORD,nowtv100,🚀 节点选择
+ - DOMAIN-KEYWORD,rthklive,🚀 节点选择
  - DOMAIN,mytvsuperlimited.hb.omtrdc.net,🚀 节点选择
  - DOMAIN,mytvsuperlimited.sc.omtrdc.net,🚀 节点选择
  - DOMAIN-SUFFIX,mytvsuper.com,🚀 节点选择
@@ -2440,6 +2229,7 @@ rules:
  - DOMAIN-SUFFIX,youtu.be,🚀 节点选择
  - DOMAIN-SUFFIX,youtube.com,🚀 节点选择
  - DOMAIN-SUFFIX,ytimg.com,🚀 节点选择
+ - DOMAIN,music.youtube.com,🚀 节点选择
  - DOMAIN-SUFFIX,1password.com,🚀 节点选择
  - DOMAIN-SUFFIX,adguard.org,🚀 节点选择
  - DOMAIN-SUFFIX,bit.no.com,🚀 节点选择
@@ -2452,6 +2242,7 @@ rules:
  - DOMAIN-SUFFIX,hoyolab.com,🚀 节点选择
  - DOMAIN-SUFFIX,inoreader.com,🚀 节点选择
  - DOMAIN-SUFFIX,ip138.com,🚀 节点选择
+ - DOMAIN-SUFFIX,linkedin.com,🚀 节点选择
  - DOMAIN-SUFFIX,myteamspeak.com,🚀 节点选择
  - DOMAIN-SUFFIX,notion.so,🚀 节点选择
  - DOMAIN-SUFFIX,ping.pe,🚀 节点选择
@@ -2460,8 +2251,6 @@ rules:
  - DOMAIN-SUFFIX,tumbex.com,🚀 节点选择
  - DOMAIN-SUFFIX,twdvd.com,🚀 节点选择
  - DOMAIN-SUFFIX,unsplash.com,🚀 节点选择
- - DOMAIN-SUFFIX,xn--i2ru8q2qg.com,🚀 节点选择
- - DOMAIN-SUFFIX,yunpanjingling.com,🚀 节点选择
  - DOMAIN-SUFFIX,eu,🚀 节点选择
  - DOMAIN-SUFFIX,hk,🚀 节点选择
  - DOMAIN-SUFFIX,jp,🚀 节点选择
@@ -2849,6 +2638,7 @@ rules:
  - DOMAIN-SUFFIX,msftconnecttest.com,🎯 全球直连
  - DOMAIN-SUFFIX,msftncsi.com,🎯 全球直连
  - DOMAIN-SUFFIX,qupu123.com,🎯 全球直连
+ - DOMAIN-SUFFIX,pdfwifi.com,🎯 全球直连
  - DOMAIN-SUFFIX,cn,🎯 全球直连
  - DOMAIN-SUFFIX,中国,🎯 全球直连
  - DOMAIN-SUFFIX,公司,🎯 全球直连
@@ -2940,7 +2730,6 @@ rules:
  - DOMAIN-SUFFIX,biliapi.com,🎯 全球直连
  - DOMAIN-SUFFIX,biliapi.net,🎯 全球直连
  - DOMAIN-SUFFIX,bilibili.com,🎯 全球直连
- - DOMAIN-SUFFIX,bilibili.tv,🎯 全球直连
  - DOMAIN-SUFFIX,biligame.com,🎯 全球直连
  - DOMAIN-SUFFIX,biligame.net,🎯 全球直连
  - DOMAIN-SUFFIX,bilivideo.com,🎯 全球直连
@@ -3194,7 +2983,6 @@ rules:
  - DOMAIN-SUFFIX,baomitu.com,🎯 全球直连
  - DOMAIN-SUFFIX,bootcss.com,🎯 全球直连
  - DOMAIN-SUFFIX,jiasule.com,🎯 全球直连
- - DOMAIN-SUFFIX,jsdelivr.net,🎯 全球直连
  - DOMAIN-SUFFIX,staticfile.org,🎯 全球直连
  - DOMAIN-SUFFIX,upaiyun.com,🎯 全球直连
  - DOMAIN-SUFFIX,10010.com,🎯 全球直连
@@ -3316,7 +3104,6 @@ rules:
  - DOMAIN-SUFFIX,lanzoux.com,🎯 全球直连
  - DOMAIN-SUFFIX,lemicp.com,🎯 全球直连
  - DOMAIN-SUFFIX,letitfly.me,🎯 全球直连
- - DOMAIN-SUFFIX,linkedin.com,🎯 全球直连
  - DOMAIN-SUFFIX,lizhi.fm,🎯 全球直连
  - DOMAIN-SUFFIX,lizhi.io,🎯 全球直连
  - DOMAIN-SUFFIX,lizhifm.com,🎯 全球直连
