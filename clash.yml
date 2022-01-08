@@ -5,98 +5,98 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 香港高速中转1, server: 211.99.96.7, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转2, server: 211.99.96.12, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转3, server: 211.99.96.19, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转4, server: 211.99.96.16, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转5, server: 211.99.96.15, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转6, server: 211.99.96.13, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转7, server: 211.99.96.10, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转8, server: 211.99.96.17, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转9, server: 211.99.96.18, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转10, server: 211.99.96.14, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速中转11, server: 211.99.96.11, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: HK 353, server: 211.99.96.15, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: HK 355, server: 211.99.96.11, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: HK 359, server: 211.99.96.7, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: HK 360, server: 211.99.96.16, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: HK 362, server: 211.99.96.10, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: HK 363, server: 211.99.96.24, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速2, server: 211.99.96.4, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速3, server: 211.99.96.6, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速4, server: 211.99.96.7, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速5, server: 211.99.96.8, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速6, server: 211.99.96.9, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速7, server: 211.99.96.10, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速8, server: 211.99.96.11, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速9, server: 211.99.96.12, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速10, server: 211.99.96.13, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速11, server: 211.99.96.14, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速12, server: 211.99.96.15, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速13, server: 211.99.96.16, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速14, server: 211.99.96.17, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速15, server: 211.99.96.18, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速16, server: 211.99.96.19, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速17, server: 211.99.96.20, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速18, server: 211.99.96.21, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速19, server: 211.99.96.22, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速20, server: 211.99.96.23, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速21, server: 211.99.96.24, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港高速22, server: 211.99.96.26, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港2, server: 211.99.96.27, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港3, server: 211.99.96.28, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港4, server: 211.99.96.29, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港5, server: 211.99.96.30, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港6, server: 211.99.96.32, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港7, server: 211.99.96.35, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港8, server: 211.99.96.36, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港9, server: 211.99.96.37, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港10, server: 211.99.96.39, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
-  - {name: 香港11, server: 211.99.96.40, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: 25rmp7CQ, udp: true}
+  - {name: 香港TG@moneyflychat  中转1, server: 211.99.96.7, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转2, server: 211.99.96.12, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转3, server: 211.99.96.19, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转4, server: 211.99.96.16, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转5, server: 211.99.96.15, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转6, server: 211.99.96.13, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转7, server: 211.99.96.10, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转8, server: 211.99.96.17, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转9, server: 211.99.96.18, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转10, server: 211.99.96.14, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  中转11, server: 211.99.96.11, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: HK 353, server: 211.99.96.15, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: HK 355, server: 211.99.96.11, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: HK 359, server: 211.99.96.7, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: HK 360, server: 211.99.96.16, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: HK 362, server: 211.99.96.10, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: HK 363, server: 211.99.96.24, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  2, server: 211.99.96.4, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  3, server: 211.99.96.6, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  4, server: 211.99.96.7, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  5, server: 211.99.96.8, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  6, server: 211.99.96.9, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  7, server: 211.99.96.10, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  8, server: 211.99.96.11, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  9, server: 211.99.96.12, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  10, server: 211.99.96.13, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  11, server: 211.99.96.14, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  12, server: 211.99.96.15, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  13, server: 211.99.96.16, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  14, server: 211.99.96.17, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  15, server: 211.99.96.18, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  16, server: 211.99.96.19, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  17, server: 211.99.96.20, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  18, server: 211.99.96.21, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  19, server: 211.99.96.22, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  20, server: 211.99.96.23, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  21, server: 211.99.96.24, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港TG@moneyflychat  22, server: 211.99.96.26, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港2, server: 211.99.96.27, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港3, server: 211.99.96.28, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港4, server: 211.99.96.29, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港5, server: 211.99.96.30, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港6, server: 211.99.96.32, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港7, server: 211.99.96.35, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港8, server: 211.99.96.36, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港9, server: 211.99.96.37, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港10, server: 211.99.96.39, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
+  - {name: 香港11, server: 211.99.96.40, port: 17852, type: ss, cipher: xchacha20-ietf-poly1305, password: xNEGda, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
@@ -112,44 +112,44 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
@@ -166,44 +166,44 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
@@ -232,44 +232,44 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
@@ -284,17 +284,17 @@ proxy-groups:
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - 香港2
       - 香港3
       - 香港4
@@ -311,44 +311,44 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
@@ -364,44 +364,44 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
@@ -418,44 +418,44 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
@@ -481,44 +481,44 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 香港高速中转1
-      - 香港高速中转2
-      - 香港高速中转3
-      - 香港高速中转4
-      - 香港高速中转5
-      - 香港高速中转6
-      - 香港高速中转7
-      - 香港高速中转8
-      - 香港高速中转9
-      - 香港高速中转10
-      - 香港高速中转11
+      - 香港TG@moneyflychat  中转1
+      - 香港TG@moneyflychat  中转2
+      - 香港TG@moneyflychat  中转3
+      - 香港TG@moneyflychat  中转4
+      - 香港TG@moneyflychat  中转5
+      - 香港TG@moneyflychat  中转6
+      - 香港TG@moneyflychat  中转7
+      - 香港TG@moneyflychat  中转8
+      - 香港TG@moneyflychat  中转9
+      - 香港TG@moneyflychat  中转10
+      - 香港TG@moneyflychat  中转11
       - HK 353
       - HK 355
       - HK 359
       - HK 360
       - HK 362
       - HK 363
-      - 香港高速2
-      - 香港高速3
-      - 香港高速4
-      - 香港高速5
-      - 香港高速6
-      - 香港高速7
-      - 香港高速8
-      - 香港高速9
-      - 香港高速10
-      - 香港高速11
-      - 香港高速12
-      - 香港高速13
-      - 香港高速14
-      - 香港高速15
-      - 香港高速16
-      - 香港高速17
-      - 香港高速18
-      - 香港高速19
-      - 香港高速20
-      - 香港高速21
-      - 香港高速22
+      - 香港TG@moneyflychat  2
+      - 香港TG@moneyflychat  3
+      - 香港TG@moneyflychat  4
+      - 香港TG@moneyflychat  5
+      - 香港TG@moneyflychat  6
+      - 香港TG@moneyflychat  7
+      - 香港TG@moneyflychat  8
+      - 香港TG@moneyflychat  9
+      - 香港TG@moneyflychat  10
+      - 香港TG@moneyflychat  11
+      - 香港TG@moneyflychat  12
+      - 香港TG@moneyflychat  13
+      - 香港TG@moneyflychat  14
+      - 香港TG@moneyflychat  15
+      - 香港TG@moneyflychat  16
+      - 香港TG@moneyflychat  17
+      - 香港TG@moneyflychat  18
+      - 香港TG@moneyflychat  19
+      - 香港TG@moneyflychat  20
+      - 香港TG@moneyflychat  21
+      - 香港TG@moneyflychat  22
       - 香港2
       - 香港3
       - 香港4
