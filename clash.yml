@@ -5,6 +5,17 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
+  - {name: 新加坡, server: abnode10.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode10.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 美国, server: abnode12.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode12.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坣, server: abnode16.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode16.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坤, server: abnode18.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode18.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坥, server: abnode12.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode12.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坦, server: abnode08.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode08.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坧, server: abnode17.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode17.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坨, server: abnode07.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode07.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坡2, server: abnode09.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode09.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坡6, server: abnode10.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode10.makegamegoal.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坢3, server: abnode13.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode13.makegamegoal.com, skip-cert-verify: true, udp: true}
   - {name: "v2ray 新加坡(移动) [Netflix]", server: cm.cheapv2.xyz, port: 29901, type: vmess, uuid: 4cf39ff7-3b04-3138-8b83-0a6d5cb7dc5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /index, ws-headers: {Host: cm.cheapv2.xyz}, udp: true}
   - {name: "v2ray 美国(移动) [Netflix]", server: cm.cheapv2.xyz, port: 23308, type: vmess, uuid: 4cf39ff7-3b04-3138-8b83-0a6d5cb7dc5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /index, ws-headers: {Host: cm.cheapv2.xyz}, udp: true}
   - {name: "v2ray 香港HGC(移动) [Netflix]", server: cm.cheapv2.xyz, port: 23318, type: vmess, uuid: 4cf39ff7-3b04-3138-8b83-0a6d5cb7dc5d, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /index, ws-headers: {Host: cm.cheapv2.xyz}, udp: true}
@@ -26,6 +37,17 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
@@ -46,6 +68,17 @@ proxy-groups:
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
@@ -67,6 +100,17 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
@@ -100,6 +144,17 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
@@ -132,6 +187,17 @@ proxy-groups:
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
@@ -152,6 +218,17 @@ proxy-groups:
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
@@ -173,6 +250,17 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
@@ -203,6 +291,17 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
+      - 新加坡
+      - 美国
+      - 新加坣
+      - 新加坤
+      - 新加坥
+      - 新加坦
+      - 新加坧
+      - 新加坨
+      - 新加坡2
+      - 新加坡6
+      - 新加坢3
       - v2ray 新加坡(移动) [Netflix]
       - v2ray 美国(移动) [Netflix]
       - v2ray 香港HGC(移动) [Netflix]
