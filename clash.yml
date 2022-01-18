@@ -5,13 +5,10 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: 7.89|HKYoutube技术分享室整理, server: shcn2-06b.iplc188.com, port: 10005, type: vmess, uuid: 65cac56d-4155-43c8-bae0-f368cb21f771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 5.20| 专线香港08原生HGCBBS, server: zfd.out02.nodeserver.top, port: 16237, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 5.20| 专线香港08原生HGCBBS 2, server: zfd.out02.nodeserver.top, port: 16237, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 3.22|专线西雅图02原生NTT, server: zfd.out02.nodeserver.top, port: 16234, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 3.22|V1台湾05 中继A 2x, server: in01.2333dns.com, port: 64068, type: vmess, uuid: 8426925e-2f87-349e-a7ba-1375c3afd37b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /video, ws-headers: {Host: cdn.bootcdn.net}, udp: true}
   - {name: 3.04|标准中国台湾04解锁流媒体, server: zfd.out04.nodeserver.top, port: 16128, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 2.84|V1香港B组 直连 速度随缘 1x, server: hk-group-b-direct.myn0des.com, port: 8880, type: vmess, uuid: 8426925e-2f87-349e-a7ba-1375c3afd37b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: new.vip.weibo.cn}, udp: true}
   - {name: 2.82| CN64, server: shcn2-06b.iplc188.com, port: 10001, type: vmess, uuid: 65cac56d-4155-43c8-bae0-f368cb21f771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 2.74| 专线西雅图01原生NTT, server: zfd.out01.nodeserver.top, port: 16233, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 2.74| 专线西雅图01原生NTT 2, server: zfd.out01.nodeserver.top, port: 16233, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
@@ -22,74 +19,46 @@ proxies:
   - {name: 2.29| 专线中国台湾03原生HINET 2, server: zfd.out02.nodeserver.top, port: 16224, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 2.29| 专线中国台湾03原生HINET 3, server: zfd.out02.nodeserver.top, port: 16224, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 2.27| 专线中国台湾03原生HINET, server: zfd.out02.nodeserver.top, port: 16224, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 2.04| 专线中国台湾05原生HINET, server: zfd.out04.nodeserver.top, port: 16226, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 1.73|US美国94, server: 107.167.23.50, port: 8084, type: ssr, cipher: aes-256-cfb, password: RhKqtYoG8, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: t.me/vpnhat, obfs-param: t.me/vpnhat, udp: true}
   - {name: 1.57|CYL科技20220101 30 2, server: sy-am2.eqsunshine.com, port: 443, type: ssr, cipher: aes-256-cfb, password: Jz8r4gLNP, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: 1.48|githubcomfreefq  安徽省移动 21, server: fa6.uuv2.co.uk, port: 10003, type: vmess, uuid: 65cac56d-4155-43c8-bae0-f368cb21f771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59, server: shcn2-06b.iplc188.com, port: 10002, type: vmess, uuid: 65cac56d-4155-43c8-bae0-f368cb21f771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: ★美国加州A★年付专线, server: 173.82.149.130, port: 443, type: vmess, uuid: 031d396f-6d28-4341-b456-bd8489aa6baa, alterId: 64, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /path/181012123433, ws-headers: {Host: www.98262787.xyz}, udp: true}
+  - {name: 1.48|TG@moneyflychat 安徽省移动 21, server: fa6.uuv2.co.uk, port: 10003, type: vmess, uuid: 65cac56d-4155-43c8-bae0-f368cb21f771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: _中国跳转_3, server: shcu01.iplc188.com, port: 10004, type: vmess, uuid: 65cac56d-4155-43c8-bae0-f368cb21f771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: _中国跳转_2, server: shcu01.iplc188.com, port: 10004, type: vmess, uuid: 65cac56d-4155-43c8-bae0-f368cb21f771, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: "[直连] 香港3 HGC Netflix HK 2", server: hgchgc1.yyyywe.top, port: 10551, type: vmess, uuid: 9bf3ddad-c2a5-4056-8dae-5a3cb9e9b84c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: hgchgc1.yyyywe.top}, udp: true}
   - {name: "[直连] 美国1 解锁流媒体 2", server: 23.234.242.253, port: 8888, type: vmess, uuid: 9bf3ddad-c2a5-4056-8dae-5a3cb9e9b84c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 23.234.242.253}, udp: true}
-  - {name: "[NAT/皖移] 马来西亚 Netflix MY 2", server: ah.jiyunshu.com, port: 10868, type: vmess, uuid: 9bf3ddad-c2a5-4056-8dae-5a3cb9e9b84c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ah.jiyunshu.com}, udp: true}
   - {name: "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2", server: ah.jiyunshu.com, port: 61352, type: vmess, uuid: 9bf3ddad-c2a5-4056-8dae-5a3cb9e9b84c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ah.jiyunshu.com}, udp: true}
   - {name: "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2", server: ah.jiyunshu.com, port: 61352, type: vmess, uuid: 9bf3ddad-c2a5-4056-8dae-5a3cb9e9b84c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ah.jiyunshu.com}, udp: true}
-  - {name: "[NAT/广港隧道] 香港3 HGC Netflix HK 2", server: gy.c6.nkeo.top, port: 45117, type: vmess, uuid: 9bf3ddad-c2a5-4056-8dae-5a3cb9e9b84c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gy.c6.nkeo.top}, udp: true}
-  - {name: 香港HGC 01_2, server: cm.newhua99.xyz, port: 22823, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 香港HGC 03_4, server: cm.newhua99.xyz, port: 22825, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 香港HGC 04_5, server: cm2.newhua99.xyz, port: 22825, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 美国DMIT 01 | 解锁流媒体_6, server: cm.newhua99.xyz, port: 22818, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 美国DMIT 02 | 解锁流媒体_7, server: cu.newhua99.xyz, port: 22818, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 马来西亚 02 | 解锁流媒体_9, server: cm.newhua99.xyz, port: 22819, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 香港 HKT01 移动_12, server: cm.newhua99.xyz, port: 22816, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 香港 HKT03 移动_13, server: cm.newhua99.xyz, port: 22817, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 香港 HKT02 移动_14, server: cm2.newhua99.xyz, port: 22816, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 香港 HKT04 移动_15, server: cm2.newhua99.xyz, port: 22817, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 新加坡01 | 解锁流媒体_16, server: cm.newhua99.xyz, port: 22801, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 新加坡02 | 解锁流媒体_17, server: cm2.newhua99.xyz, port: 22801, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 新加坡03 | 解锁流媒体_18, server: cm.newhua99.xyz, port: 22802, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 新加坡04 | 解锁流媒体_19, server: cm2.newhua99.xyz, port: 22802, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 新加坡05 | 解锁流媒体_20, server: cm.newhua99.xyz, port: 22803, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 新加坡06 | 解锁流媒体_21, server: cm2.newhua99.xyz, port: 22803, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 日本01 | 解锁流媒体_22, server: cm.newhua99.xyz, port: 22806, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 日本02 | 解锁流媒体_23, server: cu.newhua99.xyz, port: 22806, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 台湾01 | 解锁流媒体_24, server: cm.newhua99.xyz, port: 22807, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 台湾02 | 解锁流媒体_26, server: cu.newhua99.xyz, port: 22807, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 韩国01_28, server: cm.newhua99.xyz, port: 22808, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 韩国02_29, server: cu.newhua99.xyz, port: 22808, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 德国01_30, server: ct.newhua99.xyz, port: 22809, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 英国01_34, server: cm.newhua99.xyz, port: 22813, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 英国02_35, server: cu.newhua99.xyz, port: 22813, type: ss, cipher: aes-128-gcm, password: 1879f8b5-7230-46ff-8642-313b475c21d5, udp: true}
-  - {name: 3.33|CN101678251921, server: hzcu.rymv2rayssl.xyz, port: 44605, type: vmess, uuid: 5002a71b-d203-3a1d-987f-99522eccdc25, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /v2ray, ws-headers: {Host: 185.172.115.80}, udp: true}
-  - {name: TG@moneyflychat004, server: gzcm2.rymv2rayssl.xyz, port: 44605, type: vmess, uuid: 5002a71b-d203-3a1d-987f-99522eccdc25, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /v2ray, ws-headers: {Host: 185.172.115.80}, udp: true}
   - {name: 2.59|V1俄罗斯01 中继D 12x 2, server: in04.2333dns.com, port: 64071, type: vmess, uuid: 8426925e-2f87-349e-a7ba-1375c3afd37b, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: biteb-ru01.covid19.rip}, udp: true}
-  - {name: 美国, server: abnode12.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode12.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坣, server: abnode16.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode16.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坤, server: abnode18.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode18.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坥, server: abnode12.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode12.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坦, server: abnode08.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode08.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坧, server: abnode17.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode17.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坨, server: abnode07.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode07.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坡2, server: abnode09.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode09.makegamegoal.com, skip-cert-verify: true, udp: true}
-  - {name: 新加坢3, server: abnode13.makegamegoal.com, port: 8443, type: trojan, password: fa1c371a-bfc0-4784-a1f1-0f0f03af04bb, sni: abnode13.makegamegoal.com, skip-cert-verify: true, udp: true}
   - {name: 2.74| 专线西雅图01原生NTT 4, server: zfd.out01.nodeserver.top, port: 16233, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 2.74| 专线西雅图01原生NTT 2 2, server: zfd.out01.nodeserver.top, port: 16233, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 5.20| 专线香港08原生HGCBBS 3, server: zfd.out02.nodeserver.top, port: 16237, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
   - {name: 2.29| 专线中国台湾03原生HINET 4, server: zfd.out02.nodeserver.top, port: 16224, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 香港001, server: gy.170809.xyz, port: 53912, type: ss, cipher: chacha20-ietf-poly1305, password: 89386c1f-435f-4bb5-9c10-118e07c01621, udp: true}
+  - {name: 30香港TG@moneyflychat , server: zj.haojiahuo.club, port: 60038, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: zj.haojiahuo.club}, udp: true}
+  - {name: 45香港TG@moneyflychat , server: zj.haojiahuo.club, port: 60038, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: 46香港TG@moneyflychat , server: zj.haojiahuo.club, port: 30041, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: 58美国TG@moneyflychat , server: zj.haojiahuo.club, port: 30077, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: 73美国TG@moneyflychat , server: zj.haojiahuo.club, port: 30052, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: TG@moneyflychat 41, server: zj.haojiahuo.club, port: 30077, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: TG@moneyflychat 67, server: zj.haojiahuo.club, port: 30057, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: zj.haojiahuo.club}, udp: true}
+  - {name: TG@moneyflychat 92, server: zj.haojiahuo.club, port: 30052, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: TG@moneyflychat 177, server: zj.haojiahuo.club, port: 30041, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: TG@moneyflychat 201, server: zj.haojiahuo.club, port: 60038, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: zj.haojiahuo.club}, udp: true}
+  - {name: TG@moneyflychat 208, server: zj.haojiahuo.club, port: 60038, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
+  - {name: TG@moneyflychat , server: shcu1.qwqcloud.top, port: 11214, type: vmess, uuid: 99c40b31-923a-46df-97ae-b1a98acae529, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: TG@moneyflychat  2, server: shcu1.qwqcloud.top, port: 11216, type: vmess, uuid: 99c40b31-923a-46df-97ae-b1a98acae529, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: TG@moneyflychat  3, server: shcu1.qwqcloud.top, port: 11215, type: vmess, uuid: 99c40b31-923a-46df-97ae-b1a98acae529, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: TG@moneyflychat  4, server: shcu1.qwqcloud.top, port: 11212, type: vmess, uuid: 99c40b31-923a-46df-97ae-b1a98acae529, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: TG@moneyflychat  5, server: shcu1.qwqcloud.top, port: 11211, type: vmess, uuid: 99c40b31-923a-46df-97ae-b1a98acae529, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: TG@moneyflychat  6, server: shcu1.qwqcloud.top, port: 11210, type: vmess, uuid: 99c40b31-923a-46df-97ae-b1a98acae529, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -100,73 +69,45 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -177,74 +118,46 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -255,61 +168,36 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -328,13 +216,10 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -345,103 +230,64 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.70|专线香港08原生HGCBBS
       - 2.29| 专线中国台湾03原生HINET
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - "[直连] 香港3 HGC Netflix HK 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -452,73 +298,45 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -529,74 +347,46 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -607,61 +397,36 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -677,13 +442,10 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - 7.89|HKYoutube技术分享室整理
       - 5.20| 专线香港08原生HGCBBS
       - 5.20| 专线香港08原生HGCBBS 2
       - 3.22|专线西雅图02原生NTT
-      - 3.22|V1台湾05 中继A 2x
       - 3.04|标准中国台湾04解锁流媒体
-      - 2.84|V1香港B组 直连 速度随缘 1x
       - 2.82| CN64
       - 2.74| 专线西雅图01原生NTT
       - 2.74| 专线西雅图01原生NTT 2
@@ -694,61 +456,36 @@ proxy-groups:
       - 2.29| 专线中国台湾03原生HINET 2
       - 2.29| 专线中国台湾03原生HINET 3
       - 2.27| 专线中国台湾03原生HINET
-      - 2.04| 专线中国台湾05原生HINET
-      - 1.73|US美国94
       - 1.57|CYL科技20220101 30 2
-      - 1.48|githubcomfreefq  安徽省移动 21
-      - 1.37|0111oslook中国香港中国台湾CNChinaShanghai可能是中转节点59
-      - ★美国加州A★年付专线
+      - 1.48|TG@moneyflychat 安徽省移动 21
       - _中国跳转_3
       - _中国跳转_2
-      - "[直连] 香港3 HGC Netflix HK 2"
       - "[直连] 美国1 解锁流媒体 2"
-      - "[NAT/皖移] 马来西亚 Netflix MY 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2"
       - "[NAT/皖移] 阿联酋迪拜 ARM Netflix Oracle 2 2"
-      - "[NAT/广港隧道] 香港3 HGC Netflix HK 2"
-      - 香港HGC 01_2
-      - 香港HGC 03_4
-      - 香港HGC 04_5
-      - 美国DMIT 01 | 解锁流媒体_6
-      - 美国DMIT 02 | 解锁流媒体_7
-      - 马来西亚 02 | 解锁流媒体_9
-      - 香港 HKT01 移动_12
-      - 香港 HKT03 移动_13
-      - 香港 HKT02 移动_14
-      - 香港 HKT04 移动_15
-      - 新加坡01 | 解锁流媒体_16
-      - 新加坡02 | 解锁流媒体_17
-      - 新加坡03 | 解锁流媒体_18
-      - 新加坡04 | 解锁流媒体_19
-      - 新加坡05 | 解锁流媒体_20
-      - 新加坡06 | 解锁流媒体_21
-      - 日本01 | 解锁流媒体_22
-      - 日本02 | 解锁流媒体_23
-      - 台湾01 | 解锁流媒体_24
-      - 台湾02 | 解锁流媒体_26
-      - 韩国01_28
-      - 韩国02_29
-      - 德国01_30
-      - 英国01_34
-      - 英国02_35
-      - 3.33|CN101678251921
-      - TG@moneyflychat004
       - 2.59|V1俄罗斯01 中继D 12x 2
-      - 美国
-      - 新加坣
-      - 新加坤
-      - 新加坥
-      - 新加坦
-      - 新加坧
-      - 新加坨
-      - 新加坡2
-      - 新加坢3
       - 2.74| 专线西雅图01原生NTT 4
       - 2.74| 专线西雅图01原生NTT 2 2
       - 5.20| 专线香港08原生HGCBBS 3
       - 2.29| 专线中国台湾03原生HINET 4
+      - 香港001
+      - 30香港TG@moneyflychat 
+      - 45香港TG@moneyflychat 
+      - 46香港TG@moneyflychat 
+      - 58美国TG@moneyflychat 
+      - 73美国TG@moneyflychat 
+      - TG@moneyflychat 41
+      - TG@moneyflychat 67
+      - TG@moneyflychat 92
+      - TG@moneyflychat 177
+      - TG@moneyflychat 201
+      - TG@moneyflychat 208
+      - TG@moneyflychat 
+      - TG@moneyflychat  2
+      - TG@moneyflychat  3
+      - TG@moneyflychat  4
+      - TG@moneyflychat  5
+      - TG@moneyflychat  6
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
