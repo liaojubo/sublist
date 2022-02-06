@@ -5,95 +5,367 @@ mode: Rule
 log-level: info
 external-controller: :9090
 proxies:
-  - {name: MO-CTM A -原生IP @TD - 300M, server: xiuluo-zs-a.yahaha.live, port: 55404, type: ssr, cipher: chacha20-ietf, password: tGciIL, protocol: auth_sha1_v4, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com, udp: true}
+  - {name: 韩国 01, server: kr01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: kr01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 新加坡-优化2, server: cm.cnhost.top, port: 16618, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: 新加坡-01, server: hk.tw.sgp.relay.cccloud.club, port: 11000, type: vmess, uuid: 011fa5b4-e08b-3108-a1df-c4f8c09f7346, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: sgp-01.cccloud.club}, udp: true}
+  - {name: 香港 06 - 解锁流媒体, server: hk06.cnzffw.com, port: 13018, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk06.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 【固定IP】美国10-解锁流媒体, server: us10.vip-v2ray.ml, port: 22326, type: ss, cipher: aes-256-gcm, password: Yms4d44HLK, udp: true}
+  - {name: 【固定IP】美国05-解锁流媒体, server: us05.vip-v2ray.ml, port: 59452, type: vmess, uuid: 00de191d-2f90-4f71-99a0-01a49428c800, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 【固定IP】美国07-解锁流媒体, server: us07.vip-v2ray.ml, port: 58740, type: vmess, uuid: 4ca67d33-f626-47ba-e077-0ff6742fc31c, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: 【固定IP】美国08-解锁流媒体, server: us08.vip-v2ray.ml, port: 46462, type: vmess, uuid: cd44632e-eaed-45d6-c007-cd4209aa1a56, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
+  - {name: Canada 69, server: 134.195.196.110, port: 8009, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: XY VPN Norway 🇳🇴 Kristiansad 1, server: 46.29.219.246, port: 2376, type: ss, cipher: aes-256-gcm, password: faBAoD54k87UJG7, udp: true}
+  - {name: United States 16, server: 142.202.48.34, port: 6379, type: ss, cipher: aes-256-gcm, password: zDNVedRFPQexG9v, udp: true}
+  - {name: 【固定IP】日本19-解锁流媒体, server: v2.hkintk.icu, port: 46057, type: vmess, uuid: 9d31ad2e-824e-4321-a6a3-f9a91d1fc8be, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, udp: true}
+  - {name: Canada 65, server: 134.195.196.214, port: 8008, type: ss, cipher: aes-256-gcm, password: XKFKl2rULjIp74, udp: true}
+  - {name: 高速 02, server: th01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: th01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 16, server: wyykr01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: wyykr01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 17, server: wyyus01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: wyyus01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 20, server: ind01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: ind01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 24, server: wyysshk03.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: wyysshk03.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 31, server: wyyjp01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: wyyjp01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 35, server: wyyar01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: wyyar01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 38, server: wyyhk02.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: wyyhk02.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 42, server: gzdyd.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: gzdyd.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 53, server: sg02.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: sg02.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 55, server: kr01.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: kr01.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 58, server: hk03.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk03.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 68, server: ars.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: ars.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 高速 70, server: hk07.cnzffw.com, port: 16015, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk07.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 香港 06 - 解锁流媒体 2, server: hk06.cnzffw.com, port: 13018, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk06.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 香港 06 - 解锁流媒体 3, server: hk06.cnzffw.com, port: 13026, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk06.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 香港 06 - 解锁流媒体 4, server: hk06.cnzffw.com, port: 13028, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk06.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 香港 06 - 解锁流媒体 5, server: hk05.cnzffw.com, port: 13018, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk05.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 香港 06 - 解锁流媒体 6, server: hk05.cnzffw.com, port: 13026, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk05.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 香港 06 - 解锁流媒体 7, server: hk05.cnzffw.com, port: 13028, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk05.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: 香港 06 - 解锁流媒体 8, server: hk06.cnzffw.com, port: 16007, type: trojan, password: 5268de89-9c07-49cd-a023-c0a5f829b238, sni: hk06.cnzffw.com, skip-cert-verify: true, udp: true}
+  - {name: "", server: gtm.cnhost.top, port: 16617, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.cnhost.top}, udp: true}
+  - {name: " 2", server: cu.cnhost.top, port: 16617, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 3", server: ct.cnhost.top, port: 16617, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: " 4", server: gtm.cnhost.top, port: 16618, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.cnhost.top}, udp: true}
+  - {name: " 5", server: cu.cnhost.top, port: 16618, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 6", server: cm.cnhost.top, port: 16618, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: " 7", server: ct.cnhost.top, port: 16618, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: " 8", server: cu.cnhost.top, port: 26622, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 9", server: cu.cnhost.top, port: 16621, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 10", server: gtm.gkd.world, port: 16619, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.gkd.world}, udp: true}
+  - {name: " 11", server: cu.cnhost.top, port: 16619, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 12", server: cm.cnhost.top, port: 16619, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: " 13", server: ct.cnhost.top, port: 16619, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: " 14", server: gtm.cnhost.top, port: 16626, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.cnhost.top}, udp: true}
+  - {name: " 15", server: cu.cnhost.top, port: 16626, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 16", server: cm.cnhost.top, port: 16626, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: " 17", server: ct.cnhost.top, port: 16626, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: " 18", server: gtm.cnhost.top, port: 16616, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.cnhost.top}, udp: true}
+  - {name: " 19", server: cu.cnhost.top, port: 16616, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 20", server: cm.cnhost.top, port: 16616, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: " 21", server: ct.cnhost.top, port: 16616, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: " 22", server: 66.94.125.131, port: 6616, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 66.94.125.131}, udp: true}
+  - {name: " 23", server: cu.cnhost.top, port: 16632, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: " 24", server: cm.cnhost.top, port: 16632, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: " 25", server: ct.cnhost.top, port: 16632, type: vmess, uuid: 04fa0f10-13ee-4801-88f7-00d60b3b09fd, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: " 26", server: 172.105.221.11, port: 6626, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 172.105.221.11}, udp: true}
+  - {name: 2, server: gtm.cnhost.top, port: 16617, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.cnhost.top}, udp: true}
+  - {name: 3, server: cu.cnhost.top, port: 16617, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: 4, server: ct.cnhost.top, port: 16617, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: 6, server: gtm.cnhost.top, port: 16618, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.cnhost.top}, udp: true}
+  - {name: 7, server: cu.cnhost.top, port: 16618, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: 8, server: cm.cnhost.top, port: 16618, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: 9, server: ct.cnhost.top, port: 16618, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: 16, server: cu.cnhost.top, port: 26622, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: 17, server: cm.cnhost.top, port: 26622, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: 18, server: ct.cnhost.top, port: 26622, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: 25, server: cm.cnhost.top, port: 16622, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: 26, server: ct.cnhost.top, port: 16622, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: 29, server: gtm.gkd.world, port: 16619, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: gtm.gkd.world}, udp: true}
+  - {name: 30, server: cu.cnhost.top, port: 16619, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: 31, server: cm.cnhost.top, port: 16619, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: 32, server: ct.cnhost.top, port: 16619, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
+  - {name: 46, server: 66.94.125.131, port: 6616, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: 66.94.125.131}, udp: true}
+  - {name: 48, server: cu.cnhost.top, port: 16632, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cu.cnhost.top}, udp: true}
+  - {name: 49, server: cm.cnhost.top, port: 16632, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: cm.cnhost.top}, udp: true}
+  - {name: 50, server: ct.cnhost.top, port: 16632, type: vmess, uuid: 4ccf1b8c-9f46-4abc-8895-b05f83ef664f, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: ct.cnhost.top}, udp: true}
   - {name: 1.57|CYL科技20220101 30 2, server: sy-am2.eqsunshine.com, port: 443, type: ssr, cipher: aes-256-cfb, password: Jz8r4gLNP, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: HK-SZ D@IEPL - 1G, server: iepl-hk-d.yahaha.live, port: 55404, type: ssr, cipher: chacha20-ietf, password: tGciIL, protocol: auth_sha1_v4, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com, udp: true}
-  - {name: HK-SZ C@IEPL - 1G, server: iepl-hk-c.yahaha.live, port: 55404, type: ssr, cipher: chacha20-ietf, password: tGciIL, protocol: auth_sha1_v4, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com, udp: true}
-  - {name: HK-SZ B@IEPL - 1G, server: iepl-hk-b.yahaha.live, port: 55404, type: ssr, cipher: chacha20-ietf, password: tGciIL, protocol: auth_sha1_v4, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com, udp: true}
-  - {name: Relay_🇫🇷FR-🇫🇷FR_543, server: fr-am1-4.eqsunshine.com, port: 8181, type: ssr, cipher: aes-256-cfb, password: X3LKnwp5C, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
-  - {name: MO-CTM D -原生IP @TD - 300M, server: codeccloud-fs-b.yahaha.live, port: 55404, type: ssr, cipher: chacha20-ietf, password: tGciIL, protocol: auth_sha1_v4, obfs: http_simple, protocol-param: "", obfs-param: download.windowsupdate.com, udp: true}
   - {name: CN-183.232.170.110-1232, server: gdfs.xxcv.cc, port: 26001, type: trojan, password: 4a53cdc5-1067-3f5c-b1b4-745edfa8b371, sni: gdfs.xxcv.cc, skip-cert-verify: true, udp: true}
   - {name: CN-183.232.170.110-1233, server: gdfs.xxcv.cc, port: 26003, type: trojan, password: 4a53cdc5-1067-3f5c-b1b4-745edfa8b371, sni: gdfs.xxcv.cc, skip-cert-verify: true, udp: true}
   - {name: US-199.19.226.178-1313, server: us.lv.buyvm.tgproxy.wtf, port: 21888, type: vmess, uuid: aeaaff19-bb0b-434d-b206-0f2a3f4d90e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /theuploadapi, ws-headers: {Host: us.lv.buyvm.tgproxy.wtf}, udp: true}
-  - {name: 2.74| 专线西雅图01原生NTT, server: zfd.out01.nodeserver.top, port: 16233, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 2.74| 专线西雅图01原生NTT 4, server: zfd.out01.nodeserver.top, port: 16233, type: vmess, uuid: f8a35790-1599-38a5-bed9-224befd26d38, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, udp: true}
-  - {name: 香港001, server: gy.170809.xyz, port: 53912, type: ss, cipher: chacha20-ietf-poly1305, password: 89386c1f-435f-4bb5-9c10-118e07c01621, udp: true}
   - {name: 30香港TG@moneyflychat, server: zj.haojiahuo.club, port: 60038, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: zj.haojiahuo.club}, udp: true}
   - {name: 45香港TG@moneyflychat, server: zj.haojiahuo.club, port: 60038, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
-  - {name: 46香港TG@moneyflychat, server: zj.haojiahuo.club, port: 30041, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
-  - {name: 58美国TG@moneyflychat, server: zj.haojiahuo.club, port: 30077, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
-  - {name: 73美国TG@moneyflychat, server: zj.haojiahuo.club, port: 30052, type: vmess, uuid: 4a6ada0c-e453-3217-8210-8556f9c92494, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /videos, ws-headers: {Host: xuexi.cn}, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
     proxies:
       - ♻️ 自动选择
       - 🎯 全球直连
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     proxies:
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
   - name: 🎥 NETFLIX
     type: select
     proxies:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -112,103 +384,381 @@ proxy-groups:
       - 🔰 节点选择
       - ♻️ 自动选择
       - 🎯 全球直连
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
-      - 香港001
+      - 香港 06 - 解锁流媒体
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
     proxies:
       - 🎯 全球直连
       - 🔰 节点选择
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
   - name: 📲 电报信息
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
   - name: 🍎 苹果服务
     type: select
     proxies:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -224,24 +774,92 @@ proxy-groups:
       - 🔰 节点选择
       - 🎯 全球直连
       - ♻️ 自动选择
-      - MO-CTM A -原生IP @TD - 300M
+      - 韩国 01
+      - 新加坡-优化2
+      - 新加坡-01
+      - 香港 06 - 解锁流媒体
+      - 【固定IP】美国10-解锁流媒体
+      - 【固定IP】美国05-解锁流媒体
+      - 【固定IP】美国07-解锁流媒体
+      - 【固定IP】美国08-解锁流媒体
+      - Canada 69
+      - XY VPN Norway 🇳🇴 Kristiansad 1
+      - United States 16
+      - 【固定IP】日本19-解锁流媒体
+      - Canada 65
+      - 高速 02
+      - 高速 16
+      - 高速 17
+      - 高速 20
+      - 高速 24
+      - 高速 31
+      - 高速 35
+      - 高速 38
+      - 高速 42
+      - 高速 53
+      - 高速 55
+      - 高速 58
+      - 高速 68
+      - 高速 70
+      - 香港 06 - 解锁流媒体 2
+      - 香港 06 - 解锁流媒体 3
+      - 香港 06 - 解锁流媒体 4
+      - 香港 06 - 解锁流媒体 5
+      - 香港 06 - 解锁流媒体 6
+      - 香港 06 - 解锁流媒体 7
+      - 香港 06 - 解锁流媒体 8
+      - ""
+      - " 2"
+      - " 3"
+      - " 4"
+      - " 5"
+      - " 6"
+      - " 7"
+      - " 8"
+      - " 9"
+      - " 10"
+      - " 11"
+      - " 12"
+      - " 13"
+      - " 14"
+      - " 15"
+      - " 16"
+      - " 17"
+      - " 18"
+      - " 19"
+      - " 20"
+      - " 21"
+      - " 22"
+      - " 23"
+      - " 24"
+      - " 25"
+      - " 26"
+      - 2
+      - 3
+      - 4
+      - 6
+      - 7
+      - 8
+      - 9
+      - 16
+      - 17
+      - 18
+      - 25
+      - 26
+      - 29
+      - 30
+      - 31
+      - 32
+      - 46
+      - 48
+      - 49
+      - 50
       - 1.57|CYL科技20220101 30 2
-      - HK-SZ D@IEPL - 1G
-      - HK-SZ C@IEPL - 1G
-      - HK-SZ B@IEPL - 1G
-      - Relay_🇫🇷FR-🇫🇷FR_543
-      - MO-CTM D -原生IP @TD - 300M
       - CN-183.232.170.110-1232
       - CN-183.232.170.110-1233
       - US-199.19.226.178-1313
-      - 2.74| 专线西雅图01原生NTT
-      - 2.74| 专线西雅图01原生NTT 4
-      - 香港001
       - 30香港TG@moneyflychat
       - 45香港TG@moneyflychat
-      - 46香港TG@moneyflychat
-      - 58美国TG@moneyflychat
-      - 73美国TG@moneyflychat
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
