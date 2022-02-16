@@ -12,7 +12,6 @@ proxies:
   - {name: 专线 新加坡 01, server: iepl02.789jiasu.com, port: 8021, type: ssr, cipher: aes-256-cfb, password: LjtFzy, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 41796:A3bDUz, obfs-param: bdcef41796.microsoft.com, udp: true}
   - {name: 专线 香港 04 3, server: iepl01.789jiasu.com, port: 8064, type: ssr, cipher: aes-256-cfb, password: LjtFzy, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 41796:A3bDUz, obfs-param: bdcef41796.microsoft.com, udp: true}
   - {name: 专线 香港 04 2, server: iepl01.789jiasu.com, port: 8564, type: ss, cipher: aes-128-gcm, password: 9CU44I, plugin: obfs, plugin-opts: {mode: http, host: df1c04468.microsoft.com}, udp: true}
-  - {name: 专线 香港 03 3, server: iepl03.789jiasu.com, port: 8563, type: ss, cipher: aes-128-gcm, password: 9CU44I, plugin: obfs, plugin-opts: {mode: http, host: df1c04468.microsoft.com}, udp: true}
   - {name: 专线 香港 03 2, server: iepl03.789jiasu.com, port: 8063, type: ssr, cipher: aes-256-cfb, password: LjtFzy, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 41796:A3bDUz, obfs-param: bdcef41796.microsoft.com, udp: true}
   - {name: 专线 香港 02, server: iepl02.789jiasu.com, port: 8062, type: ssr, cipher: aes-256-cfb, password: LjtFzy, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 41796:A3bDUz, obfs-param: bdcef41796.microsoft.com, udp: true}
   - {name: 专线 香港 01 2, server: iepl01.789jiasu.com, port: 8061, type: ssr, cipher: aes-256-cfb, password: LjtFzy, protocol: auth_aes128_md5, obfs: http_simple, protocol-param: 41796:A3bDUz, obfs-param: bdcef41796.microsoft.com, udp: true}
@@ -76,7 +75,6 @@ proxies:
   - {name: 高速中转01, server: nhnlt.okex-tradebot.xyz, port: 30014, type: vmess, uuid: 7800ada8-8774-4641-b0b8-9d88e3c66371, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /, ws-headers: {Host: nhnlt.okex-tradebot.xyz}, udp: true}
   - {name: US-199.19.226.178-0364, server: us.lv.buyvm.tgproxy.wtf, port: 21888, type: vmess, uuid: aeaaff19-bb0b-434d-b206-0f2a3f4d90e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /theuploadapi, ws-headers: {Host: us.lv.buyvm.tgproxy.wtf}, udp: true}
   - {name: KR | Oracle 甲骨文, server: fq.0112391.xyz, port: 12226, type: trojan, password: 1qaz2wsx, sni: fq.0112391.xyz, skip-cert-verify: true, udp: true}
-  - {name: GLaDOS-TW-Netflix, server: 03041b0.t2.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/03041b0.fm.apple.com:23622, ws-headers: {Host: test.moss.network}, udp: true}
   - {name: GLaDOS-HK-Netflix, server: 03041b0.t3.gladns.com, port: 3306, type: vmess, uuid: 57e0cb4d-eae5-48ec-8091-149dc2b309e0, alterId: 0, cipher: auto, tls: false, skip-cert-verify: true, network: ws, ws-path: /s/03041b0.fm.apple.com:23622, ws-headers: {Host: hk.moss.network}, udp: true}
   - {name: CN-183.232.170.110-1233, server: gdfs.xxcv.cc, port: 26003, type: trojan, password: 4a53cdc5-1067-3f5c-b1b4-745edfa8b371, sni: gdfs.xxcv.cc, skip-cert-verify: true, udp: true}
   - {name: CN-183.232.170.110-1232, server: gdfs.xxcv.cc, port: 26001, type: trojan, password: 4a53cdc5-1067-3f5c-b1b4-745edfa8b371, sni: gdfs.xxcv.cc, skip-cert-verify: true, udp: true}
@@ -98,6 +96,15 @@ proxies:
   - {name: 1.37|FR14194115681008, server: ovh.fr.tgproxy.wtf, port: 8888, type: vmess, uuid: d064d11b-477c-4c5d-a2d8-9fd599ef8e79, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /theuploadapi, ws-headers: {Host: ovh.fr.tgproxy.wtf}, udp: true}
   - {name: 1.26| GB549, server: uk-am3-5.eqsunshine.com, port: 8181, type: ssr, cipher: aes-256-cfb, password: PNRbp3j9B, protocol: origin, obfs: tls1.2_ticket_auth, protocol-param: "", obfs-param: "", udp: true}
   - {name: 1.23|拉脱维亚01流解0x, server: lv.tgproxy.wtf, port: 2052, type: vmess, uuid: aeaaff19-bb0b-434d-b206-0f2a3f4d90e9, alterId: 0, cipher: auto, tls: true, skip-cert-verify: true, network: ws, ws-path: /theuploadapi, ws-headers: {Host: lv.tgproxy.wtf}, udp: true}
+  - {name: 印度尼西亚 Indonesia●, server: gz1.52168.xyz, port: 1103, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 土耳其 Turkey★, server: gz2.52168.xyz, port: 2104, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 新加坡 Singapore★, server: gz2.52168.xyz, port: 2106, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 泰国 Thailand★, server: gz2.52168.xyz, port: 2109, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 澳大利亚 Australia●, server: gz1.52168.xyz, port: 1111, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 英国 England(Free)★, server: gz2.52168.xyz, port: 2102, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 菲律宾 Philippine●, server: gz1.52168.xyz, port: 1101, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 韩国 Korea●, server: gz1.52168.xyz, port: 1115, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
+  - {name: 香港 Hongkong (AZ)●, server: gz1.52168.xyz, port: 1114, type: ssr, cipher: aes-256-cfb, password: epChJS35fV, protocol: auth_aes128_sha1, obfs: tls1.2_ticket_auth, protocol-param: 149:y711wfz6uln, obfs-param: 30a2a149.baidu.com, udp: true}
 proxy-groups:
   - name: 🔰 节点选择
     type: select
@@ -111,7 +118,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -175,7 +181,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -197,6 +202,15 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
@@ -209,7 +223,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -273,7 +286,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -295,6 +307,15 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
   - name: 🎥 NETFLIX
     type: select
     proxies:
@@ -308,7 +329,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -372,7 +392,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -394,6 +413,15 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
   - name: ⛔️ 广告拦截
     type: select
     proxies:
@@ -419,7 +447,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -483,7 +510,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -505,13 +531,21 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
   - name: 🌏 国内媒体
     type: select
     proxies:
       - 🎯 全球直连
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -525,6 +559,7 @@ proxy-groups:
       - 香港L2 中继M1S2 [3]
       - 香港L2 中继M1S1 [3]
       - 30香港TG@moneyflychat
+      - 香港 Hongkong (AZ)●
       - 🔰 节点选择
   - name: Ⓜ️ 微软服务
     type: select
@@ -538,7 +573,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -602,7 +636,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -624,6 +657,15 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
   - name: 📲 电报信息
     type: select
     proxies:
@@ -636,7 +678,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -700,7 +741,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -722,6 +762,15 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
   - name: 🍎 苹果服务
     type: select
     proxies:
@@ -735,7 +784,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -799,7 +847,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -821,6 +868,15 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
   - name: 🎯 全球直连
     type: select
     proxies:
@@ -843,7 +899,6 @@ proxy-groups:
       - 专线 新加坡 01
       - 专线 香港 04 3
       - 专线 香港 04 2
-      - 专线 香港 03 3
       - 专线 香港 03 2
       - 专线 香港 02
       - 专线 香港 01 2
@@ -907,7 +962,6 @@ proxy-groups:
       - 高速中转01
       - US-199.19.226.178-0364
       - KR | Oracle 甲骨文
-      - GLaDOS-TW-Netflix
       - GLaDOS-HK-Netflix
       - CN-183.232.170.110-1233
       - CN-183.232.170.110-1232
@@ -929,6 +983,15 @@ proxy-groups:
       - 1.37|FR14194115681008
       - 1.26| GB549
       - 1.23|拉脱维亚01流解0x
+      - 印度尼西亚 Indonesia●
+      - 土耳其 Turkey★
+      - 新加坡 Singapore★
+      - 泰国 Thailand★
+      - 澳大利亚 Australia●
+      - 英国 England(Free)★
+      - 菲律宾 Philippine●
+      - 韩国 Korea●
+      - 香港 Hongkong (AZ)●
 rules:
  - DOMAIN-SUFFIX,local,🎯 全球直连
  - IP-CIDR,192.168.0.0/16,🎯 全球直连,no-resolve
