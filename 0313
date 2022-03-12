@@ -1,0 +1,2889 @@
+
+port: 7890
+socks-port: 7891
+redir-port: 7892
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 0.0.0.0:9090
+
+dns:
+  enable: true
+  # listen: 0.0.0.0:53
+  ipv6: false # 当此选项为 false 时, AAAA 请求将返回空
+
+  # 以下填写的 DNS 服务器将会被用来解析 DNS 服务的域名
+  # 仅填写 DNS 服务器的 IP 地址
+  default-nameserver:
+    - 223.5.5.5
+    #- 1.2.4.8
+    #- 114.114.114.114
+    - 119.29.29.29
+  enhanced-mode: redir-host # 或 fake-ip
+  fake-ip-range: 198.18.0.1/16 # Fake IP 地址池 (CIDR 形式)
+  # use-hosts: true # 查询 hosts 并返回 IP 记录
+
+  # 在以下列表的域名将不会被解析为 fake ip，这些域名相关的解析请求将会返回它们真实的 IP 地址
+  # fake-ip-filter:
+  #   - '*.lan'
+  #   - localhost.ptlogin2.qq.com
+
+  # 支持 UDP / TCP / DoT / DoH 协议的 DNS 服务，可以指明具体的连接端口号。
+  # 所有 DNS 请求将会直接发送到服务器，不经过任何代理。
+  # Clash 会使用最先获得的解析记录回复 DNS 请求
+  nameserver:
+    #如果你有自建的DNS服务器或专用网络的DNS服务器可在托管链接添加如 &dns=9.9.9.9 参数（9.9.9.9替换成你要自定义的DNS，注意，此DNS必须有效，否则将导致出错无法使用），自定义DNS将出现以下方
+    
+    #默认提供DoT / DoH 协议的DNS
+    - https://223.5.5.5/dns-query
+    #- https://doh.pub/dns-query
+    #- tls://223.6.6.6
+    #- https://dns.alidns.com/dns-query
+    #- https://v6.rubyfish.cn/dns-query
+    #- https://rubyfish.cn/dns-query
+    - https://1.12.12.12/dns-query
+    #- https://doh.360.cn/dns-query
+    #- tls://223.5.5.5
+    #- tls://dns.alidns.com
+    #- tls://13800000000.rubyfish.cn
+    #- tls://dot.360.cn
+    #- 223.5.5.5
+    #- 119.29.29.29
+    
+  # 当 fallback 参数被配置时, DNS 请求将同时发送至上方 nameserver 列表和下方 fallback 列表中配置的所有 DNS 服务器.
+  # 当解析得到的 IP 地址的地理位置不是 CN 时，clash 将会选用 fallback 中 DNS 服务器的解析结果。
+  #fallback:
+    #- https://8.8.4.4/dns-query
+    #- https://1.0.0.1/dns-query    
+    #- https://dns.google/dns-query
+    #- tls://8.8.4.4
+    #- https://cloudflare-dns.com/dns-query
+    #- https://1.1.1.1/dns-query
+    #- https://8.8.8.8/dns-query
+    #- https://dns.twnic.tw/dns-query
+    #- tls://1.0.0.1
+    #- tls://dns.adguard.com:853
+
+  # 如果使用 nameserver 列表中的服务器解析的 IP 地址在下方列表中的子网中，则它们被认为是无效的，
+  # Clash 会选用 fallback 列表中配置 DNS 服务器解析得到的结果。
+  #
+  # 当 fallback-filter.geoip 为 true 且 IP 地址的地理位置为 CN 时，
+  # Clash 会选用 nameserver 列表中配置 DNS 服务器解析得到的结果。
+  #
+  # 当 fallback-filter.geoip 为 false, 如果解析结果在 fallback-filter.ipcidr 范围内，
+  # Clash 会选用 nameserver 列表中配置 DNS 服务器解析得到的结果。
+  #
+  # 采取以上逻辑进行域名解析是为了对抗 DNS 投毒攻击。
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    # - 240.0.0.0/4
+proxies:
+  - type: ss
+    server: zhs.fun
+    port: 29083
+    password: zhshi.gitlab.io
+    cipher: aes-128-gcm
+    name: ♥流量:8764.57GB 等级6剩:1501.7天
+  - name: ⓪TJ.US空灵 [备用] [10] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: klusr3.zhs.futbol
+    port: 443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: klusr3.zhs.futbol
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: klusr3.zhs.futbol
+  - name: ❶gR.SG时光 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: sg3bct.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❶TJ.HK天机 [荐] [1] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: wzhkb3.zhs.company
+    port: 2083
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: wzhkb3.zhs.company
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wzhkb3.zhs.company
+  - name: ❶TJ.JP忍者 [荐] [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: jprz3r.zhs.company
+    port: 2053
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: jprz3r.zhs.company
+  - name: ❶TJ.RU西亚 [联通] [1] [NF*]
+    type: trojan
+    udp: true
+    server: ruhd1h.zhs.company
+    port: 443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: ruhd1h.zhs.company
+  - name: ❶TJ.SG时光 [0.8] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: sg3bct.zhs.company
+    port: 2096
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: sg3bct.zhs.company
+  - name: ❶V2.HK奇点 [2] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkqd2d.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkqd2d.zhs.company
+  - name: ❶V2.HK摄魂 [阿里云] [荐] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hksh3t.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hksh3t.zhs.company
+  - name: ❶V2.HK流萤 [1] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkbnc2.zhs.company
+    port: 11400
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /216074fa
+      headers:
+        Host: hkbnc2.zhs.company
+  - name: ❶V2.HK灵魂 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hklhjk.zhs.company
+    port: 53999
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hklhjk.zhs.company
+  - name: ❖CN1❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: us-yxpi5.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpxy9o.zhs.company
+  - name: ❖CN2❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hk-ila-qktv7.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpxy9o.zhs.company
+  - name: ✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: jpxy9o.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpxy9o.zhs.company
+  - name: ❖CN1❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: us-yxpi5.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ukwlb6.zhs.company
+  - name: ❖CN2❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hk-ila-qktv7.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ukwlb6.zhs.company
+  - name: ❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: ukwlb6.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ukwlb6.zhs.company
+  - name: ❶V2.US贝塔 [HBO] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: usbt5n.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /110fcc6c
+      headers:
+        Host: usbt5n.zhs.company
+  - name: ❷gR.HK天机 [荐] [1] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: wzhkb3.zhs.company
+    port: 443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: wzhkb3.zhs.company
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❖CN1❖❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: cm12ov.zhs.company
+    port: 35054
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hktkj9.zhs.company
+  - name: ❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: hktkj9.zhs.company
+    port: 2087
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hktkj9.zhs.company
+  - name: ❷TJ.SG黎明 [1.5] [NF*] [D+]
+    type: trojan
+    udp: true
+    server: sglmz9.zhs.company
+    port: 8443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: sglmz9.zhs.company
+  - name: ❷V2.HK嘉禾 [阿里云] [1] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkjh3r.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkjh3r.zhs.company
+  - name: ❷V2.HK安魂 [荐] [阿里云] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkah9e.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkah9e.zhs.company
+  - name: ❖CN1❖❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm12ov.zhs.company
+    port: 35055
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hktkj9.zhs.company
+  - name: ❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hktkj9.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hktkj9.zhs.company
+  - name: ❷V2.JP死神 [1.5] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: jpssv5.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /3af179ba
+      headers:
+        Host: jpssv5.zhs.company
+  - name: ❖CN1❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: us-yxpi5.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpqjd7.zhs.company
+  - name: ❖CN2❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hk-ila-qktv7.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpqjd7.zhs.company
+  - name: ❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: jpqjd7.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpqjd7.zhs.company
+  - name: ❷V2.SG黎明 [1.5] [NF*] [D+]
+    type: vmess
+    udp: true
+    server: sglmz9.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: sglmz9.zhs.company
+  - name: ❖CN1❖❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39045
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twwwn3.zhs.company
+  - name: ❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: twwwn3.zhs.company
+    port: 8443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twwwn3.zhs.company
+  - name: ❖CN1❖❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 30008
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usjzo0.zhs.company
+  - name: ❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: usjzo0.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usjzo0.zhs.company
+  - name: ❷V2.US神像 [2] [荐] [NF*] [D+]
+    type: vmess
+    udp: true
+    server: ussxhh.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ussxhh.zhs.company
+  - name: ❖CN1❖❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cmbe3-vdn.zhs.company
+    port: 35049
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: wttwz9.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❖CN1❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50017
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❖CN2❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39107
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: twbdis.zhs.company
+    port: 8443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❖CN1❖❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39107
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: twzh6v.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❖CN1❖❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39107
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: twmc8.zhs.company
+    port: 8443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❖CN1❖❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: us-yxpi5.ingk.live
+    port: 443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: uscp5g.zhs.company
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: uscp5g.zhs.company
+    port: 443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: uscp5g.zhs.company
+    network: grpc
+    grpc-opts:
+      grpc-service-name: zhs
+  - name: ❖CN1❖❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50008
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hgcdf6.zhs.company
+  - name: ❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: hgcdf6.zhs.company
+    port: 2083
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hgcdf6.zhs.company
+  - name: ❖CN1❖❸TJ.HK判官 [荐] [1] [NF] [D+]
+    type: trojan
+    udp: true
+    server: cmbe3-vdn.zhs.company
+    port: 35020
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkbnx3.zhs.company
+  - name: ❸TJ.HK判官 [荐] [1] [NF] [D+]
+    type: trojan
+    udp: true
+    server: hkbnx3.zhs.company
+    port: 2083
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkbnx3.zhs.company
+  - name: ❖CN1❖❸TJ.HK城寨 [1] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50008
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hktcz3.zhs.company
+  - name: ❸TJ.HK城寨 [1] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: hktcz3.zhs.company
+    port: 8443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hktcz3.zhs.company
+  - name: ❖CN1❖❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50014
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkqy7u.zhs.company
+  - name: ❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: hkqy7u.zhs.company
+    port: 2087
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkqy7u.zhs.company
+  - name: ❖CN1❖❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: umhn5r.zhs.company
+    port: 60007
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: jpdhn3.zhs.company
+  - name: ❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: jpdhn3.zhs.company
+    port: 8443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: jpdhn3.zhs.company
+  - name: ❖CN1❖❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39105
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twwwn3.zhs.company
+  - name: ❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: twwwn3.zhs.company
+    port: 2053
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twwwn3.zhs.company
+  - name: ❖CN1❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50006
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twbdis.zhs.company
+  - name: ❖CN2❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39105
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twbdis.zhs.company
+  - name: ❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: twbdis.zhs.company
+    port: 2087
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twbdis.zhs.company
+  - name: ❖CN1❖❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50006
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twmc8.zhs.company
+  - name: ❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: twmc8.zhs.company
+    port: 2087
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twmc8.zhs.company
+  - name: ❸TJ.US加州 [Hulu] [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: usjzo0.zhs.company
+    port: 2087
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: usjzo0.zhs.company
+  - name: ❸V2.CN刀锋 仅解锁中国 爱/优/腾/B站等 [5]
+    type: vmess
+    udp: true
+    server: cndf5g.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: cndf5g.zhs.company
+  - name: ❸V2.CN盛宴 仅解锁中国 爱/优/腾/B站等 [5]
+    type: vmess
+    udp: true
+    server: hksyx2.zhs.company
+    port: 2021
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hksyx2.zhs.company
+  - name: ❖CN1❖❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    type: vmess
+    udp: true
+    server: us-yxpi5.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hgus4g.zhs.company
+  - name: ❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    type: vmess
+    udp: true
+    server: hgus4g.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hgus4g.zhs.company
+  - name: ❖CN1❖❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50007
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hgcdf6.zhs.company
+  - name: ❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hgcdf6.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hgcdf6.zhs.company
+  - name: ❖CN1❖❸V2.HK城寨 [1] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50007
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hktcz3.zhs.company
+  - name: ❸V2.HK城寨 [1] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hktcz3.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hktcz3.zhs.company
+  - name: ❖CN1❖❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50015
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wzhkb3.zhs.company
+  - name: ❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    type: vmess
+    udp: true
+    server: wzhkb3.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wzhkb3.zhs.company
+  - name: ❖CN1❖❸V2.JP和服 [0.5] [NF] [D+]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 30005
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jphfy2.zhs.company
+  - name: ❸V2.JP和服 [0.5] [NF] [D+]
+    type: vmess
+    udp: true
+    server: jphfy2.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jphfy2.zhs.company
+  - name: ❖CN1❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 60004
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpknh5.zhs.company
+  - name: ❖CN2❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: us-yxpi5.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpknh5.zhs.company
+  - name: ❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: jpknh5.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpknh5.zhs.company
+  - name: ❖CN1❖❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 60003
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpws9e.zhs.company
+  - name: ❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: jpws9e.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpws9e.zhs.company
+  - name: ❖CN1❖❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 60009
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: sglyc6.zhs.company
+  - name: ❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: sglyc6.zhs.company
+    port: 2087
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: sglyc6.zhs.company
+  - name: ❸V2.TR古灵 [注册Netflix] [5] [NF] [Yp]
+    type: vmess
+    udp: true
+    server: trglnt.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /bc8785b6
+      headers:
+        Host: trglnt.zhs.company
+  - name: ❖CN1❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50005
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twzh6v.zhs.company
+  - name: ❖CN2❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39104
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twzh6v.zhs.company
+  - name: ❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: twzh6v.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twzh6v.zhs.company
+  - name: ❖CN1❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50005
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twmc8.zhs.company
+  - name: ❖CN2❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39106
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twmc8.zhs.company
+  - name: ❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: twmc8.zhs.company
+    port: 2083
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twmc8.zhs.company
+  - name: ❸V2.US川谱 [Hulu] [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: uscp5g.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: uscp5g.zhs.company
+  - name: ❖CN1❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 30001
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usly2m.zhs.company
+  - name: ❖CN2❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    type: vmess
+    udp: true
+    server: hk-ila-qktv7.ingk.live
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usly2m.zhs.company
+  - name: ❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    type: vmess
+    udp: true
+    server: usly2m.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usly2m.zhs.company
+  - name: ❸V2.US玫瑰 [2] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: usmg3r.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usmg3r.zhs.company
+  - name: ❖CN1❖❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 30004
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ussdh7.zhs.company
+  - name: ❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: ussdh7.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ussdh7.zhs.company
+  - name: ❖CN1❖❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39044
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: h2
+    h2-opts:
+      path: /zhs
+  - name: ❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkbnjl0.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: h2
+    h2-opts:
+      path: /zhs
+  - name: ❖CN1❖❻H2.HK判官 [荐] [2] [NF] [D+]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39044
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: h2
+    h2-opts:
+      path: /zhs
+  - name: ❻H2.HK判官 [荐] [2] [NF] [D+]
+    type: vmess
+    udp: true
+    server: hkbnx3.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: h2
+    h2-opts:
+      path: /zhs
+  - name: ❖CN1❖❻H2.HK城寨 [1] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cmbe3-vdn.zhs.company
+    port: 35046
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: h2
+    h2-opts:
+      path: /zhs
+  - name: ❻H2.HK城寨 [1] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hktcz3.zhs.company
+    port: 2083
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: h2
+    h2-opts:
+      path: /zhs
+  - name: ❖CN1❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50004
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkbnjl0.zhs.company
+  - name: ❖CN2❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: cmbe3-vdn.zhs.company
+    port: 35030
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkbnjl0.zhs.company
+  - name: ❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: hkbnjl0.zhs.company
+    port: 2087
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkbnjl0.zhs.company
+  - name: ❖CN1❖❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: umhn5r.zhs.company
+    port: 39007
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkbl3n.zhs.company
+  - name: ❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: hkbl3n.zhs.company
+    port: 443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: hkbl3n.zhs.company
+  - name: ❻TJ.HK王者 [IEPL] [10] [NF*] [D+]
+    type: trojan
+    udp: true
+    server: i0gzcm-iepl.zhs.company
+    port: 58443
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: i0gzcm-iepl.zhs.company
+  - name: ❖CN1❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50001
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: wztwb6.zhs.company
+  - name: ❖CN2❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39103
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: wztwb6.zhs.company
+  - name: ❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: wztwb6.zhs.company
+    port: 1433
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: wztwb6.zhs.company
+  - name: ❖CN1❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50001
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twzh6v.zhs.company
+  - name: ❖CN2❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39103
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twzh6v.zhs.company
+  - name: ❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    type: trojan
+    udp: true
+    server: twzh6v.zhs.company
+    port: 2096
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: twzh6v.zhs.company
+  - name: ❖CN1❖❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    type: trojan
+    udp: true
+    server: umhn5r.zhs.company
+    port: 30002
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: usly2m.zhs.company
+  - name: ❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    type: trojan
+    udp: true
+    server: usly2m.zhs.company
+    port: 2053
+    password: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    skip-cert-verify: false
+    sni: usly2m.zhs.company
+  - name: ❻V2.HKG王者 [游戏] [8] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: wzhki6.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wzhki6.zhs.company
+  - name: ❖CN1❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50016
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbnjl0.zhs.company
+  - name: ❖CN2❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39041
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbnjl0.zhs.company
+  - name: ❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkbnjl0.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbnjl0.zhs.company
+  - name: ❖CN1❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50003
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbnx3.zhs.company
+  - name: ❖CN2❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39041
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbnx3.zhs.company
+  - name: ❻V2.HK判官 [荐] [1] [NF] [D+]
+    type: vmess
+    udp: true
+    server: hkbnx3.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbnx3.zhs.company
+  - name: ❖CN1❖❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50013
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkqy7u.zhs.company
+  - name: ❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkqy7u.zhs.company
+    port: 2083
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkqy7u.zhs.company
+  - name: ❖CN1❖❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 39006
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbl3n.zhs.company
+  - name: ❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: hkbl3n.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: hkbl3n.zhs.company
+  - name: ❖CN1❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50010
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpemg7.zhs.company
+  - name: ❖CN2❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 60002
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpemg7.zhs.company
+  - name: ❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: jpemg7.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: jpemg7.zhs.company
+  - name: ❖CN1❖❻V2.JP王者 [3] [abema] [NF]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 30000
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /c52ad75e
+      headers:
+        Host: wzjpk9.zhs.company
+  - name: ❻V2.JP王者 [3] [abema] [NF]
+    type: vmess
+    udp: true
+    server: wzjpk9.zhs.company
+    port: 2053
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /c52ad75e
+      headers:
+        Host: wzjpk9.zhs.company
+  - name: ❖CN1❖❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 37001
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: sgali-rd6.zhs.company
+  - name: ❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: sgali-rd6.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: sgali-rd6.zhs.company
+  - name: ❖CN1❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50009
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wttwz9.zhs.company
+  - name: ❖CN2❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cmbe3-vdn.zhs.company
+    port: 35048
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wttwz9.zhs.company
+  - name: ❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: wttwz9.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wttwz9.zhs.company
+  - name: ❖CN1❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50000
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wztwb6.zhs.company
+  - name: ❖CN2❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39102
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wztwb6.zhs.company
+  - name: ❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: wztwb6.zhs.company
+    port: 1443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: wztwb6.zhs.company
+  - name: ❖CN1❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: lrgz2cm-0.zhs.company
+    port: 50000
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twbdis.zhs.company
+  - name: ❖CN2❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: cm2tw-odn.zhs.company
+    port: 39101
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twbdis.zhs.company
+  - name: ❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: twbdis.zhs.company
+    port: 2096
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: twbdis.zhs.company
+  - name: ❻V2.US无量 [下载专用] [0] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: uswlwz.zhs.company
+    port: 443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /d40d345b
+      headers:
+        Host: uswlwz.zhs.company
+  - name: ❖CN1❖❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 30003
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usly2m.zhs.company
+  - name: ❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    type: vmess
+    udp: true
+    server: usly2m.zhs.company
+    port: 8443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: usly2m.zhs.company
+  - name: ❖CN1❖❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: umhn5r.zhs.company
+    port: 39026
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ussxm9.zhs.company
+  - name: ❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+    type: vmess
+    udp: true
+    server: ussxm9.zhs.company
+    port: 8443
+    uuid: 87bd3b48-112c-32a0-93d8-66cc8919877a
+    alterId: 0
+    cipher: auto
+    tls: true
+    skip-cert-verify: false
+    network: ws
+    ws-opts:
+      path: /zhs
+      headers:
+        Host: ussxm9.zhs.company
+
+proxy-groups:
+
+  - name: 🚧Proxy
+    type: select
+    proxies:
+    - DIRECT
+    - ♥流量:8764.57GB 等级6剩:1501.7天
+    - ⓪TJ.US空灵 [备用] [10] [D+] [Yp]
+    - ❶gR.SG时光 [1] [NF*] [D+] [Yp]
+    - ❶TJ.HK天机 [荐] [1] [D+] [Yp]
+    - ❶TJ.JP忍者 [荐] [1] [NF*] [D+] [Yp]
+    - ❶TJ.RU西亚 [联通] [1] [NF*]
+    - ❶TJ.SG时光 [0.8] [NF*] [D+] [Yp]
+    - ❶V2.HK奇点 [2] [NF*] [D+] [Yp]
+    - ❶V2.HK摄魂 [阿里云] [荐] [1] [NF*] [D+] [Yp]
+    - ❶V2.HK流萤 [1] [D+] [Yp]
+    - ❶V2.HK灵魂 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.US贝塔 [HBO] [1] [NF*] [D+] [Yp]
+    - ❷gR.HK天机 [荐] [1] [D+] [Yp]
+    - ❖CN1❖❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.SG黎明 [1.5] [NF*] [D+]
+    - ❷V2.HK嘉禾 [阿里云] [1] [D+] [Yp]
+    - ❷V2.HK安魂 [荐] [阿里云] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.JP死神 [1.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.SG黎明 [1.5] [NF*] [D+]
+    - ❖CN1❖❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US神像 [2] [荐] [NF*] [D+]
+    - ❖CN1❖❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN2❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.US加州 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❸V2.CN刀锋 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN盛宴 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.HK城寨 [1] [D+] [Yp]
+    - ❸V2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❖CN1❖❸V2.JP和服 [0.5] [NF] [D+]
+    - ❸V2.JP和服 [0.5] [NF] [D+]
+    - ❖CN1❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.TR古灵 [注册Netflix] [5] [NF] [Yp]
+    - ❖CN1❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.US川谱 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❖CN2❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US玫瑰 [2] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❖CN1❖❻H2.HK城寨 [1] [D+] [Yp]
+    - ❻H2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK王者 [IEPL] [10] [NF*] [D+]
+    - ❖CN1❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻V2.HKG王者 [游戏] [8] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN2❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP王者 [3] [abema] [NF]
+    - ❻V2.JP王者 [3] [abema] [NF]
+    - ❖CN1❖❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.US无量 [下载专用] [0] [D+] [Yp]
+    - ❖CN1❖❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❖CN1❖❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+
+
+
+
+
+  - name: 🎬Netflix等国外流媒体
+    type: select
+    proxies:
+    - 🚧Proxy
+    - DIRECT
+    - ♥流量:8764.57GB 等级6剩:1501.7天
+    - ⓪TJ.US空灵 [备用] [10] [D+] [Yp]
+    - ❶gR.SG时光 [1] [NF*] [D+] [Yp]
+    - ❶TJ.HK天机 [荐] [1] [D+] [Yp]
+    - ❶TJ.JP忍者 [荐] [1] [NF*] [D+] [Yp]
+    - ❶TJ.RU西亚 [联通] [1] [NF*]
+    - ❶TJ.SG时光 [0.8] [NF*] [D+] [Yp]
+    - ❶V2.HK奇点 [2] [NF*] [D+] [Yp]
+    - ❶V2.HK摄魂 [阿里云] [荐] [1] [NF*] [D+] [Yp]
+    - ❶V2.HK流萤 [1] [D+] [Yp]
+    - ❶V2.HK灵魂 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.US贝塔 [HBO] [1] [NF*] [D+] [Yp]
+    - ❷gR.HK天机 [荐] [1] [D+] [Yp]
+    - ❖CN1❖❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.SG黎明 [1.5] [NF*] [D+]
+    - ❷V2.HK嘉禾 [阿里云] [1] [D+] [Yp]
+    - ❷V2.HK安魂 [荐] [阿里云] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.JP死神 [1.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.SG黎明 [1.5] [NF*] [D+]
+    - ❖CN1❖❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US神像 [2] [荐] [NF*] [D+]
+    - ❖CN1❖❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN2❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.US加州 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❸V2.CN刀锋 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN盛宴 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.HK城寨 [1] [D+] [Yp]
+    - ❸V2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❖CN1❖❸V2.JP和服 [0.5] [NF] [D+]
+    - ❸V2.JP和服 [0.5] [NF] [D+]
+    - ❖CN1❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.TR古灵 [注册Netflix] [5] [NF] [Yp]
+    - ❖CN1❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.US川谱 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❖CN2❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US玫瑰 [2] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❖CN1❖❻H2.HK城寨 [1] [D+] [Yp]
+    - ❻H2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK王者 [IEPL] [10] [NF*] [D+]
+    - ❖CN1❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻V2.HKG王者 [游戏] [8] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN2❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP王者 [3] [abema] [NF]
+    - ❻V2.JP王者 [3] [abema] [NF]
+    - ❖CN1❖❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.US无量 [下载专用] [0] [D+] [Yp]
+    - ❖CN1❖❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❖CN1❖❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+
+  - name: 📺爱奇艺等国内流媒体
+    type: select
+    proxies:
+    - DIRECT
+    - 🇨🇳国内网站或资源
+    - 🚧Proxy
+    - ♥流量:8764.57GB 等级6剩:1501.7天
+    - ⓪TJ.US空灵 [备用] [10] [D+] [Yp]
+    - ❶gR.SG时光 [1] [NF*] [D+] [Yp]
+    - ❶TJ.HK天机 [荐] [1] [D+] [Yp]
+    - ❶TJ.JP忍者 [荐] [1] [NF*] [D+] [Yp]
+    - ❶TJ.RU西亚 [联通] [1] [NF*]
+    - ❶TJ.SG时光 [0.8] [NF*] [D+] [Yp]
+    - ❶V2.HK奇点 [2] [NF*] [D+] [Yp]
+    - ❶V2.HK摄魂 [阿里云] [荐] [1] [NF*] [D+] [Yp]
+    - ❶V2.HK流萤 [1] [D+] [Yp]
+    - ❶V2.HK灵魂 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.US贝塔 [HBO] [1] [NF*] [D+] [Yp]
+    - ❷gR.HK天机 [荐] [1] [D+] [Yp]
+    - ❖CN1❖❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.SG黎明 [1.5] [NF*] [D+]
+    - ❷V2.HK嘉禾 [阿里云] [1] [D+] [Yp]
+    - ❷V2.HK安魂 [荐] [阿里云] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.JP死神 [1.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.SG黎明 [1.5] [NF*] [D+]
+    - ❖CN1❖❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US神像 [2] [荐] [NF*] [D+]
+    - ❖CN1❖❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN2❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.US加州 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❸V2.CN刀锋 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN盛宴 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.HK城寨 [1] [D+] [Yp]
+    - ❸V2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❖CN1❖❸V2.JP和服 [0.5] [NF] [D+]
+    - ❸V2.JP和服 [0.5] [NF] [D+]
+    - ❖CN1❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.TR古灵 [注册Netflix] [5] [NF] [Yp]
+    - ❖CN1❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.US川谱 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❖CN2❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US玫瑰 [2] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❖CN1❖❻H2.HK城寨 [1] [D+] [Yp]
+    - ❻H2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK王者 [IEPL] [10] [NF*] [D+]
+    - ❖CN1❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻V2.HKG王者 [游戏] [8] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN2❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP王者 [3] [abema] [NF]
+    - ❻V2.JP王者 [3] [abema] [NF]
+    - ❖CN1❖❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.US无量 [下载专用] [0] [D+] [Yp]
+    - ❖CN1❖❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❖CN1❖❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+
+  - name: 🇨🇳国内网站或资源
+    type: select
+    proxies:
+    - DIRECT
+    - 🚧Proxy
+    - ♥流量:8764.57GB 等级6剩:1501.7天
+    - ⓪TJ.US空灵 [备用] [10] [D+] [Yp]
+    - ❶gR.SG时光 [1] [NF*] [D+] [Yp]
+    - ❶TJ.HK天机 [荐] [1] [D+] [Yp]
+    - ❶TJ.JP忍者 [荐] [1] [NF*] [D+] [Yp]
+    - ❶TJ.RU西亚 [联通] [1] [NF*]
+    - ❶TJ.SG时光 [0.8] [NF*] [D+] [Yp]
+    - ❶V2.HK奇点 [2] [NF*] [D+] [Yp]
+    - ❶V2.HK摄魂 [阿里云] [荐] [1] [NF*] [D+] [Yp]
+    - ❶V2.HK流萤 [1] [D+] [Yp]
+    - ❶V2.HK灵魂 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.US贝塔 [HBO] [1] [NF*] [D+] [Yp]
+    - ❷gR.HK天机 [荐] [1] [D+] [Yp]
+    - ❖CN1❖❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.SG黎明 [1.5] [NF*] [D+]
+    - ❷V2.HK嘉禾 [阿里云] [1] [D+] [Yp]
+    - ❷V2.HK安魂 [荐] [阿里云] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.JP死神 [1.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.SG黎明 [1.5] [NF*] [D+]
+    - ❖CN1❖❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US神像 [2] [荐] [NF*] [D+]
+    - ❖CN1❖❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN2❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.US加州 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❸V2.CN刀锋 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN盛宴 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.HK城寨 [1] [D+] [Yp]
+    - ❸V2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❖CN1❖❸V2.JP和服 [0.5] [NF] [D+]
+    - ❸V2.JP和服 [0.5] [NF] [D+]
+    - ❖CN1❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.TR古灵 [注册Netflix] [5] [NF] [Yp]
+    - ❖CN1❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.US川谱 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❖CN2❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US玫瑰 [2] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❖CN1❖❻H2.HK城寨 [1] [D+] [Yp]
+    - ❻H2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK王者 [IEPL] [10] [NF*] [D+]
+    - ❖CN1❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻V2.HKG王者 [游戏] [8] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN2❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP王者 [3] [abema] [NF]
+    - ❻V2.JP王者 [3] [abema] [NF]
+    - ❖CN1❖❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.US无量 [下载专用] [0] [D+] [Yp]
+    - ❖CN1❖❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❖CN1❖❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+
+  - name: 🌵其它规则外
+    type: select
+    proxies:
+    - 🚧Proxy
+    - DIRECT
+    - ♥流量:8764.57GB 等级6剩:1501.7天
+    - ⓪TJ.US空灵 [备用] [10] [D+] [Yp]
+    - ❶gR.SG时光 [1] [NF*] [D+] [Yp]
+    - ❶TJ.HK天机 [荐] [1] [D+] [Yp]
+    - ❶TJ.JP忍者 [荐] [1] [NF*] [D+] [Yp]
+    - ❶TJ.RU西亚 [联通] [1] [NF*]
+    - ❶TJ.SG时光 [0.8] [NF*] [D+] [Yp]
+    - ❶V2.HK奇点 [2] [NF*] [D+] [Yp]
+    - ❶V2.HK摄魂 [阿里云] [荐] [1] [NF*] [D+] [Yp]
+    - ❶V2.HK流萤 [1] [D+] [Yp]
+    - ❶V2.HK灵魂 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ✙维护✙❶V2.JP星移 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.UK威廉 [BBC] [1] [NF*] [D+] [Yp]
+    - ❶V2.US贝塔 [HBO] [1] [NF*] [D+] [Yp]
+    - ❷gR.HK天机 [荐] [1] [D+] [Yp]
+    - ❖CN1❖❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.HK铠甲 [TVB] [1] [NF] [D+] [Yp]
+    - ❷TJ.SG黎明 [1.5] [NF*] [D+]
+    - ❷V2.HK嘉禾 [阿里云] [1] [D+] [Yp]
+    - ❷V2.HK安魂 [荐] [阿里云] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.HK铠甲 [1] [NF] [D+] [Yp]
+    - ❷V2.JP死神 [1.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.JP清酒 [1] [NF*] [D+] [Yp]
+    - ❷V2.SG黎明 [1.5] [NF*] [D+]
+    - ❖CN1❖❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❷V2.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US加州 [Hulu] [1]  [NF*] [D+] [Yp]
+    - ❷V2.US神像 [2] [荐] [NF*] [D+]
+    - ❖CN1❖❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❸gR.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸gR.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❸gR.US川谱 [Hulu] [荐] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❸TJ.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❸TJ.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❸TJ.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❸TJ.JP大和 [0.8] [NF*] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW台湾 [动画疯] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN2❖❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❸TJ.TW宝岛 [动画疯] [荐] [3] [NF] [D+] [Yp]
+    - ❖CN1❖❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸TJ.US加州 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❸V2.CN刀锋 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN盛宴 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❸V2.CN贝塔 仅解锁中国 爱/优/腾/B站等 [5]
+    - ❖CN1❖❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❸V2.HK刀锋 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.HK城寨 [1] [D+] [Yp]
+    - ❸V2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❸V2.HK天机 [荐] [1]  [D+] [Yp]
+    - ❖CN1❖❸V2.JP和服 [0.5] [NF] [D+]
+    - ❸V2.JP和服 [0.5] [NF] [D+]
+    - ❖CN1❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN2❖❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❸V2.JP柯南 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❸V2.JP武士 [荐] [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.SG烈焰 [荐] [1] [NF*] [D+] [Yp]
+    - ❸V2.TR古灵 [注册Netflix] [5] [NF] [Yp]
+    - ❖CN1❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW彰化 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.TW高雄 [荐] [1] [NF] [D+] [Yp]
+    - ❸V2.US川谱 [Hulu] [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❖CN2❖❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❸V2.US玫瑰 [2] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❸V2.US胜地 [0.5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❻H2.HK九龙 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❻H2.HK判官 [荐] [2] [NF] [D+]
+    - ❖CN1❖❻H2.HK城寨 [1] [D+] [Yp]
+    - ❻H2.HK城寨 [1] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK波澜 [1] [NF*] [D+] [Yp]
+    - ❻TJ.HK王者 [IEPL] [10] [NF*] [D+]
+    - ❖CN1❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❻TJ.TW剑魂 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❻TJ.TW彰化 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻TJ.US猎鹰 [Hulu] [HBO] [1] [NF*] [D+]
+    - ❻V2.HKG王者 [游戏] [8] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.HK九龙 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN2❖❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❻V2.HK判官 [荐] [1] [NF] [D+]
+    - ❖CN1❖❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❻V2.HK契约 [1] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❻V2.HK波澜 [2] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❻V2.JP恶魔 [1] [abema] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.JP王者 [3] [abema] [NF]
+    - ❻V2.JP王者 [3] [abema] [NF]
+    - ❖CN1❖❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❻V2.SG星岛 [5] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN2❖❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.SG狮城 [1] [v6] [NF*] [D+] [Yp]
+    - ❖CN1❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❻V2.TW剑魂 [1] [NF] [D+] [Yp]
+    - ❖CN1❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❖CN2❖❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.TW宝岛 [荐] [1] [NF] [D+] [Yp]
+    - ❻V2.US无量 [下载专用] [0] [D+] [Yp]
+    - ❖CN1❖❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❻V2.US猎鹰 [Hulu] [HBO] [荐] [1] [NF*] [D+]
+    - ❖CN1❖❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+    - ❻V2.US王者 II [Hulu] [1] [v6] [NF*] [D+] [Yp]
+
+
+rule-providers:
+
+
+
+
+  Unbreak:
+    type: http
+    behavior: classical
+    path: ./Rules/Unbreak.yaml
+    url: https://cdn.staticaly.com/gh/tututo/Profiles@master/Clash/RuleSet/Unbreak.yaml
+    interval: 86400
+  Netflix等国外流媒体:
+    type: http
+    behavior: classical
+    path: ./Rules/NetflixAndGlobalMedia.yaml
+    url: https://cdn.staticaly.com/gh/tututo/Profiles@master/Clash/RuleSet/StreamingMedia/Streaming.yaml
+    interval: 86400
+  Global:
+    type: http
+    behavior: classical
+    path: ./Rules/Global.yaml
+    url: https://cdn.staticaly.com/gh/tututo/Profiles@master/Clash/RuleSet/Global.yaml
+    interval: 86400
+  爱奇艺等国内流媒体:
+    type: http
+    behavior: classical
+    path: ./Rules/iQiyiAndChinaMedia.yaml
+    url: https://cdn.staticaly.com/gh/tututo/Profiles@master/Clash/RuleSet/StreamingMedia/StreamingCN.yaml
+    interval: 86400
+  China:
+    type: http
+    behavior: classical
+    path: ./Rules/China.yaml
+    url: https://cdn.staticaly.com/gh/tututo/Profiles@master/Clash/RuleSet/China.yaml
+    interval: 86400
+  ChinaIP:
+    type: http
+    behavior: ipcidr
+    path: ./Rules/ChinaIP.yaml
+    url: https://cdn.staticaly.com/gh/tututo/Profiles@master/Clash/RuleSet/Extra/ChinaIP.yaml
+    interval: 86400  
+
+rules:
+
+  # 在 官网 - 资料编辑 - 你追加自定义Clash规则，优先级最高
+
+
+
+
+
+
+  # 腾讯视频补充规则
+  - DOMAIN-SUFFIX,video.coral.qq.com,📺爱奇艺等国内流媒体
+  - DOMAIN-SUFFIX,vfiles.gtimg.cn,📺爱奇艺等国内流媒体
+  - DOMAIN-SUFFIX,pingjs.qq.com,📺爱奇艺等国内流媒体
+  - DOMAIN-SUFFIX,image.video.qpic.cn,📺爱奇艺等国内流媒体
+  - DOMAIN-SUFFIX,l.qq.com,📺爱奇艺等国内流媒体
+  - DOMAIN-SUFFIX,aegis.qq.com,📺爱奇艺等国内流媒体
+  - DOMAIN-SUFFIX,v.smtcdns.com,📺爱奇艺等国内流媒体
+  - DOMAIN-SUFFIX,pingtas.qq.com,📺爱奇艺等国内流媒体
+  
+  - RULE-SET,Unbreak,DIRECT
+  - RULE-SET,Netflix等国外流媒体,🎬Netflix等国外流媒体
+  - RULE-SET,爱奇艺等国内流媒体,📺爱奇艺等国内流媒体
+  - RULE-SET,Global,🚧Proxy
+
+  - RULE-SET,China,🇨🇳国内网站或资源
+  - RULE-SET,ChinaIP,🇨🇳国内网站或资源
+
+  # Local Area Network
+  - IP-CIDR,192.168.0.0/16,DIRECT
+  - IP-CIDR,10.0.0.0/8,DIRECT
+  - IP-CIDR,172.16.0.0/12,DIRECT
+  - IP-CIDR,127.0.0.0/8,DIRECT
+  - IP-CIDR,100.64.0.0/10,DIRECT
+  - IP-CIDR,224.0.0.0/4,DIRECT
+
+  # Tencent
+  #- IP-CIDR,119.28.28.28/32,🇨🇳国内网站或资源
+  #- IP-CIDR,182.254.116.0/24,🇨🇳国内网站或资源
+  # GeoIP China
+  #- GEOIP,CN,🇨🇳国内网站或资源
+  # ip111.cn检测passgfw 的域名 ):就是这么个性...
+  - DOMAIN-SUFFIX,sspanel.net,🚧Proxy
+  # linkedin
+  - DOMAIN-SUFFIX,linkedin.com,🚧Proxy
+  # zhs
+  - DOMAIN-SUFFIX,zhs.tw,🚧Proxy  
+  - DOMAIN-SUFFIX,zhshi.gitlab.io,🚧Proxy
+
+  - MATCH,🌵其它规则外
+  # 致谢引用的各开源项目开发者 @DivineEngine @Hackl0us  
+      
